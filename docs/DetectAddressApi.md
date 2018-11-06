@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::DetectAddressApi
+# WWW::ClickSendClient::DetectAddressApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::DetectAddressApi;
+use WWW::ClickSendClient::Object::DetectAddressApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -22,15 +22,15 @@ Detects address in uploaded file.
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::DetectAddressApi;
-my $api_instance = WWW::SwaggerClient::DetectAddressApi->new(
+use WWW::ClickSendClient::DetectAddressApi;
+my $api_instance = WWW::ClickSendClient::DetectAddressApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $content = WWW::SwaggerClient::Object::string->new(); # string | Base64-encoded file contents
+my $content = WWW::ClickSendClient::Object::string->new(); # string | Base64-encoded file contents
 
 eval { 
     my $result = $api_instance->detect_address_post(content => $content);

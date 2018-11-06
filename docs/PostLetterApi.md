@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::PostLetterApi
+# WWW::ClickSendClient::PostLetterApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::PostLetterApi;
+use WWW::ClickSendClient::Object::PostLetterApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -25,8 +25,8 @@ export post letter history
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostLetterApi;
-my $api_instance = WWW::SwaggerClient::PostLetterApi->new(
+use WWW::ClickSendClient::PostLetterApi;
+my $api_instance = WWW::ClickSendClient::PostLetterApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -75,8 +75,8 @@ Get all post letter history
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostLetterApi;
-my $api_instance = WWW::SwaggerClient::PostLetterApi->new(
+use WWW::ClickSendClient::PostLetterApi;
+my $api_instance = WWW::ClickSendClient::PostLetterApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -127,15 +127,15 @@ Calculate post letter price
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostLetterApi;
-my $api_instance = WWW::SwaggerClient::PostLetterApi->new(
+use WWW::ClickSendClient::PostLetterApi;
+my $api_instance = WWW::ClickSendClient::PostLetterApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $post_letter = WWW::SwaggerClient::Object::PostLetter->new(); # PostLetter | PostLetter model
+my $post_letter = WWW::ClickSendClient::Object::PostLetter->new(); # PostLetter | PostLetter model
 
 eval { 
     my $result = $api_instance->post_letters_price_post(post_letter => $post_letter);
@@ -177,15 +177,15 @@ Send post letter
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostLetterApi;
-my $api_instance = WWW::SwaggerClient::PostLetterApi->new(
+use WWW::ClickSendClient::PostLetterApi;
+my $api_instance = WWW::ClickSendClient::PostLetterApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $post_letter = WWW::SwaggerClient::Object::PostLetter->new(); # PostLetter | PostLetter model
+my $post_letter = WWW::ClickSendClient::Object::PostLetter->new(); # PostLetter | PostLetter model
 
 eval { 
     my $result = $api_instance->post_letters_send_post(post_letter => $post_letter);

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::DeliveryReceiptRule
+# WWW::ClickSendClient::Object::DeliveryReceiptRule
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::DeliveryReceiptRule;
+use WWW::ClickSendClient::Object::DeliveryReceiptRule;
 ```
 
 ## Properties

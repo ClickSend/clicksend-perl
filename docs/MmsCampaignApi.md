@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::MmsCampaignApi
+# WWW::ClickSendClient::MmsCampaignApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::MmsCampaignApi;
+use WWW::ClickSendClient::Object::MmsCampaignApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -27,8 +27,8 @@ Get specific mms campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MmsCampaignApi;
-my $api_instance = WWW::SwaggerClient::MmsCampaignApi->new(
+use WWW::ClickSendClient::MmsCampaignApi;
+my $api_instance = WWW::ClickSendClient::MmsCampaignApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -77,8 +77,8 @@ Update mms campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MmsCampaignApi;
-my $api_instance = WWW::SwaggerClient::MmsCampaignApi->new(
+use WWW::ClickSendClient::MmsCampaignApi;
+my $api_instance = WWW::ClickSendClient::MmsCampaignApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -86,7 +86,7 @@ my $api_instance = WWW::SwaggerClient::MmsCampaignApi->new(
 );
 
 my $mms_campaign_id = 56; # int | ID of MMS campaign to update
-my $campaign = WWW::SwaggerClient::Object::MmsCampaign->new(); # MmsCampaign | MmsCampaign model
+my $campaign = WWW::ClickSendClient::Object::MmsCampaign->new(); # MmsCampaign | MmsCampaign model
 
 eval { 
     my $result = $api_instance->mms_campaigns_by_mms_campaign_id_put(mms_campaign_id => $mms_campaign_id, campaign => $campaign);
@@ -129,8 +129,8 @@ Cancel sms campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MmsCampaignApi;
-my $api_instance = WWW::SwaggerClient::MmsCampaignApi->new(
+use WWW::ClickSendClient::MmsCampaignApi;
+my $api_instance = WWW::ClickSendClient::MmsCampaignApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -179,8 +179,8 @@ Get list of mms campaigns
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MmsCampaignApi;
-my $api_instance = WWW::SwaggerClient::MmsCampaignApi->new(
+use WWW::ClickSendClient::MmsCampaignApi;
+my $api_instance = WWW::ClickSendClient::MmsCampaignApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -231,15 +231,15 @@ Calculate price for sms campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MmsCampaignApi;
-my $api_instance = WWW::SwaggerClient::MmsCampaignApi->new(
+use WWW::ClickSendClient::MmsCampaignApi;
+my $api_instance = WWW::ClickSendClient::MmsCampaignApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $campaign = WWW::SwaggerClient::Object::MmsCampaign->new(); # MmsCampaign | MmsCampaign model
+my $campaign = WWW::ClickSendClient::Object::MmsCampaign->new(); # MmsCampaign | MmsCampaign model
 
 eval { 
     my $result = $api_instance->mms_campaigns_price_post(campaign => $campaign);
@@ -281,15 +281,15 @@ Create mms campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MmsCampaignApi;
-my $api_instance = WWW::SwaggerClient::MmsCampaignApi->new(
+use WWW::ClickSendClient::MmsCampaignApi;
+my $api_instance = WWW::ClickSendClient::MmsCampaignApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $campaign = WWW::SwaggerClient::Object::MmsCampaign->new(); # MmsCampaign | MmsCampaign model
+my $campaign = WWW::ClickSendClient::Object::MmsCampaign->new(); # MmsCampaign | MmsCampaign model
 
 eval { 
     my $result = $api_instance->mms_campaigns_send_post(campaign => $campaign);

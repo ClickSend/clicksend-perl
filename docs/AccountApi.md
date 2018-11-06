@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::AccountApi
+# WWW::ClickSendClient::AccountApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::AccountApi;
+use WWW::ClickSendClient::Object::AccountApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -28,8 +28,8 @@ Get account details
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountApi;
-my $api_instance = WWW::SwaggerClient::AccountApi->new(
+use WWW::ClickSendClient::AccountApi;
+my $api_instance = WWW::ClickSendClient::AccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -74,15 +74,15 @@ Create An Account
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountApi;
-my $api_instance = WWW::SwaggerClient::AccountApi->new(
+use WWW::ClickSendClient::AccountApi;
+my $api_instance = WWW::ClickSendClient::AccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $account = WWW::SwaggerClient::Object::Account->new(); # Account | Account model
+my $account = WWW::ClickSendClient::Object::Account->new(); # Account | Account model
 
 eval { 
     my $result = $api_instance->account_post(account => $account);
@@ -124,15 +124,15 @@ Send account activation token
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountApi;
-my $api_instance = WWW::SwaggerClient::AccountApi->new(
+use WWW::ClickSendClient::AccountApi;
+my $api_instance = WWW::ClickSendClient::AccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $account_verify = WWW::SwaggerClient::Object::AccountVerify->new(); # AccountVerify | Account details
+my $account_verify = WWW::ClickSendClient::Object::AccountVerify->new(); # AccountVerify | Account details
 
 eval { 
     my $result = $api_instance->account_verify_send_put(account_verify => $account_verify);
@@ -174,8 +174,8 @@ Verify new account
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountApi;
-my $api_instance = WWW::SwaggerClient::AccountApi->new(
+use WWW::ClickSendClient::AccountApi;
+my $api_instance = WWW::ClickSendClient::AccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -224,15 +224,15 @@ Forgot password
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountApi;
-my $api_instance = WWW::SwaggerClient::AccountApi->new(
+use WWW::ClickSendClient::AccountApi;
+my $api_instance = WWW::ClickSendClient::AccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $username = WWW::SwaggerClient::Object::string->new(); # string | Username belonging to account
+my $username = WWW::ClickSendClient::Object::string->new(); # string | Username belonging to account
 
 eval { 
     my $result = $api_instance->forgot_password_put(username => $username);
@@ -274,15 +274,15 @@ Verify forgot password
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountApi;
-my $api_instance = WWW::SwaggerClient::AccountApi->new(
+use WWW::ClickSendClient::AccountApi;
+my $api_instance = WWW::ClickSendClient::AccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $verify_password = WWW::SwaggerClient::Object::AccountForgotPasswordVerify->new(); # AccountForgotPasswordVerify | verifyPassword data
+my $verify_password = WWW::ClickSendClient::Object::AccountForgotPasswordVerify->new(); # AccountForgotPasswordVerify | verifyPassword data
 
 eval { 
     my $result = $api_instance->forgot_password_verify_put(verify_password => $verify_password);
@@ -324,11 +324,11 @@ Forgot username
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountApi;
-my $api_instance = WWW::SwaggerClient::AccountApi->new(
+use WWW::ClickSendClient::AccountApi;
+my $api_instance = WWW::ClickSendClient::AccountApi->new(
 );
 
-my $email = WWW::SwaggerClient::Object::string->new(); # string | Email belonging to account
+my $email = WWW::ClickSendClient::Object::string->new(); # string | Email belonging to account
 
 eval { 
     my $result = $api_instance->forgot_username_put(email => $email);

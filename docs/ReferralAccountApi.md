@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::ReferralAccountApi
+# WWW::ClickSendClient::ReferralAccountApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::ReferralAccountApi;
+use WWW::ClickSendClient::Object::ReferralAccountApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -22,8 +22,8 @@ Get all referral accounts
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ReferralAccountApi;
-my $api_instance = WWW::SwaggerClient::ReferralAccountApi->new(
+use WWW::ClickSendClient::ReferralAccountApi;
+my $api_instance = WWW::ClickSendClient::ReferralAccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

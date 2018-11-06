@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::VoiceApi
+# WWW::ClickSendClient::VoiceApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::VoiceApi;
+use WWW::ClickSendClient::Object::VoiceApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -29,8 +29,8 @@ Update all voice messages as cancelled
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::VoiceApi;
-my $api_instance = WWW::SwaggerClient::VoiceApi->new(
+use WWW::ClickSendClient::VoiceApi;
+my $api_instance = WWW::ClickSendClient::VoiceApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -75,8 +75,8 @@ Update voice message status as cancelled
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::VoiceApi;
-my $api_instance = WWW::SwaggerClient::VoiceApi->new(
+use WWW::ClickSendClient::VoiceApi;
+my $api_instance = WWW::ClickSendClient::VoiceApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -125,8 +125,8 @@ Export voice history
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::VoiceApi;
-my $api_instance = WWW::SwaggerClient::VoiceApi->new(
+use WWW::ClickSendClient::VoiceApi;
+my $api_instance = WWW::ClickSendClient::VoiceApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -175,8 +175,8 @@ Get all voice history
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::VoiceApi;
-my $api_instance = WWW::SwaggerClient::VoiceApi->new(
+use WWW::ClickSendClient::VoiceApi;
+my $api_instance = WWW::ClickSendClient::VoiceApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -231,8 +231,8 @@ Get all voice languages
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::VoiceApi;
-my $api_instance = WWW::SwaggerClient::VoiceApi->new(
+use WWW::ClickSendClient::VoiceApi;
+my $api_instance = WWW::ClickSendClient::VoiceApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -277,15 +277,15 @@ Calculate voice price
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::VoiceApi;
-my $api_instance = WWW::SwaggerClient::VoiceApi->new(
+use WWW::ClickSendClient::VoiceApi;
+my $api_instance = WWW::ClickSendClient::VoiceApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $voice_messages = WWW::SwaggerClient::Object::VoiceMessageCollection->new(); # VoiceMessageCollection | VoiceMessageCollection model
+my $voice_messages = WWW::ClickSendClient::Object::VoiceMessageCollection->new(); # VoiceMessageCollection | VoiceMessageCollection model
 
 eval { 
     my $result = $api_instance->voice_price_post(voice_messages => $voice_messages);
@@ -327,8 +327,8 @@ Get all voice receipts
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::VoiceApi;
-my $api_instance = WWW::SwaggerClient::VoiceApi->new(
+use WWW::ClickSendClient::VoiceApi;
+my $api_instance = WWW::ClickSendClient::VoiceApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -379,15 +379,15 @@ Send a voice call
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::VoiceApi;
-my $api_instance = WWW::SwaggerClient::VoiceApi->new(
+use WWW::ClickSendClient::VoiceApi;
+my $api_instance = WWW::ClickSendClient::VoiceApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $voice_messages = WWW::SwaggerClient::Object::VoiceMessageCollection->new(); # VoiceMessageCollection | VoiceMessageCollection model
+my $voice_messages = WWW::ClickSendClient::Object::VoiceMessageCollection->new(); # VoiceMessageCollection | VoiceMessageCollection model
 
 eval { 
     my $result = $api_instance->voice_send_post(voice_messages => $voice_messages);

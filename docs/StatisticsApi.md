@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::StatisticsApi
+# WWW::ClickSendClient::StatisticsApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::StatisticsApi;
+use WWW::ClickSendClient::Object::StatisticsApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -24,8 +24,8 @@ Get mms statistics
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::StatisticsApi;
-my $api_instance = WWW::SwaggerClient::StatisticsApi->new(
+use WWW::ClickSendClient::StatisticsApi;
+my $api_instance = WWW::ClickSendClient::StatisticsApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -70,8 +70,8 @@ Get sms statistics
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::StatisticsApi;
-my $api_instance = WWW::SwaggerClient::StatisticsApi->new(
+use WWW::ClickSendClient::StatisticsApi;
+my $api_instance = WWW::ClickSendClient::StatisticsApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -116,8 +116,8 @@ Get voice statistics
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::StatisticsApi;
-my $api_instance = WWW::SwaggerClient::StatisticsApi->new(
+use WWW::ClickSendClient::StatisticsApi;
+my $api_instance = WWW::ClickSendClient::StatisticsApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

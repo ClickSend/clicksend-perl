@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::CountriesApi
+# WWW::ClickSendClient::CountriesApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::CountriesApi;
+use WWW::ClickSendClient::Object::CountriesApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -22,8 +22,8 @@ Get all countries
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::CountriesApi;
-my $api_instance = WWW::SwaggerClient::CountriesApi->new(
+use WWW::ClickSendClient::CountriesApi;
+my $api_instance = WWW::ClickSendClient::CountriesApi->new(
 );
 
 

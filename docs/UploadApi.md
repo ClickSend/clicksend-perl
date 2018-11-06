@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::UploadApi
+# WWW::ClickSendClient::UploadApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::UploadApi;
+use WWW::ClickSendClient::Object::UploadApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -22,15 +22,15 @@ Upload File
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::UploadApi;
-my $api_instance = WWW::SwaggerClient::UploadApi->new(
+use WWW::ClickSendClient::UploadApi;
+my $api_instance = WWW::ClickSendClient::UploadApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $content = WWW::SwaggerClient::Object::string->new(); # string | Base64-encoded file contents
+my $content = WWW::ClickSendClient::Object::string->new(); # string | Base64-encoded file contents
 my $convert = 'convert_example'; # string | 
 
 eval { 

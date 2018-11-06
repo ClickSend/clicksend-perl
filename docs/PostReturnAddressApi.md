@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::PostReturnAddressApi
+# WWW::ClickSendClient::PostReturnAddressApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::PostReturnAddressApi;
+use WWW::ClickSendClient::Object::PostReturnAddressApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -26,8 +26,8 @@ Delete specific post return address
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostReturnAddressApi;
-my $api_instance = WWW::SwaggerClient::PostReturnAddressApi->new(
+use WWW::ClickSendClient::PostReturnAddressApi;
+my $api_instance = WWW::ClickSendClient::PostReturnAddressApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -76,8 +76,8 @@ Get specific post return address
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostReturnAddressApi;
-my $api_instance = WWW::SwaggerClient::PostReturnAddressApi->new(
+use WWW::ClickSendClient::PostReturnAddressApi;
+my $api_instance = WWW::ClickSendClient::PostReturnAddressApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -126,8 +126,8 @@ Update post return address
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostReturnAddressApi;
-my $api_instance = WWW::SwaggerClient::PostReturnAddressApi->new(
+use WWW::ClickSendClient::PostReturnAddressApi;
+my $api_instance = WWW::ClickSendClient::PostReturnAddressApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -135,7 +135,7 @@ my $api_instance = WWW::SwaggerClient::PostReturnAddressApi->new(
 );
 
 my $return_address_id = 56; # int | Return address ID
-my $return_address = WWW::SwaggerClient::Object::Address->new(); # Address | Address model
+my $return_address = WWW::ClickSendClient::Object::Address->new(); # Address | Address model
 
 eval { 
     my $result = $api_instance->post_return_addresses_by_return_address_id_put(return_address_id => $return_address_id, return_address => $return_address);
@@ -178,8 +178,8 @@ Get list of post return addresses
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostReturnAddressApi;
-my $api_instance = WWW::SwaggerClient::PostReturnAddressApi->new(
+use WWW::ClickSendClient::PostReturnAddressApi;
+my $api_instance = WWW::ClickSendClient::PostReturnAddressApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -230,15 +230,15 @@ Create post return address
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostReturnAddressApi;
-my $api_instance = WWW::SwaggerClient::PostReturnAddressApi->new(
+use WWW::ClickSendClient::PostReturnAddressApi;
+my $api_instance = WWW::ClickSendClient::PostReturnAddressApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $return_address = WWW::SwaggerClient::Object::Address->new(); # Address | Address model
+my $return_address = WWW::ClickSendClient::Object::Address->new(); # Address | Address model
 
 eval { 
     my $result = $api_instance->post_return_addresses_post(return_address => $return_address);

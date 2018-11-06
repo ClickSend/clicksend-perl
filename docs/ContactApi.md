@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::ContactApi
+# WWW::ClickSendClient::ContactApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::ContactApi;
+use WWW::ClickSendClient::Object::ContactApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -28,8 +28,8 @@ Delete a contact
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactApi;
-my $api_instance = WWW::SwaggerClient::ContactApi->new(
+use WWW::ClickSendClient::ContactApi;
+my $api_instance = WWW::ClickSendClient::ContactApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -80,8 +80,8 @@ Get a specific contact
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactApi;
-my $api_instance = WWW::SwaggerClient::ContactApi->new(
+use WWW::ClickSendClient::ContactApi;
+my $api_instance = WWW::ClickSendClient::ContactApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -132,8 +132,8 @@ Update specific contact
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactApi;
-my $api_instance = WWW::SwaggerClient::ContactApi->new(
+use WWW::ClickSendClient::ContactApi;
+my $api_instance = WWW::ClickSendClient::ContactApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -142,7 +142,7 @@ my $api_instance = WWW::SwaggerClient::ContactApi->new(
 
 my $list_id = 56; # int | Contact list id
 my $contact_id = 56; # int | Contact ID
-my $contact = WWW::SwaggerClient::Object::Contact->new(); # Contact | Contact model
+my $contact = WWW::ClickSendClient::Object::Contact->new(); # Contact | Contact model
 
 eval { 
     my $result = $api_instance->lists_contacts_by_list_id_and_contact_id_put(list_id => $list_id, contact_id => $contact_id, contact => $contact);
@@ -186,8 +186,8 @@ Get all contacts in a list
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactApi;
-my $api_instance = WWW::SwaggerClient::ContactApi->new(
+use WWW::ClickSendClient::ContactApi;
+my $api_instance = WWW::ClickSendClient::ContactApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -240,15 +240,15 @@ Create new contact
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactApi;
-my $api_instance = WWW::SwaggerClient::ContactApi->new(
+use WWW::ClickSendClient::ContactApi;
+my $api_instance = WWW::ClickSendClient::ContactApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $contact = WWW::SwaggerClient::Object::Contact->new(); # Contact | Contact model
+my $contact = WWW::ClickSendClient::Object::Contact->new(); # Contact | Contact model
 my $list_id = 56; # int | List id
 my $page = 56; # int | Page number
 my $limit = 56; # int | Number of records per page
@@ -296,8 +296,8 @@ Remove all opted out contacts
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactApi;
-my $api_instance = WWW::SwaggerClient::ContactApi->new(
+use WWW::ClickSendClient::ContactApi;
+my $api_instance = WWW::ClickSendClient::ContactApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -348,8 +348,8 @@ Transfer contact to another list
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactApi;
-my $api_instance = WWW::SwaggerClient::ContactApi->new(
+use WWW::ClickSendClient::ContactApi;
+my $api_instance = WWW::ClickSendClient::ContactApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::EmailMarketingApi
+# WWW::ClickSendClient::EmailMarketingApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::EmailMarketingApi;
+use WWW::ClickSendClient::Object::EmailMarketingApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -35,8 +35,8 @@ Get all email addresses
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -87,15 +87,15 @@ Create allowed Email Address
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $email_address = WWW::SwaggerClient::Object::string->new(); # string | Email to be allowed.
+my $email_address = WWW::ClickSendClient::Object::string->new(); # string | Email to be allowed.
 
 eval { 
     my $result = $api_instance->allowed_email_address_post(email_address => $email_address);
@@ -137,8 +137,8 @@ Cancel email campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -187,8 +187,8 @@ Get specific email campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -237,8 +237,8 @@ Export specific email campaign history
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -291,8 +291,8 @@ Get specific email campaign history
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -349,15 +349,15 @@ Send email campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $email_campaign = WWW::SwaggerClient::Object::EmailCampaign->new(); # EmailCampaign | Email model
+my $email_campaign = WWW::ClickSendClient::Object::EmailCampaign->new(); # EmailCampaign | Email model
 
 eval { 
     my $result = $api_instance->email_campaign_post(email_campaign => $email_campaign);
@@ -399,15 +399,15 @@ Calculate email campaign price
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $email_campaign = WWW::SwaggerClient::Object::EmailCampaign->new(); # EmailCampaign | Email model
+my $email_campaign = WWW::ClickSendClient::Object::EmailCampaign->new(); # EmailCampaign | Email model
 
 eval { 
     my $result = $api_instance->email_campaign_price_post(email_campaign => $email_campaign);
@@ -449,8 +449,8 @@ Edit email campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -499,8 +499,8 @@ Get all email campaigns
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -551,8 +551,8 @@ Send verification token
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -601,8 +601,8 @@ Delete specific email address
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -651,8 +651,8 @@ Get specific email address
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -701,8 +701,8 @@ Verify email address using verification token
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailMarketingApi;
-my $api_instance = WWW::SwaggerClient::EmailMarketingApi->new(
+use WWW::ClickSendClient::EmailMarketingApi;
+my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

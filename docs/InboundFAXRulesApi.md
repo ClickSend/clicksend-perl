@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::InboundFAXRulesApi
+# WWW::ClickSendClient::InboundFAXRulesApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::InboundFAXRulesApi;
+use WWW::ClickSendClient::Object::InboundFAXRulesApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -26,8 +26,8 @@ Delete inbound fax automation
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::InboundFAXRulesApi;
-my $api_instance = WWW::SwaggerClient::InboundFAXRulesApi->new(
+use WWW::ClickSendClient::InboundFAXRulesApi;
+my $api_instance = WWW::ClickSendClient::InboundFAXRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -76,8 +76,8 @@ Get specific inbound fax automation
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::InboundFAXRulesApi;
-my $api_instance = WWW::SwaggerClient::InboundFAXRulesApi->new(
+use WWW::ClickSendClient::InboundFAXRulesApi;
+my $api_instance = WWW::ClickSendClient::InboundFAXRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -126,15 +126,15 @@ Create new inbound fax automation
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::InboundFAXRulesApi;
-my $api_instance = WWW::SwaggerClient::InboundFAXRulesApi->new(
+use WWW::ClickSendClient::InboundFAXRulesApi;
+my $api_instance = WWW::ClickSendClient::InboundFAXRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $inbound_fax_rule = WWW::SwaggerClient::Object::InboundFAXRule->new(); # InboundFAXRule | Inbound fax rule model
+my $inbound_fax_rule = WWW::ClickSendClient::Object::InboundFAXRule->new(); # InboundFAXRule | Inbound fax rule model
 
 eval { 
     my $result = $api_instance->fax_inbound_automation_post(inbound_fax_rule => $inbound_fax_rule);
@@ -176,8 +176,8 @@ Update inbound fax automation
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::InboundFAXRulesApi;
-my $api_instance = WWW::SwaggerClient::InboundFAXRulesApi->new(
+use WWW::ClickSendClient::InboundFAXRulesApi;
+my $api_instance = WWW::ClickSendClient::InboundFAXRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -185,7 +185,7 @@ my $api_instance = WWW::SwaggerClient::InboundFAXRulesApi->new(
 );
 
 my $inbound_rule_id = 56; # int | Inbound rule id
-my $inbound_fax_rule = WWW::SwaggerClient::Object::InboundFAXRule->new(); # InboundFAXRule | Inbound fax rule model
+my $inbound_fax_rule = WWW::ClickSendClient::Object::InboundFAXRule->new(); # InboundFAXRule | Inbound fax rule model
 
 eval { 
     my $result = $api_instance->fax_inbound_automation_put(inbound_rule_id => $inbound_rule_id, inbound_fax_rule => $inbound_fax_rule);
@@ -228,8 +228,8 @@ Get all inbound fax automations
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::InboundFAXRulesApi;
-my $api_instance = WWW::SwaggerClient::InboundFAXRulesApi->new(
+use WWW::ClickSendClient::InboundFAXRulesApi;
+my $api_instance = WWW::ClickSendClient::InboundFAXRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

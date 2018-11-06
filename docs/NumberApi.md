@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::NumberApi
+# WWW::ClickSendClient::NumberApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::NumberApi;
+use WWW::ClickSendClient::Object::NumberApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -24,8 +24,8 @@ Buy dedicated number
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::NumberApi;
-my $api_instance = WWW::SwaggerClient::NumberApi->new(
+use WWW::ClickSendClient::NumberApi;
+my $api_instance = WWW::ClickSendClient::NumberApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -74,8 +74,8 @@ Get all availible dedicated numbers
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::NumberApi;
-my $api_instance = WWW::SwaggerClient::NumberApi->new(
+use WWW::ClickSendClient::NumberApi;
+my $api_instance = WWW::ClickSendClient::NumberApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -126,8 +126,8 @@ Get all dedicated numbers by country
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::NumberApi;
-my $api_instance = WWW::SwaggerClient::NumberApi->new(
+use WWW::ClickSendClient::NumberApi;
+my $api_instance = WWW::ClickSendClient::NumberApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::Contact
+# WWW::ClickSendClient::Object::Contact
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::Contact;
+use WWW::ClickSendClient::Object::Contact;
 ```
 
 ## Properties

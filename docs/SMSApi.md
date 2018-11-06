@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::SMSApi
+# WWW::ClickSendClient::SMSApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::SMSApi;
+use WWW::ClickSendClient::Object::SMSApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -38,8 +38,8 @@ Update all scheduled message as cancelled
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -84,8 +84,8 @@ Update scheduled message as cancelled
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -134,8 +134,8 @@ Export all sms history
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -184,8 +184,8 @@ Get all sms history
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -240,8 +240,8 @@ Get all inbound sms
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -292,15 +292,15 @@ Create inbound sms
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $url = WWW::SwaggerClient::Object::string->new(); # string | Your url
+my $url = WWW::ClickSendClient::Object::string->new(); # string | Your url
 
 eval { 
     my $result = $api_instance->sms_inbound_post(url => $url);
@@ -342,15 +342,15 @@ Mark all inbound SMS as read optionally before a certain date
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $date_before = WWW::SwaggerClient::Object::string->new(); # string | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+my $date_before = WWW::ClickSendClient::Object::string->new(); # string | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
 
 eval { 
     my $result = $api_instance->sms_inbound_read_put(date_before => $date_before);
@@ -392,15 +392,15 @@ Calculate sms price
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $sms_messages = WWW::SwaggerClient::Object::SmsMessageCollection->new(); # SmsMessageCollection | SmsMessageCollection model
+my $sms_messages = WWW::ClickSendClient::Object::SmsMessageCollection->new(); # SmsMessageCollection | SmsMessageCollection model
 
 eval { 
     my $result = $api_instance->sms_price_post(sms_messages => $sms_messages);
@@ -442,8 +442,8 @@ Get a Specific Delivery Receipt
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -492,8 +492,8 @@ Get all delivery receipts
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -544,15 +544,15 @@ Add a delivery receipt
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $url = WWW::SwaggerClient::Object::string->new(); # string | Your url
+my $url = WWW::ClickSendClient::Object::string->new(); # string | Your url
 
 eval { 
     my $result = $api_instance->sms_receipts_post(url => $url);
@@ -594,15 +594,15 @@ Mark delivery receipts as read
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $date_before = WWW::SwaggerClient::Object::string->new(); # string | Mark all as read before this timestamp
+my $date_before = WWW::ClickSendClient::Object::string->new(); # string | Mark all as read before this timestamp
 
 eval { 
     my $result = $api_instance->sms_receipts_read_put(date_before => $date_before);
@@ -644,15 +644,15 @@ Send sms message(s)
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $sms_messages = WWW::SwaggerClient::Object::SmsMessageCollection->new(); # SmsMessageCollection | SmsMessageCollection model
+my $sms_messages = WWW::ClickSendClient::Object::SmsMessageCollection->new(); # SmsMessageCollection | SmsMessageCollection model
 
 eval { 
     my $result = $api_instance->sms_send_post(sms_messages => $sms_messages);
@@ -694,8 +694,8 @@ Delete sms template
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -744,8 +744,8 @@ Update sms template
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -753,7 +753,7 @@ my $api_instance = WWW::SwaggerClient::SMSApi->new(
 );
 
 my $template_id = 56; # int | Template id
-my $sms_template = WWW::SwaggerClient::Object::SmsTemplate->new(); # SmsTemplate | Template item
+my $sms_template = WWW::ClickSendClient::Object::SmsTemplate->new(); # SmsTemplate | Template item
 
 eval { 
     my $result = $api_instance->sms_templates_by_template_id_put(template_id => $template_id, sms_template => $sms_template);
@@ -796,8 +796,8 @@ Get lists of all sms templates
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -848,15 +848,15 @@ Create sms template
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SMSApi;
-my $api_instance = WWW::SwaggerClient::SMSApi->new(
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $sms_template = WWW::SwaggerClient::Object::SmsTemplate->new(); # SmsTemplate | SmsTemplate model
+my $sms_template = WWW::ClickSendClient::Object::SmsTemplate->new(); # SmsTemplate | SmsTemplate model
 
 eval { 
     my $result = $api_instance->sms_templates_post(sms_template => $sms_template);

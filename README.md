@@ -5,11 +5,11 @@
 ## A note on Moose
 
 This role is the only component of the library that uses Moose. See
-WWW::SwaggerClient::ApiFactory for non-Moosey usage.
+WWW::ClickSendClient::ApiFactory for non-Moosey usage.
 
 # SYNOPSIS
 
-The Perl Swagger Codegen project builds a library of Perl modules to interact with
+The Perl ClickSend Codegen project builds a library of Perl modules to interact with
 a web service defined by a OpenAPI Specification. See below for how to build the
 library.
 
@@ -19,7 +19,7 @@ role.
 
         package MyApp;
         use Moose;
-        with 'WWW::SwaggerClient::Role';
+        with 'WWW::ClickSendClient::Role';
 
         package main;
 
@@ -78,7 +78,7 @@ you are accessing. Usually `prefix` and `in` will be determined by the code gene
 the spec and you will not need to set them at run time. If not, `in` will
 default to 'head' and `prefix` to the empty string.
 
-The tokens will be placed in a L<WWW::SwaggerClient::Configuration> instance
+The tokens will be placed in a L<WWW::ClickSendClient::Configuration> instance
 as follows, but you don't need to know about this.
 
 - `$cfg->{username}`
@@ -123,7 +123,7 @@ returns the current value of `base_url`.
 
 Returns an API factory object. You probably won't need to call this directly.
 
-        $self->api_factory('Pet'); # returns a WWW::SwaggerClient::PetApi instance
+        $self->api_factory('Pet'); # returns a WWW::ClickSendClient::PetApi instance
 
         $self->pet_api;            # the same
 
@@ -194,7 +194,7 @@ namespace is used if you don't supply your own class.
 
 # DOCUMENTATION FROM THE OpenAPI Spec
 
-Additional documentation for each class and method may be provided by the Swagger
+Additional documentation for each class and method may be provided by the ClickSend
 spec. If so, this is available via the `class_documentation()` and
 `method_documentation()` methods on each generated object class, and the
 `method_documentation()` method on the endpoint API classes:
@@ -211,86 +211,86 @@ Each of these calls returns a hashref with various useful pieces of information.
 
 To load the API packages:
 ```perl
-use WWW::SwaggerClient::AccountApi;
-use WWW::SwaggerClient::AccountRechargeApi;
-use WWW::SwaggerClient::ContactApi;
-use WWW::SwaggerClient::ContactListApi;
-use WWW::SwaggerClient::CountriesApi;
-use WWW::SwaggerClient::DeliveryIssuesApi;
-use WWW::SwaggerClient::DetectAddressApi;
-use WWW::SwaggerClient::EmailDeliveryReceiptRulesApi;
-use WWW::SwaggerClient::EmailMarketingApi;
-use WWW::SwaggerClient::EmailToSmsApi;
-use WWW::SwaggerClient::FAXDeliveryReceiptRulesApi;
-use WWW::SwaggerClient::FaxApi;
-use WWW::SwaggerClient::InboundFAXRulesApi;
-use WWW::SwaggerClient::InboundSMSRulesApi;
-use WWW::SwaggerClient::MMSApi;
-use WWW::SwaggerClient::MasterEmailTemplatesApi;
-use WWW::SwaggerClient::MmsCampaignApi;
-use WWW::SwaggerClient::NumberApi;
-use WWW::SwaggerClient::PostDirectMailApi;
-use WWW::SwaggerClient::PostLetterApi;
-use WWW::SwaggerClient::PostPostcardApi;
-use WWW::SwaggerClient::PostReturnAddressApi;
-use WWW::SwaggerClient::ReferralAccountApi;
-use WWW::SwaggerClient::ResellerAccountApi;
-use WWW::SwaggerClient::SMSApi;
-use WWW::SwaggerClient::SMSDeliveryReceiptRulesApi;
-use WWW::SwaggerClient::SearchApi;
-use WWW::SwaggerClient::SmsCampaignApi;
-use WWW::SwaggerClient::StatisticsApi;
-use WWW::SwaggerClient::SubaccountApi;
-use WWW::SwaggerClient::TimezonesApi;
-use WWW::SwaggerClient::TransactionalEmailApi;
-use WWW::SwaggerClient::TransferCreditApi;
-use WWW::SwaggerClient::UploadApi;
-use WWW::SwaggerClient::UserEmailTemplatesApi;
-use WWW::SwaggerClient::VoiceApi;
-use WWW::SwaggerClient::VoiceDeliveryReceiptRulesApi;
+use WWW::ClickSendClient::AccountApi;
+use WWW::ClickSendClient::AccountRechargeApi;
+use WWW::ClickSendClient::ContactApi;
+use WWW::ClickSendClient::ContactListApi;
+use WWW::ClickSendClient::CountriesApi;
+use WWW::ClickSendClient::DeliveryIssuesApi;
+use WWW::ClickSendClient::DetectAddressApi;
+use WWW::ClickSendClient::EmailDeliveryReceiptRulesApi;
+use WWW::ClickSendClient::EmailMarketingApi;
+use WWW::ClickSendClient::EmailToSmsApi;
+use WWW::ClickSendClient::FAXDeliveryReceiptRulesApi;
+use WWW::ClickSendClient::FaxApi;
+use WWW::ClickSendClient::InboundFAXRulesApi;
+use WWW::ClickSendClient::InboundSMSRulesApi;
+use WWW::ClickSendClient::MMSApi;
+use WWW::ClickSendClient::MasterEmailTemplatesApi;
+use WWW::ClickSendClient::MmsCampaignApi;
+use WWW::ClickSendClient::NumberApi;
+use WWW::ClickSendClient::PostDirectMailApi;
+use WWW::ClickSendClient::PostLetterApi;
+use WWW::ClickSendClient::PostPostcardApi;
+use WWW::ClickSendClient::PostReturnAddressApi;
+use WWW::ClickSendClient::ReferralAccountApi;
+use WWW::ClickSendClient::ResellerAccountApi;
+use WWW::ClickSendClient::SMSApi;
+use WWW::ClickSendClient::SMSDeliveryReceiptRulesApi;
+use WWW::ClickSendClient::SearchApi;
+use WWW::ClickSendClient::SmsCampaignApi;
+use WWW::ClickSendClient::StatisticsApi;
+use WWW::ClickSendClient::SubaccountApi;
+use WWW::ClickSendClient::TimezonesApi;
+use WWW::ClickSendClient::TransactionalEmailApi;
+use WWW::ClickSendClient::TransferCreditApi;
+use WWW::ClickSendClient::UploadApi;
+use WWW::ClickSendClient::UserEmailTemplatesApi;
+use WWW::ClickSendClient::VoiceApi;
+use WWW::ClickSendClient::VoiceDeliveryReceiptRulesApi;
 
 ```
 
 To load the models:
 ```perl
-use WWW::SwaggerClient::Object::Account;
-use WWW::SwaggerClient::Object::AccountForgotPasswordVerify;
-use WWW::SwaggerClient::Object::AccountVerify;
-use WWW::SwaggerClient::Object::Address;
-use WWW::SwaggerClient::Object::Attachment;
-use WWW::SwaggerClient::Object::Contact;
-use WWW::SwaggerClient::Object::ContactListImport;
-use WWW::SwaggerClient::Object::CreditCard;
-use WWW::SwaggerClient::Object::DeliveryIssue;
-use WWW::SwaggerClient::Object::DeliveryReceiptRule;
-use WWW::SwaggerClient::Object::Email;
-use WWW::SwaggerClient::Object::EmailCampaign;
-use WWW::SwaggerClient::Object::EmailFrom;
-use WWW::SwaggerClient::Object::EmailRecipient;
-use WWW::SwaggerClient::Object::EmailSMSAddress;
-use WWW::SwaggerClient::Object::EmailTemplateNew;
-use WWW::SwaggerClient::Object::EmailTemplateUpdate;
-use WWW::SwaggerClient::Object::FaxMessage;
-use WWW::SwaggerClient::Object::FaxMessageCollection;
-use WWW::SwaggerClient::Object::InboundFAXRule;
-use WWW::SwaggerClient::Object::InboundSMSRule;
-use WWW::SwaggerClient::Object::MmsCampaign;
-use WWW::SwaggerClient::Object::MmsMessage;
-use WWW::SwaggerClient::Object::MmsMessageCollection;
-use WWW::SwaggerClient::Object::PostDirectMail;
-use WWW::SwaggerClient::Object::PostDirectMailArea;
-use WWW::SwaggerClient::Object::PostLetter;
-use WWW::SwaggerClient::Object::PostPostcard;
-use WWW::SwaggerClient::Object::PostRecipient;
-use WWW::SwaggerClient::Object::ResellerAccount;
-use WWW::SwaggerClient::Object::ResellerAccountTransferCredit;
-use WWW::SwaggerClient::Object::SmsCampaign;
-use WWW::SwaggerClient::Object::SmsMessage;
-use WWW::SwaggerClient::Object::SmsMessageCollection;
-use WWW::SwaggerClient::Object::SmsTemplate;
-use WWW::SwaggerClient::Object::Subaccount;
-use WWW::SwaggerClient::Object::VoiceMessage;
-use WWW::SwaggerClient::Object::VoiceMessageCollection;
+use WWW::ClickSendClient::Object::Account;
+use WWW::ClickSendClient::Object::AccountForgotPasswordVerify;
+use WWW::ClickSendClient::Object::AccountVerify;
+use WWW::ClickSendClient::Object::Address;
+use WWW::ClickSendClient::Object::Attachment;
+use WWW::ClickSendClient::Object::Contact;
+use WWW::ClickSendClient::Object::ContactListImport;
+use WWW::ClickSendClient::Object::CreditCard;
+use WWW::ClickSendClient::Object::DeliveryIssue;
+use WWW::ClickSendClient::Object::DeliveryReceiptRule;
+use WWW::ClickSendClient::Object::Email;
+use WWW::ClickSendClient::Object::EmailCampaign;
+use WWW::ClickSendClient::Object::EmailFrom;
+use WWW::ClickSendClient::Object::EmailRecipient;
+use WWW::ClickSendClient::Object::EmailSMSAddress;
+use WWW::ClickSendClient::Object::EmailTemplateNew;
+use WWW::ClickSendClient::Object::EmailTemplateUpdate;
+use WWW::ClickSendClient::Object::FaxMessage;
+use WWW::ClickSendClient::Object::FaxMessageCollection;
+use WWW::ClickSendClient::Object::InboundFAXRule;
+use WWW::ClickSendClient::Object::InboundSMSRule;
+use WWW::ClickSendClient::Object::MmsCampaign;
+use WWW::ClickSendClient::Object::MmsMessage;
+use WWW::ClickSendClient::Object::MmsMessageCollection;
+use WWW::ClickSendClient::Object::PostDirectMail;
+use WWW::ClickSendClient::Object::PostDirectMailArea;
+use WWW::ClickSendClient::Object::PostLetter;
+use WWW::ClickSendClient::Object::PostPostcard;
+use WWW::ClickSendClient::Object::PostRecipient;
+use WWW::ClickSendClient::Object::ResellerAccount;
+use WWW::ClickSendClient::Object::ResellerAccountTransferCredit;
+use WWW::ClickSendClient::Object::SmsCampaign;
+use WWW::ClickSendClient::Object::SmsMessage;
+use WWW::ClickSendClient::Object::SmsMessageCollection;
+use WWW::ClickSendClient::Object::SmsTemplate;
+use WWW::ClickSendClient::Object::Subaccount;
+use WWW::ClickSendClient::Object::VoiceMessage;
+use WWW::ClickSendClient::Object::VoiceMessageCollection;
 
 ````
 
@@ -302,89 +302,89 @@ use lib 'lib';
 use strict;
 use warnings;
 # load the API package
-use WWW::SwaggerClient::AccountApi;
-use WWW::SwaggerClient::AccountRechargeApi;
-use WWW::SwaggerClient::ContactApi;
-use WWW::SwaggerClient::ContactListApi;
-use WWW::SwaggerClient::CountriesApi;
-use WWW::SwaggerClient::DeliveryIssuesApi;
-use WWW::SwaggerClient::DetectAddressApi;
-use WWW::SwaggerClient::EmailDeliveryReceiptRulesApi;
-use WWW::SwaggerClient::EmailMarketingApi;
-use WWW::SwaggerClient::EmailToSmsApi;
-use WWW::SwaggerClient::FAXDeliveryReceiptRulesApi;
-use WWW::SwaggerClient::FaxApi;
-use WWW::SwaggerClient::InboundFAXRulesApi;
-use WWW::SwaggerClient::InboundSMSRulesApi;
-use WWW::SwaggerClient::MMSApi;
-use WWW::SwaggerClient::MasterEmailTemplatesApi;
-use WWW::SwaggerClient::MmsCampaignApi;
-use WWW::SwaggerClient::NumberApi;
-use WWW::SwaggerClient::PostDirectMailApi;
-use WWW::SwaggerClient::PostLetterApi;
-use WWW::SwaggerClient::PostPostcardApi;
-use WWW::SwaggerClient::PostReturnAddressApi;
-use WWW::SwaggerClient::ReferralAccountApi;
-use WWW::SwaggerClient::ResellerAccountApi;
-use WWW::SwaggerClient::SMSApi;
-use WWW::SwaggerClient::SMSDeliveryReceiptRulesApi;
-use WWW::SwaggerClient::SearchApi;
-use WWW::SwaggerClient::SmsCampaignApi;
-use WWW::SwaggerClient::StatisticsApi;
-use WWW::SwaggerClient::SubaccountApi;
-use WWW::SwaggerClient::TimezonesApi;
-use WWW::SwaggerClient::TransactionalEmailApi;
-use WWW::SwaggerClient::TransferCreditApi;
-use WWW::SwaggerClient::UploadApi;
-use WWW::SwaggerClient::UserEmailTemplatesApi;
-use WWW::SwaggerClient::VoiceApi;
-use WWW::SwaggerClient::VoiceDeliveryReceiptRulesApi;
+use WWW::ClickSendClient::AccountApi;
+use WWW::ClickSendClient::AccountRechargeApi;
+use WWW::ClickSendClient::ContactApi;
+use WWW::ClickSendClient::ContactListApi;
+use WWW::ClickSendClient::CountriesApi;
+use WWW::ClickSendClient::DeliveryIssuesApi;
+use WWW::ClickSendClient::DetectAddressApi;
+use WWW::ClickSendClient::EmailDeliveryReceiptRulesApi;
+use WWW::ClickSendClient::EmailMarketingApi;
+use WWW::ClickSendClient::EmailToSmsApi;
+use WWW::ClickSendClient::FAXDeliveryReceiptRulesApi;
+use WWW::ClickSendClient::FaxApi;
+use WWW::ClickSendClient::InboundFAXRulesApi;
+use WWW::ClickSendClient::InboundSMSRulesApi;
+use WWW::ClickSendClient::MMSApi;
+use WWW::ClickSendClient::MasterEmailTemplatesApi;
+use WWW::ClickSendClient::MmsCampaignApi;
+use WWW::ClickSendClient::NumberApi;
+use WWW::ClickSendClient::PostDirectMailApi;
+use WWW::ClickSendClient::PostLetterApi;
+use WWW::ClickSendClient::PostPostcardApi;
+use WWW::ClickSendClient::PostReturnAddressApi;
+use WWW::ClickSendClient::ReferralAccountApi;
+use WWW::ClickSendClient::ResellerAccountApi;
+use WWW::ClickSendClient::SMSApi;
+use WWW::ClickSendClient::SMSDeliveryReceiptRulesApi;
+use WWW::ClickSendClient::SearchApi;
+use WWW::ClickSendClient::SmsCampaignApi;
+use WWW::ClickSendClient::StatisticsApi;
+use WWW::ClickSendClient::SubaccountApi;
+use WWW::ClickSendClient::TimezonesApi;
+use WWW::ClickSendClient::TransactionalEmailApi;
+use WWW::ClickSendClient::TransferCreditApi;
+use WWW::ClickSendClient::UploadApi;
+use WWW::ClickSendClient::UserEmailTemplatesApi;
+use WWW::ClickSendClient::VoiceApi;
+use WWW::ClickSendClient::VoiceDeliveryReceiptRulesApi;
 
 # load the models
-use WWW::SwaggerClient::Object::Account;
-use WWW::SwaggerClient::Object::AccountForgotPasswordVerify;
-use WWW::SwaggerClient::Object::AccountVerify;
-use WWW::SwaggerClient::Object::Address;
-use WWW::SwaggerClient::Object::Attachment;
-use WWW::SwaggerClient::Object::Contact;
-use WWW::SwaggerClient::Object::ContactListImport;
-use WWW::SwaggerClient::Object::CreditCard;
-use WWW::SwaggerClient::Object::DeliveryIssue;
-use WWW::SwaggerClient::Object::DeliveryReceiptRule;
-use WWW::SwaggerClient::Object::Email;
-use WWW::SwaggerClient::Object::EmailCampaign;
-use WWW::SwaggerClient::Object::EmailFrom;
-use WWW::SwaggerClient::Object::EmailRecipient;
-use WWW::SwaggerClient::Object::EmailSMSAddress;
-use WWW::SwaggerClient::Object::EmailTemplateNew;
-use WWW::SwaggerClient::Object::EmailTemplateUpdate;
-use WWW::SwaggerClient::Object::FaxMessage;
-use WWW::SwaggerClient::Object::FaxMessageCollection;
-use WWW::SwaggerClient::Object::InboundFAXRule;
-use WWW::SwaggerClient::Object::InboundSMSRule;
-use WWW::SwaggerClient::Object::MmsCampaign;
-use WWW::SwaggerClient::Object::MmsMessage;
-use WWW::SwaggerClient::Object::MmsMessageCollection;
-use WWW::SwaggerClient::Object::PostDirectMail;
-use WWW::SwaggerClient::Object::PostDirectMailArea;
-use WWW::SwaggerClient::Object::PostLetter;
-use WWW::SwaggerClient::Object::PostPostcard;
-use WWW::SwaggerClient::Object::PostRecipient;
-use WWW::SwaggerClient::Object::ResellerAccount;
-use WWW::SwaggerClient::Object::ResellerAccountTransferCredit;
-use WWW::SwaggerClient::Object::SmsCampaign;
-use WWW::SwaggerClient::Object::SmsMessage;
-use WWW::SwaggerClient::Object::SmsMessageCollection;
-use WWW::SwaggerClient::Object::SmsTemplate;
-use WWW::SwaggerClient::Object::Subaccount;
-use WWW::SwaggerClient::Object::VoiceMessage;
-use WWW::SwaggerClient::Object::VoiceMessageCollection;
+use WWW::ClickSendClient::Object::Account;
+use WWW::ClickSendClient::Object::AccountForgotPasswordVerify;
+use WWW::ClickSendClient::Object::AccountVerify;
+use WWW::ClickSendClient::Object::Address;
+use WWW::ClickSendClient::Object::Attachment;
+use WWW::ClickSendClient::Object::Contact;
+use WWW::ClickSendClient::Object::ContactListImport;
+use WWW::ClickSendClient::Object::CreditCard;
+use WWW::ClickSendClient::Object::DeliveryIssue;
+use WWW::ClickSendClient::Object::DeliveryReceiptRule;
+use WWW::ClickSendClient::Object::Email;
+use WWW::ClickSendClient::Object::EmailCampaign;
+use WWW::ClickSendClient::Object::EmailFrom;
+use WWW::ClickSendClient::Object::EmailRecipient;
+use WWW::ClickSendClient::Object::EmailSMSAddress;
+use WWW::ClickSendClient::Object::EmailTemplateNew;
+use WWW::ClickSendClient::Object::EmailTemplateUpdate;
+use WWW::ClickSendClient::Object::FaxMessage;
+use WWW::ClickSendClient::Object::FaxMessageCollection;
+use WWW::ClickSendClient::Object::InboundFAXRule;
+use WWW::ClickSendClient::Object::InboundSMSRule;
+use WWW::ClickSendClient::Object::MmsCampaign;
+use WWW::ClickSendClient::Object::MmsMessage;
+use WWW::ClickSendClient::Object::MmsMessageCollection;
+use WWW::ClickSendClient::Object::PostDirectMail;
+use WWW::ClickSendClient::Object::PostDirectMailArea;
+use WWW::ClickSendClient::Object::PostLetter;
+use WWW::ClickSendClient::Object::PostPostcard;
+use WWW::ClickSendClient::Object::PostRecipient;
+use WWW::ClickSendClient::Object::ResellerAccount;
+use WWW::ClickSendClient::Object::ResellerAccountTransferCredit;
+use WWW::ClickSendClient::Object::SmsCampaign;
+use WWW::ClickSendClient::Object::SmsMessage;
+use WWW::ClickSendClient::Object::SmsMessageCollection;
+use WWW::ClickSendClient::Object::SmsTemplate;
+use WWW::ClickSendClient::Object::Subaccount;
+use WWW::ClickSendClient::Object::VoiceMessage;
+use WWW::ClickSendClient::Object::VoiceMessageCollection;
 
 # for displaying the API response data
 use Data::Dumper;
-use WWW::SwaggerClient::;
+use WWW::ClickSendClient::;
 
-my $api_instance = WWW::SwaggerClient::->new(
+my $api_instance = WWW::ClickSendClient::->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

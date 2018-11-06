@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::VoiceMessageCollection
+# WWW::ClickSendClient::Object::VoiceMessageCollection
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::VoiceMessageCollection;
+use WWW::ClickSendClient::Object::VoiceMessageCollection;
 ```
 
 ## Properties

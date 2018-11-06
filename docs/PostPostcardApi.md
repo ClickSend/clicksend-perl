@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::PostPostcardApi
+# WWW::ClickSendClient::PostPostcardApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::PostPostcardApi;
+use WWW::ClickSendClient::Object::PostPostcardApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -25,8 +25,8 @@ Export postcard history to a CSV file
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostPostcardApi;
-my $api_instance = WWW::SwaggerClient::PostPostcardApi->new(
+use WWW::ClickSendClient::PostPostcardApi;
+my $api_instance = WWW::ClickSendClient::PostPostcardApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -75,8 +75,8 @@ Retrieve the history of postcards sent or scheduled
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostPostcardApi;
-my $api_instance = WWW::SwaggerClient::PostPostcardApi->new(
+use WWW::ClickSendClient::PostPostcardApi;
+my $api_instance = WWW::ClickSendClient::PostPostcardApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -127,15 +127,15 @@ Calculate price for sending one or more postcards
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostPostcardApi;
-my $api_instance = WWW::SwaggerClient::PostPostcardApi->new(
+use WWW::ClickSendClient::PostPostcardApi;
+my $api_instance = WWW::ClickSendClient::PostPostcardApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $post_postcards = WWW::SwaggerClient::Object::PostPostcard->new(); # PostPostcard | PostPostcard model
+my $post_postcards = WWW::ClickSendClient::Object::PostPostcard->new(); # PostPostcard | PostPostcard model
 
 eval { 
     my $result = $api_instance->post_postcards_price_post(post_postcards => $post_postcards);
@@ -177,15 +177,15 @@ Send one or more postcards
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostPostcardApi;
-my $api_instance = WWW::SwaggerClient::PostPostcardApi->new(
+use WWW::ClickSendClient::PostPostcardApi;
+my $api_instance = WWW::ClickSendClient::PostPostcardApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $post_postcards = WWW::SwaggerClient::Object::PostPostcard->new(); # PostPostcard | PostPostcard model
+my $post_postcards = WWW::ClickSendClient::Object::PostPostcard->new(); # PostPostcard | PostPostcard model
 
 eval { 
     my $result = $api_instance->post_postcards_send_post(post_postcards => $post_postcards);

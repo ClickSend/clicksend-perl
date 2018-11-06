@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::AccountVerify
+# WWW::ClickSendClient::Object::AccountVerify
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::AccountVerify;
+use WWW::ClickSendClient::Object::AccountVerify;
 ```
 
 ## Properties

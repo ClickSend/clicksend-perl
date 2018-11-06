@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::Attachment
+# WWW::ClickSendClient::Object::Attachment
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::Attachment;
+use WWW::ClickSendClient::Object::Attachment;
 ```
 
 ## Properties

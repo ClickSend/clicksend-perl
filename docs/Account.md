@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::Account
+# WWW::ClickSendClient::Object::Account
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::Account;
+use WWW::ClickSendClient::Object::Account;
 ```
 
 ## Properties

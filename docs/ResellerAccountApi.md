@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::ResellerAccountApi
+# WWW::ClickSendClient::ResellerAccountApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::ResellerAccountApi;
+use WWW::ClickSendClient::Object::ResellerAccountApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -25,8 +25,8 @@ Get Reseller clients Account
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ResellerAccountApi;
-my $api_instance = WWW::SwaggerClient::ResellerAccountApi->new(
+use WWW::ClickSendClient::ResellerAccountApi;
+my $api_instance = WWW::ClickSendClient::ResellerAccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -75,8 +75,8 @@ Update Reseller clients Account
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ResellerAccountApi;
-my $api_instance = WWW::SwaggerClient::ResellerAccountApi->new(
+use WWW::ClickSendClient::ResellerAccountApi;
+my $api_instance = WWW::ClickSendClient::ResellerAccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -84,7 +84,7 @@ my $api_instance = WWW::SwaggerClient::ResellerAccountApi->new(
 );
 
 my $client_user_id = 56; # int | User ID of client
-my $reseller_account = WWW::SwaggerClient::Object::ResellerAccount->new(); # ResellerAccount | ResellerAccount model
+my $reseller_account = WWW::ClickSendClient::Object::ResellerAccount->new(); # ResellerAccount | ResellerAccount model
 
 eval { 
     my $result = $api_instance->reseller_accounts_by_client_user_id_put(client_user_id => $client_user_id, reseller_account => $reseller_account);
@@ -127,8 +127,8 @@ Get list of reseller accounts
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ResellerAccountApi;
-my $api_instance = WWW::SwaggerClient::ResellerAccountApi->new(
+use WWW::ClickSendClient::ResellerAccountApi;
+my $api_instance = WWW::ClickSendClient::ResellerAccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -179,15 +179,15 @@ Create reseller account
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ResellerAccountApi;
-my $api_instance = WWW::SwaggerClient::ResellerAccountApi->new(
+use WWW::ClickSendClient::ResellerAccountApi;
+my $api_instance = WWW::ClickSendClient::ResellerAccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $reseller_account = WWW::SwaggerClient::Object::ResellerAccount->new(); # ResellerAccount | ResellerAccount model
+my $reseller_account = WWW::ClickSendClient::Object::ResellerAccount->new(); # ResellerAccount | ResellerAccount model
 
 eval { 
     my $result = $api_instance->reseller_accounts_post(reseller_account => $reseller_account);

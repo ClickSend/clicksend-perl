@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::DeliveryIssue
+# WWW::ClickSendClient::Object::DeliveryIssue
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::DeliveryIssue;
+use WWW::ClickSendClient::Object::DeliveryIssue;
 ```
 
 ## Properties

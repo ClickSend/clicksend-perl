@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::FaxApi
+# WWW::ClickSendClient::FaxApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::FaxApi;
+use WWW::ClickSendClient::Object::FaxApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -26,8 +26,8 @@ Get a list of Fax History.
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::FaxApi;
-my $api_instance = WWW::SwaggerClient::FaxApi->new(
+use WWW::ClickSendClient::FaxApi;
+my $api_instance = WWW::ClickSendClient::FaxApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -86,15 +86,15 @@ Calculate Total Price for Fax Messages sent
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::FaxApi;
-my $api_instance = WWW::SwaggerClient::FaxApi->new(
+use WWW::ClickSendClient::FaxApi;
+my $api_instance = WWW::ClickSendClient::FaxApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $fax_message = WWW::SwaggerClient::Object::FaxMessageCollection->new(); # FaxMessageCollection | FaxMessageCollection model
+my $fax_message = WWW::ClickSendClient::Object::FaxMessageCollection->new(); # FaxMessageCollection | FaxMessageCollection model
 
 eval { 
     my $result = $api_instance->fax_price_post(fax_message => $fax_message);
@@ -136,8 +136,8 @@ Get a single fax receipt based on message id.
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::FaxApi;
-my $api_instance = WWW::SwaggerClient::FaxApi->new(
+use WWW::ClickSendClient::FaxApi;
+my $api_instance = WWW::ClickSendClient::FaxApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -186,8 +186,8 @@ Get List of Fax Receipts
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::FaxApi;
-my $api_instance = WWW::SwaggerClient::FaxApi->new(
+use WWW::ClickSendClient::FaxApi;
+my $api_instance = WWW::ClickSendClient::FaxApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -232,15 +232,15 @@ Send a fax using supplied supported file-types.
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::FaxApi;
-my $api_instance = WWW::SwaggerClient::FaxApi->new(
+use WWW::ClickSendClient::FaxApi;
+my $api_instance = WWW::ClickSendClient::FaxApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $fax_message = WWW::SwaggerClient::Object::FaxMessageCollection->new(); # FaxMessageCollection | FaxMessageCollection model
+my $fax_message = WWW::ClickSendClient::Object::FaxMessageCollection->new(); # FaxMessageCollection | FaxMessageCollection model
 
 eval { 
     my $result = $api_instance->fax_send_post(fax_message => $fax_message);

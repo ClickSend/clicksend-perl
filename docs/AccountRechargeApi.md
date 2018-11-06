@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::AccountRechargeApi
+# WWW::ClickSendClient::AccountRechargeApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::AccountRechargeApi;
+use WWW::ClickSendClient::Object::AccountRechargeApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -27,8 +27,8 @@ Get Credit Card info
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountRechargeApi;
-my $api_instance = WWW::SwaggerClient::AccountRechargeApi->new(
+use WWW::ClickSendClient::AccountRechargeApi;
+my $api_instance = WWW::ClickSendClient::AccountRechargeApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -73,15 +73,15 @@ Update credit card info
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountRechargeApi;
-my $api_instance = WWW::SwaggerClient::AccountRechargeApi->new(
+use WWW::ClickSendClient::AccountRechargeApi;
+my $api_instance = WWW::ClickSendClient::AccountRechargeApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $credit_card = WWW::SwaggerClient::Object::CreditCard->new(); # CreditCard | CreditCard model
+my $credit_card = WWW::ClickSendClient::Object::CreditCard->new(); # CreditCard | CreditCard model
 
 eval { 
     my $result = $api_instance->recharge_credit_card_put(credit_card => $credit_card);
@@ -123,8 +123,8 @@ Get list of all packages
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountRechargeApi;
-my $api_instance = WWW::SwaggerClient::AccountRechargeApi->new(
+use WWW::ClickSendClient::AccountRechargeApi;
+my $api_instance = WWW::ClickSendClient::AccountRechargeApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -173,8 +173,8 @@ Purchase a package
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountRechargeApi;
-my $api_instance = WWW::SwaggerClient::AccountRechargeApi->new(
+use WWW::ClickSendClient::AccountRechargeApi;
+my $api_instance = WWW::ClickSendClient::AccountRechargeApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -223,8 +223,8 @@ Get specific Transaction
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountRechargeApi;
-my $api_instance = WWW::SwaggerClient::AccountRechargeApi->new(
+use WWW::ClickSendClient::AccountRechargeApi;
+my $api_instance = WWW::ClickSendClient::AccountRechargeApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -273,8 +273,8 @@ Get all transactions
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::AccountRechargeApi;
-my $api_instance = WWW::SwaggerClient::AccountRechargeApi->new(
+use WWW::ClickSendClient::AccountRechargeApi;
+my $api_instance = WWW::ClickSendClient::AccountRechargeApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

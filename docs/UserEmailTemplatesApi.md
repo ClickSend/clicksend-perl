@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::UserEmailTemplatesApi
+# WWW::ClickSendClient::UserEmailTemplatesApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::UserEmailTemplatesApi;
+use WWW::ClickSendClient::Object::UserEmailTemplatesApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -26,8 +26,8 @@ Delete user email template
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::UserEmailTemplatesApi;
-my $api_instance = WWW::SwaggerClient::UserEmailTemplatesApi->new(
+use WWW::ClickSendClient::UserEmailTemplatesApi;
+my $api_instance = WWW::ClickSendClient::UserEmailTemplatesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -76,8 +76,8 @@ Get specific user email templates
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::UserEmailTemplatesApi;
-my $api_instance = WWW::SwaggerClient::UserEmailTemplatesApi->new(
+use WWW::ClickSendClient::UserEmailTemplatesApi;
+my $api_instance = WWW::ClickSendClient::UserEmailTemplatesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -126,15 +126,15 @@ Create email template
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::UserEmailTemplatesApi;
-my $api_instance = WWW::SwaggerClient::UserEmailTemplatesApi->new(
+use WWW::ClickSendClient::UserEmailTemplatesApi;
+my $api_instance = WWW::ClickSendClient::UserEmailTemplatesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $email_template = WWW::SwaggerClient::Object::EmailTemplateNew->new(); # EmailTemplateNew | Email template model
+my $email_template = WWW::ClickSendClient::Object::EmailTemplateNew->new(); # EmailTemplateNew | Email template model
 
 eval { 
     my $result = $api_instance->email_template_post(email_template => $email_template);
@@ -176,8 +176,8 @@ Update email template
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::UserEmailTemplatesApi;
-my $api_instance = WWW::SwaggerClient::UserEmailTemplatesApi->new(
+use WWW::ClickSendClient::UserEmailTemplatesApi;
+my $api_instance = WWW::ClickSendClient::UserEmailTemplatesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -185,7 +185,7 @@ my $api_instance = WWW::SwaggerClient::UserEmailTemplatesApi->new(
 );
 
 my $template_id = 56; # int | Email template id
-my $email_template = WWW::SwaggerClient::Object::EmailTemplateUpdate->new(); # EmailTemplateUpdate | Email template model
+my $email_template = WWW::ClickSendClient::Object::EmailTemplateUpdate->new(); # EmailTemplateUpdate | Email template model
 
 eval { 
     my $result = $api_instance->email_template_put(template_id => $template_id, email_template => $email_template);
@@ -228,8 +228,8 @@ Get all user email templates
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::UserEmailTemplatesApi;
-my $api_instance = WWW::SwaggerClient::UserEmailTemplatesApi->new(
+use WWW::ClickSendClient::UserEmailTemplatesApi;
+my $api_instance = WWW::ClickSendClient::UserEmailTemplatesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

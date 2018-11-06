@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::SearchApi
+# WWW::ClickSendClient::SearchApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::SearchApi;
+use WWW::ClickSendClient::Object::SearchApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -22,8 +22,8 @@ Get list of searched contact list
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SearchApi;
-my $api_instance = WWW::SwaggerClient::SearchApi->new(
+use WWW::ClickSendClient::SearchApi;
+my $api_instance = WWW::ClickSendClient::SearchApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

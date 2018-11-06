@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::InboundSMSRule
+# WWW::ClickSendClient::Object::InboundSMSRule
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::InboundSMSRule;
+use WWW::ClickSendClient::Object::InboundSMSRule;
 ```
 
 ## Properties

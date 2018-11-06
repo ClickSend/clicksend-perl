@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::EmailSMSAddress
+# WWW::ClickSendClient::Object::EmailSMSAddress
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::EmailSMSAddress;
+use WWW::ClickSendClient::Object::EmailSMSAddress;
 ```
 
 ## Properties

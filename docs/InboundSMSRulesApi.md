@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::InboundSMSRulesApi
+# WWW::ClickSendClient::InboundSMSRulesApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::InboundSMSRulesApi;
+use WWW::ClickSendClient::Object::InboundSMSRulesApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -26,8 +26,8 @@ Delete inbound sms automation
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::InboundSMSRulesApi;
-my $api_instance = WWW::SwaggerClient::InboundSMSRulesApi->new(
+use WWW::ClickSendClient::InboundSMSRulesApi;
+my $api_instance = WWW::ClickSendClient::InboundSMSRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -76,8 +76,8 @@ Get specific inbound sms automation
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::InboundSMSRulesApi;
-my $api_instance = WWW::SwaggerClient::InboundSMSRulesApi->new(
+use WWW::ClickSendClient::InboundSMSRulesApi;
+my $api_instance = WWW::ClickSendClient::InboundSMSRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -126,15 +126,15 @@ Create new inbound sms automation
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::InboundSMSRulesApi;
-my $api_instance = WWW::SwaggerClient::InboundSMSRulesApi->new(
+use WWW::ClickSendClient::InboundSMSRulesApi;
+my $api_instance = WWW::ClickSendClient::InboundSMSRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $inbound_sms_rule = WWW::SwaggerClient::Object::InboundSMSRule->new(); # InboundSMSRule | Inbound sms rule model
+my $inbound_sms_rule = WWW::ClickSendClient::Object::InboundSMSRule->new(); # InboundSMSRule | Inbound sms rule model
 
 eval { 
     my $result = $api_instance->sms_inbound_automation_post(inbound_sms_rule => $inbound_sms_rule);
@@ -176,8 +176,8 @@ Update inbound sms automation
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::InboundSMSRulesApi;
-my $api_instance = WWW::SwaggerClient::InboundSMSRulesApi->new(
+use WWW::ClickSendClient::InboundSMSRulesApi;
+my $api_instance = WWW::ClickSendClient::InboundSMSRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -185,7 +185,7 @@ my $api_instance = WWW::SwaggerClient::InboundSMSRulesApi->new(
 );
 
 my $inbound_rule_id = 56; # int | Inbound rule id
-my $inbound_sms_rule = WWW::SwaggerClient::Object::InboundSMSRule->new(); # InboundSMSRule | Inbound sms rule model
+my $inbound_sms_rule = WWW::ClickSendClient::Object::InboundSMSRule->new(); # InboundSMSRule | Inbound sms rule model
 
 eval { 
     my $result = $api_instance->sms_inbound_automation_put(inbound_rule_id => $inbound_rule_id, inbound_sms_rule => $inbound_sms_rule);
@@ -228,8 +228,8 @@ Get all inbound sms automations
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::InboundSMSRulesApi;
-my $api_instance = WWW::SwaggerClient::InboundSMSRulesApi->new(
+use WWW::ClickSendClient::InboundSMSRulesApi;
+my $api_instance = WWW::ClickSendClient::InboundSMSRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

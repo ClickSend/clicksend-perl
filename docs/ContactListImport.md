@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::ContactListImport
+# WWW::ClickSendClient::Object::ContactListImport
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::ContactListImport;
+use WWW::ClickSendClient::Object::ContactListImport;
 ```
 
 ## Properties

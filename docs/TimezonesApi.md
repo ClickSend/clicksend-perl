@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::TimezonesApi
+# WWW::ClickSendClient::TimezonesApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::TimezonesApi;
+use WWW::ClickSendClient::Object::TimezonesApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -22,8 +22,8 @@ Get supported list of timezones.
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::TimezonesApi;
-my $api_instance = WWW::SwaggerClient::TimezonesApi->new(
+use WWW::ClickSendClient::TimezonesApi;
+my $api_instance = WWW::ClickSendClient::TimezonesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

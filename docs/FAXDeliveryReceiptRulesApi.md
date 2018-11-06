@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::FAXDeliveryReceiptRulesApi
+# WWW::ClickSendClient::FAXDeliveryReceiptRulesApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::FAXDeliveryReceiptRulesApi;
+use WWW::ClickSendClient::Object::FAXDeliveryReceiptRulesApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -26,8 +26,8 @@ Delete fax delivery receipt automation
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::FAXDeliveryReceiptRulesApi;
-my $api_instance = WWW::SwaggerClient::FAXDeliveryReceiptRulesApi->new(
+use WWW::ClickSendClient::FAXDeliveryReceiptRulesApi;
+my $api_instance = WWW::ClickSendClient::FAXDeliveryReceiptRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -76,8 +76,8 @@ Get specific fax delivery receipt automation
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::FAXDeliveryReceiptRulesApi;
-my $api_instance = WWW::SwaggerClient::FAXDeliveryReceiptRulesApi->new(
+use WWW::ClickSendClient::FAXDeliveryReceiptRulesApi;
+my $api_instance = WWW::ClickSendClient::FAXDeliveryReceiptRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -126,15 +126,15 @@ Create fax delivery receipt automations
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::FAXDeliveryReceiptRulesApi;
-my $api_instance = WWW::SwaggerClient::FAXDeliveryReceiptRulesApi->new(
+use WWW::ClickSendClient::FAXDeliveryReceiptRulesApi;
+my $api_instance = WWW::ClickSendClient::FAXDeliveryReceiptRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delivery_receipt_rule = WWW::SwaggerClient::Object::DeliveryReceiptRule->new(); # DeliveryReceiptRule | fax delivery receipt rule model
+my $delivery_receipt_rule = WWW::ClickSendClient::Object::DeliveryReceiptRule->new(); # DeliveryReceiptRule | fax delivery receipt rule model
 
 eval { 
     my $result = $api_instance->fax_delivery_receipt_automation_post(delivery_receipt_rule => $delivery_receipt_rule);
@@ -176,8 +176,8 @@ Update fax delivery receipt automation
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::FAXDeliveryReceiptRulesApi;
-my $api_instance = WWW::SwaggerClient::FAXDeliveryReceiptRulesApi->new(
+use WWW::ClickSendClient::FAXDeliveryReceiptRulesApi;
+my $api_instance = WWW::ClickSendClient::FAXDeliveryReceiptRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -185,7 +185,7 @@ my $api_instance = WWW::SwaggerClient::FAXDeliveryReceiptRulesApi->new(
 );
 
 my $receipt_rule_id = 56; # int | Receipt rule id
-my $delivery_receipt_rule = WWW::SwaggerClient::Object::DeliveryReceiptRule->new(); # DeliveryReceiptRule | Delivery receipt rule model
+my $delivery_receipt_rule = WWW::ClickSendClient::Object::DeliveryReceiptRule->new(); # DeliveryReceiptRule | Delivery receipt rule model
 
 eval { 
     my $result = $api_instance->fax_delivery_receipt_automation_put(receipt_rule_id => $receipt_rule_id, delivery_receipt_rule => $delivery_receipt_rule);
@@ -228,8 +228,8 @@ Get all fax delivery receipt automations
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::FAXDeliveryReceiptRulesApi;
-my $api_instance = WWW::SwaggerClient::FAXDeliveryReceiptRulesApi->new(
+use WWW::ClickSendClient::FAXDeliveryReceiptRulesApi;
+my $api_instance = WWW::ClickSendClient::FAXDeliveryReceiptRulesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

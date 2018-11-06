@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::MasterEmailTemplatesApi
+# WWW::ClickSendClient::MasterEmailTemplatesApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::MasterEmailTemplatesApi;
+use WWW::ClickSendClient::Object::MasterEmailTemplatesApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -26,8 +26,8 @@ Get all master email template categories
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MasterEmailTemplatesApi;
-my $api_instance = WWW::SwaggerClient::MasterEmailTemplatesApi->new(
+use WWW::ClickSendClient::MasterEmailTemplatesApi;
+my $api_instance = WWW::ClickSendClient::MasterEmailTemplatesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -78,8 +78,8 @@ Get specific master email template category
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MasterEmailTemplatesApi;
-my $api_instance = WWW::SwaggerClient::MasterEmailTemplatesApi->new(
+use WWW::ClickSendClient::MasterEmailTemplatesApi;
+my $api_instance = WWW::ClickSendClient::MasterEmailTemplatesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -128,8 +128,8 @@ Get specific master email template
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MasterEmailTemplatesApi;
-my $api_instance = WWW::SwaggerClient::MasterEmailTemplatesApi->new(
+use WWW::ClickSendClient::MasterEmailTemplatesApi;
+my $api_instance = WWW::ClickSendClient::MasterEmailTemplatesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -178,8 +178,8 @@ Get all master email templates
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MasterEmailTemplatesApi;
-my $api_instance = WWW::SwaggerClient::MasterEmailTemplatesApi->new(
+use WWW::ClickSendClient::MasterEmailTemplatesApi;
+my $api_instance = WWW::ClickSendClient::MasterEmailTemplatesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -230,8 +230,8 @@ Get all master email templates in a category
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MasterEmailTemplatesApi;
-my $api_instance = WWW::SwaggerClient::MasterEmailTemplatesApi->new(
+use WWW::ClickSendClient::MasterEmailTemplatesApi;
+my $api_instance = WWW::ClickSendClient::MasterEmailTemplatesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

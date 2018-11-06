@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::TransactionalEmailApi
+# WWW::ClickSendClient::TransactionalEmailApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::TransactionalEmailApi;
+use WWW::ClickSendClient::Object::TransactionalEmailApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -25,8 +25,8 @@ Export all Transactional Email history
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::TransactionalEmailApi;
-my $api_instance = WWW::SwaggerClient::TransactionalEmailApi->new(
+use WWW::ClickSendClient::TransactionalEmailApi;
+my $api_instance = WWW::ClickSendClient::TransactionalEmailApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -79,8 +79,8 @@ Get all transactional email history
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::TransactionalEmailApi;
-my $api_instance = WWW::SwaggerClient::TransactionalEmailApi->new(
+use WWW::ClickSendClient::TransactionalEmailApi;
+my $api_instance = WWW::ClickSendClient::TransactionalEmailApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -135,15 +135,15 @@ Get transactional email price
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::TransactionalEmailApi;
-my $api_instance = WWW::SwaggerClient::TransactionalEmailApi->new(
+use WWW::ClickSendClient::TransactionalEmailApi;
+my $api_instance = WWW::ClickSendClient::TransactionalEmailApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $email = WWW::SwaggerClient::Object::Email->new(); # Email | Email model
+my $email = WWW::ClickSendClient::Object::Email->new(); # Email | Email model
 
 eval { 
     my $result = $api_instance->email_price_post(email => $email);
@@ -185,15 +185,15 @@ Send transactional email
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::TransactionalEmailApi;
-my $api_instance = WWW::SwaggerClient::TransactionalEmailApi->new(
+use WWW::ClickSendClient::TransactionalEmailApi;
+my $api_instance = WWW::ClickSendClient::TransactionalEmailApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $email = WWW::SwaggerClient::Object::Email->new(); # Email | Email model
+my $email = WWW::ClickSendClient::Object::Email->new(); # Email | Email model
 
 eval { 
     my $result = $api_instance->email_send_post(email => $email);

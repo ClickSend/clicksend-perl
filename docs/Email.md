@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::Email
+# WWW::ClickSendClient::Object::Email
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::Email;
+use WWW::ClickSendClient::Object::Email;
 ```
 
 ## Properties

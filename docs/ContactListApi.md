@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::ContactListApi
+# WWW::ClickSendClient::ContactListApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::ContactListApi;
+use WWW::ClickSendClient::Object::ContactListApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -28,8 +28,8 @@ Delete a specific contact list
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactListApi;
-my $api_instance = WWW::SwaggerClient::ContactListApi->new(
+use WWW::ClickSendClient::ContactListApi;
+my $api_instance = WWW::ClickSendClient::ContactListApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -78,8 +78,8 @@ Get specific contact list
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactListApi;
-my $api_instance = WWW::SwaggerClient::ContactListApi->new(
+use WWW::ClickSendClient::ContactListApi;
+my $api_instance = WWW::ClickSendClient::ContactListApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -128,8 +128,8 @@ Update specific contact list
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactListApi;
-my $api_instance = WWW::SwaggerClient::ContactListApi->new(
+use WWW::ClickSendClient::ContactListApi;
+my $api_instance = WWW::ClickSendClient::ContactListApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -137,7 +137,7 @@ my $api_instance = WWW::SwaggerClient::ContactListApi->new(
 );
 
 my $list_id = 56; # int | Your list id
-my $list_name = WWW::SwaggerClient::Object::string->new(); # string | Your new list name
+my $list_name = WWW::ClickSendClient::Object::string->new(); # string | Your new list name
 
 eval { 
     my $result = $api_instance->lists_by_list_id_put(list_id => $list_id, list_name => $list_name);
@@ -180,8 +180,8 @@ Get all contact lists
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactListApi;
-my $api_instance = WWW::SwaggerClient::ContactListApi->new(
+use WWW::ClickSendClient::ContactListApi;
+my $api_instance = WWW::ClickSendClient::ContactListApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -232,8 +232,8 @@ Import contacts to list
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactListApi;
-my $api_instance = WWW::SwaggerClient::ContactListApi->new(
+use WWW::ClickSendClient::ContactListApi;
+my $api_instance = WWW::ClickSendClient::ContactListApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -241,7 +241,7 @@ my $api_instance = WWW::SwaggerClient::ContactListApi->new(
 );
 
 my $list_id = 56; # int | Your contact list id you want to access.
-my $file = WWW::SwaggerClient::Object::ContactListImport->new(); # ContactListImport | ContactListImport model
+my $file = WWW::ClickSendClient::Object::ContactListImport->new(); # ContactListImport | ContactListImport model
 
 eval { 
     my $result = $api_instance->lists_import_by_list_id_post(list_id => $list_id, file => $file);
@@ -284,15 +284,15 @@ Create new contact list
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactListApi;
-my $api_instance = WWW::SwaggerClient::ContactListApi->new(
+use WWW::ClickSendClient::ContactListApi;
+my $api_instance = WWW::ClickSendClient::ContactListApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $list_name = WWW::SwaggerClient::Object::string->new(); # string | Your contact list name
+my $list_name = WWW::ClickSendClient::Object::string->new(); # string | Your contact list name
 
 eval { 
     my $result = $api_instance->lists_post(list_name => $list_name);
@@ -334,8 +334,8 @@ Remove duplicate contacts
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::ContactListApi;
-my $api_instance = WWW::SwaggerClient::ContactListApi->new(
+use WWW::ClickSendClient::ContactListApi;
+my $api_instance = WWW::ClickSendClient::ContactListApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

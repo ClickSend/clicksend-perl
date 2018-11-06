@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::ResellerAccountTransferCredit
+# WWW::ClickSendClient::Object::ResellerAccountTransferCredit
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::ResellerAccountTransferCredit;
+use WWW::ClickSendClient::Object::ResellerAccountTransferCredit;
 ```
 
 ## Properties

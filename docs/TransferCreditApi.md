@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::TransferCreditApi
+# WWW::ClickSendClient::TransferCreditApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::TransferCreditApi;
+use WWW::ClickSendClient::Object::TransferCreditApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -22,15 +22,15 @@ Transfer Credit
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::TransferCreditApi;
-my $api_instance = WWW::SwaggerClient::TransferCreditApi->new(
+use WWW::ClickSendClient::TransferCreditApi;
+my $api_instance = WWW::ClickSendClient::TransferCreditApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $reseller_account_transfer_credit = WWW::SwaggerClient::Object::ResellerAccountTransferCredit->new(); # ResellerAccountTransferCredit | ResellerAccountTransferCredit model
+my $reseller_account_transfer_credit = WWW::ClickSendClient::Object::ResellerAccountTransferCredit->new(); # ResellerAccountTransferCredit | ResellerAccountTransferCredit model
 
 eval { 
     my $result = $api_instance->reseller_transfer_credit_put(reseller_account_transfer_credit => $reseller_account_transfer_credit);

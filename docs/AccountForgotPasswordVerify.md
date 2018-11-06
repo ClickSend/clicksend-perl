@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::AccountForgotPasswordVerify
+# WWW::ClickSendClient::Object::AccountForgotPasswordVerify
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::AccountForgotPasswordVerify;
+use WWW::ClickSendClient::Object::AccountForgotPasswordVerify;
 ```
 
 ## Properties

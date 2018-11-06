@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::InboundFAXRule
+# WWW::ClickSendClient::Object::InboundFAXRule
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::InboundFAXRule;
+use WWW::ClickSendClient::Object::InboundFAXRule;
 ```
 
 ## Properties

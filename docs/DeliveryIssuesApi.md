@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::DeliveryIssuesApi
+# WWW::ClickSendClient::DeliveryIssuesApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::DeliveryIssuesApi;
+use WWW::ClickSendClient::Object::DeliveryIssuesApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -23,8 +23,8 @@ Get all delivery issues
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::DeliveryIssuesApi;
-my $api_instance = WWW::SwaggerClient::DeliveryIssuesApi->new(
+use WWW::ClickSendClient::DeliveryIssuesApi;
+my $api_instance = WWW::ClickSendClient::DeliveryIssuesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -75,15 +75,15 @@ Create delivery Issue
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::DeliveryIssuesApi;
-my $api_instance = WWW::SwaggerClient::DeliveryIssuesApi->new(
+use WWW::ClickSendClient::DeliveryIssuesApi;
+my $api_instance = WWW::ClickSendClient::DeliveryIssuesApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $delivery_issue = WWW::SwaggerClient::Object::DeliveryIssue->new(); # DeliveryIssue | DeliveryIssue model
+my $delivery_issue = WWW::ClickSendClient::Object::DeliveryIssue->new(); # DeliveryIssue | DeliveryIssue model
 
 eval { 
     my $result = $api_instance->delivery_issues_post(delivery_issue => $delivery_issue);

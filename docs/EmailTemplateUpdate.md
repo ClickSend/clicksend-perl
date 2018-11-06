@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::EmailTemplateUpdate
+# WWW::ClickSendClient::Object::EmailTemplateUpdate
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::EmailTemplateUpdate;
+use WWW::ClickSendClient::Object::EmailTemplateUpdate;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::FaxMessageCollection
+# WWW::ClickSendClient::Object::FaxMessageCollection
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::FaxMessageCollection;
+use WWW::ClickSendClient::Object::FaxMessageCollection;
 ```
 
 ## Properties

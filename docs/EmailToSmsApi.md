@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::EmailToSmsApi
+# WWW::ClickSendClient::EmailToSmsApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::EmailToSmsApi;
+use WWW::ClickSendClient::Object::EmailToSmsApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -28,8 +28,8 @@ Get list of email to sms allowed addresses
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailToSmsApi;
-my $api_instance = WWW::SwaggerClient::EmailToSmsApi->new(
+use WWW::ClickSendClient::EmailToSmsApi;
+my $api_instance = WWW::ClickSendClient::EmailToSmsApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -80,15 +80,15 @@ Create email to sms allowed address
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailToSmsApi;
-my $api_instance = WWW::SwaggerClient::EmailToSmsApi->new(
+use WWW::ClickSendClient::EmailToSmsApi;
+my $api_instance = WWW::ClickSendClient::EmailToSmsApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $email_sms_address = WWW::SwaggerClient::Object::EmailSMSAddress->new(); # EmailSMSAddress | EmailSMSAddress model
+my $email_sms_address = WWW::ClickSendClient::Object::EmailSMSAddress->new(); # EmailSMSAddress | EmailSMSAddress model
 
 eval { 
     my $result = $api_instance->sms_email_sms_post(email_sms_address => $email_sms_address);
@@ -130,8 +130,8 @@ Delete email to sms stripped string rule
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailToSmsApi;
-my $api_instance = WWW::SwaggerClient::EmailToSmsApi->new(
+use WWW::ClickSendClient::EmailToSmsApi;
+my $api_instance = WWW::ClickSendClient::EmailToSmsApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -180,8 +180,8 @@ Get email to sms stripped string rule
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailToSmsApi;
-my $api_instance = WWW::SwaggerClient::EmailToSmsApi->new(
+use WWW::ClickSendClient::EmailToSmsApi;
+my $api_instance = WWW::ClickSendClient::EmailToSmsApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -230,15 +230,15 @@ Create email to sms stripped string rules
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailToSmsApi;
-my $api_instance = WWW::SwaggerClient::EmailToSmsApi->new(
+use WWW::ClickSendClient::EmailToSmsApi;
+my $api_instance = WWW::ClickSendClient::EmailToSmsApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $stripped_string = WWW::SwaggerClient::Object::string->new(); # string | String to be stripped.
+my $stripped_string = WWW::ClickSendClient::Object::string->new(); # string | String to be stripped.
 
 eval { 
     my $result = $api_instance->sms_email_sms_stripped_string_post(stripped_string => $stripped_string);
@@ -280,8 +280,8 @@ Update email to sms stripped string rule
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailToSmsApi;
-my $api_instance = WWW::SwaggerClient::EmailToSmsApi->new(
+use WWW::ClickSendClient::EmailToSmsApi;
+my $api_instance = WWW::ClickSendClient::EmailToSmsApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -289,7 +289,7 @@ my $api_instance = WWW::SwaggerClient::EmailToSmsApi->new(
 );
 
 my $rule_id = 56; # int | Your rule id
-my $stripped_string = WWW::SwaggerClient::Object::string->new(); # string | String to be stripped.
+my $stripped_string = WWW::ClickSendClient::Object::string->new(); # string | String to be stripped.
 
 eval { 
     my $result = $api_instance->sms_email_sms_stripped_string_put(rule_id => $rule_id, stripped_string => $stripped_string);
@@ -332,8 +332,8 @@ Get list of email to sms stripped string rules
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::EmailToSmsApi;
-my $api_instance = WWW::SwaggerClient::EmailToSmsApi->new(
+use WWW::ClickSendClient::EmailToSmsApi;
+my $api_instance = WWW::ClickSendClient::EmailToSmsApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

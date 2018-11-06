@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::MmsMessage
+# WWW::ClickSendClient::Object::MmsMessage
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::MmsMessage;
+use WWW::ClickSendClient::Object::MmsMessage;
 ```
 
 ## Properties

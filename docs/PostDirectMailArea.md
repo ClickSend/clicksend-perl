@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::PostDirectMailArea
+# WWW::ClickSendClient::Object::PostDirectMailArea
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::PostDirectMailArea;
+use WWW::ClickSendClient::Object::PostDirectMailArea;
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::SubaccountApi
+# WWW::ClickSendClient::SubaccountApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::SubaccountApi;
+use WWW::ClickSendClient::Object::SubaccountApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -27,8 +27,8 @@ Delete a subaccount
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SubaccountApi;
-my $api_instance = WWW::SwaggerClient::SubaccountApi->new(
+use WWW::ClickSendClient::SubaccountApi;
+my $api_instance = WWW::ClickSendClient::SubaccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -77,8 +77,8 @@ Get specific subaccount
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SubaccountApi;
-my $api_instance = WWW::SwaggerClient::SubaccountApi->new(
+use WWW::ClickSendClient::SubaccountApi;
+my $api_instance = WWW::ClickSendClient::SubaccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -127,8 +127,8 @@ Update subaccount
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SubaccountApi;
-my $api_instance = WWW::SwaggerClient::SubaccountApi->new(
+use WWW::ClickSendClient::SubaccountApi;
+my $api_instance = WWW::ClickSendClient::SubaccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -136,7 +136,7 @@ my $api_instance = WWW::SwaggerClient::SubaccountApi->new(
 );
 
 my $subaccount_id = 56; # int | ID of subaccount to update
-my $subaccount = WWW::SwaggerClient::Object::Subaccount->new(); # Subaccount | Subaccount model
+my $subaccount = WWW::ClickSendClient::Object::Subaccount->new(); # Subaccount | Subaccount model
 
 eval { 
     my $result = $api_instance->subaccounts_by_subaccount_id_put(subaccount_id => $subaccount_id, subaccount => $subaccount);
@@ -179,8 +179,8 @@ Get all subaccounts
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SubaccountApi;
-my $api_instance = WWW::SwaggerClient::SubaccountApi->new(
+use WWW::ClickSendClient::SubaccountApi;
+my $api_instance = WWW::ClickSendClient::SubaccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -231,15 +231,15 @@ Create new subaccount
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SubaccountApi;
-my $api_instance = WWW::SwaggerClient::SubaccountApi->new(
+use WWW::ClickSendClient::SubaccountApi;
+my $api_instance = WWW::ClickSendClient::SubaccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $subaccount = WWW::SwaggerClient::Object::Subaccount->new(); # Subaccount | Subaccount model
+my $subaccount = WWW::ClickSendClient::Object::Subaccount->new(); # Subaccount | Subaccount model
 
 eval { 
     my $result = $api_instance->subaccounts_post(subaccount => $subaccount);
@@ -281,8 +281,8 @@ Regenerate an API Key
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::SubaccountApi;
-my $api_instance = WWW::SwaggerClient::SubaccountApi->new(
+use WWW::ClickSendClient::SubaccountApi;
+my $api_instance = WWW::ClickSendClient::SubaccountApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

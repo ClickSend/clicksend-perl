@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::Object::CreditCard
+# WWW::ClickSendClient::Object::CreditCard
 
 ## Load the model package
 ```perl
-use WWW::SwaggerClient::Object::CreditCard;
+use WWW::ClickSendClient::Object::CreditCard;
 ```
 
 ## Properties

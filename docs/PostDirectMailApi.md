@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::PostDirectMailApi
+# WWW::ClickSendClient::PostDirectMailApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::PostDirectMailApi;
+use WWW::ClickSendClient::Object::PostDirectMailApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -25,8 +25,8 @@ Get direct mail campaigns
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostDirectMailApi;
-my $api_instance = WWW::SwaggerClient::PostDirectMailApi->new(
+use WWW::ClickSendClient::PostDirectMailApi;
+my $api_instance = WWW::ClickSendClient::PostDirectMailApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
@@ -77,15 +77,15 @@ Calculate direct mail campaign price
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostDirectMailApi;
-my $api_instance = WWW::SwaggerClient::PostDirectMailApi->new(
+use WWW::ClickSendClient::PostDirectMailApi;
+my $api_instance = WWW::ClickSendClient::PostDirectMailApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $post_direct_mail = WWW::SwaggerClient::Object::PostDirectMail->new(); # PostDirectMail | PostDirectMail model
+my $post_direct_mail = WWW::ClickSendClient::Object::PostDirectMail->new(); # PostDirectMail | PostDirectMail model
 
 eval { 
     my $result = $api_instance->post_direct_mail_campaigns_price_post(post_direct_mail => $post_direct_mail);
@@ -127,15 +127,15 @@ Send direct mail campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostDirectMailApi;
-my $api_instance = WWW::SwaggerClient::PostDirectMailApi->new(
+use WWW::ClickSendClient::PostDirectMailApi;
+my $api_instance = WWW::ClickSendClient::PostDirectMailApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $post_direct_mail = WWW::SwaggerClient::Object::PostDirectMail->new(); # PostDirectMail | PostDirectMail model
+my $post_direct_mail = WWW::ClickSendClient::Object::PostDirectMail->new(); # PostDirectMail | PostDirectMail model
 
 eval { 
     my $result = $api_instance->post_direct_mail_campaigns_send_post(post_direct_mail => $post_direct_mail);
@@ -177,8 +177,8 @@ Search for a location
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::PostDirectMailApi;
-my $api_instance = WWW::SwaggerClient::PostDirectMailApi->new(
+use WWW::ClickSendClient::PostDirectMailApi;
+my $api_instance = WWW::ClickSendClient::PostDirectMailApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',

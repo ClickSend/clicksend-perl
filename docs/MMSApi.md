@@ -1,8 +1,8 @@
-# WWW::SwaggerClient::MMSApi
+# WWW::ClickSendClient::MMSApi
 
 ## Load the API package
 ```perl
-use WWW::SwaggerClient::Object::MMSApi;
+use WWW::ClickSendClient::Object::MMSApi;
 ```
 
 All URIs are relative to *https://rest.clicksend.com/v3*
@@ -23,15 +23,15 @@ Get Price for MMS sent
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MMSApi;
-my $api_instance = WWW::SwaggerClient::MMSApi->new(
+use WWW::ClickSendClient::MMSApi;
+my $api_instance = WWW::ClickSendClient::MMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $mms_messages = WWW::SwaggerClient::Object::MmsMessageCollection->new(); # MmsMessageCollection | MmsMessageCollection model
+my $mms_messages = WWW::ClickSendClient::Object::MmsMessageCollection->new(); # MmsMessageCollection | MmsMessageCollection model
 
 eval { 
     my $result = $api_instance->mms_price_post(mms_messages => $mms_messages);
@@ -73,15 +73,15 @@ Send MMS
 ### Example 
 ```perl
 use Data::Dumper;
-use WWW::SwaggerClient::MMSApi;
-my $api_instance = WWW::SwaggerClient::MMSApi->new(
+use WWW::ClickSendClient::MMSApi;
+my $api_instance = WWW::ClickSendClient::MMSApi->new(
 
     # Configure HTTP basic authorization: BasicAuth
     username => 'YOUR_USERNAME',
     password => 'YOUR_PASSWORD',
 );
 
-my $mms_messages = WWW::SwaggerClient::Object::MmsMessageCollection->new(); # MmsMessageCollection | MmsMessageCollection model
+my $mms_messages = WWW::ClickSendClient::Object::MmsMessageCollection->new(); # MmsMessageCollection | MmsMessageCollection model
 
 eval { 
     my $result = $api_instance->mms_send_post(mms_messages => $mms_messages);
