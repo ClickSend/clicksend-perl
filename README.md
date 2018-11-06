@@ -9,10 +9,6 @@ WWW::ClickSendClient::ApiFactory for non-Moosey usage.
 
 # SYNOPSIS
 
-The Perl ClickSend Codegen project builds a library of Perl modules to interact with
-a web service defined by a OpenAPI Specification. See below for how to build the
-library.
-
 This module provides an interface to the generated library. All the classes,
 objects, and methods (well, not quite \*all\*, see below) are flattened into this
 role.
@@ -126,86 +122,6 @@ Returns an API factory object. You probably won't need to call this directly.
         $self->api_factory('Pet'); # returns a WWW::ClickSendClient::PetApi instance
 
         $self->pet_api;            # the same
-
-# MISSING METHODS
-
-Most of the methods on the API are delegated to individual endpoint API objects
-(e.g. Pet API, Store API, User API etc). Where different endpoint APIs use the
-same method name (e.g. `new()`), these methods can't be delegated. So you need
-to call `$api->pet_api->new()`.
-
-In principle, every API is susceptible to the presence of a few, random, undelegatable
-method names. In practice, because of the way method names are constructed, it's
-unlikely in general that any methods will be undelegatable, except for:
-
-        new()
-        class_documentation()
-        method_documentation()
-
-To call these methods, you need to get a handle on the relevant object, either
-by calling `$api->foo_api` or by retrieving an object, e.g.
-`$api->get_pet_by_id(pet_id => $pet_id)`. They are class methods, so
-you could also call them on class names.
-
-# BUILDING YOUR LIBRARY
-
-See the homepage `https://github.com/swagger-api/swagger-codegen` for full details.
-But briefly, clone the git repository, build the codegen codebase, set up your build
-config file, then run the API build script. You will need git, Java 7 or 8 and Apache
-maven 3.0.3 or better already installed.
-
-The config file should specify the project name for the generated library:
-
-        {"moduleName":"WWW::MyProjectName"}
-
-Your library files will be built under `WWW::MyProjectName`.
-
-          $ git clone https://github.com/swagger-api/swagger-codegen.git
-          $ cd swagger-codegen
-          $ mvn package
-          $ java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate \
-    -i [URL or file path to JSON swagger API spec] \
-    -l perl \
-    -c /path/to/config/file.json \
-    -o /path/to/output/folder
-
-Bang, all done. Run the `autodoc` script in the `bin` directory to see the API
-you just built.
-
-# AUTOMATIC DOCUMENTATION
-
-You can print out a summary of the generated API by running the included
-`autodoc` script in the `bin` directory of your generated library. A few
-output formats are supported:
-
-          Usage: autodoc [OPTION]
-
-    -w           wide format (default)
-    -n           narrow format
-    -p           POD format
-    -H           HTML format
-    -m           Markdown format
-    -h           print this help message
-    -c           your application class
-
-
-The `-c` option allows you to load and inspect your own application. A dummy
-namespace is used if you don't supply your own class.
-
-# DOCUMENTATION FROM THE OpenAPI Spec
-
-Additional documentation for each class and method may be provided by the ClickSend
-spec. If so, this is available via the `class_documentation()` and
-`method_documentation()` methods on each generated object class, and the
-`method_documentation()` method on the endpoint API classes:
-
-        my $cmdoc = $api->pet_api->method_documentation->{$method_name};
-
-        my $odoc = $api->get_pet_by_id->(pet_id => $pet_id)->class_documentation;
-        my $omdoc = $api->get_pet_by_id->(pet_id => $pet_id)->method_documentation->{method_name};
-
-
-Each of these calls returns a hashref with various useful pieces of information.
 
 # LOAD THE MODULES
 
