@@ -347,10 +347,10 @@ sub email_campaign_get {
     __PACKAGE__->method_documentation->{ 'email_campaign_history_export_get' } = { 
     	summary => 'Export specific email campaign history',
         params => $params,
-        returns => 'File',
+        returns => 'string',
         };
 }
-# @return File
+# @return string
 #
 sub email_campaign_history_export_get {
     my ($self, %args) = @_;
@@ -403,7 +403,7 @@ sub email_campaign_history_export_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('File', $response);
+    my $_response_object = $self->{api_client}->deserialize('string', $response);
     return $_response_object;
 }
 

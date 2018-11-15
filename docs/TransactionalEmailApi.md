@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **email_history_export_get**
-> File email_history_export_get(filename => $filename, date_from => $date_from, date_to => $date_to)
+> string email_history_export_get(filename => $filename, date_from => $date_from, date_to => $date_to)
 
 Export all Transactional Email history
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+**string**
 
 ### Authorization
 

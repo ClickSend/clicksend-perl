@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **email_campaign_history_export_get**
-> File email_campaign_history_export_get(email_campaign_id => $email_campaign_id, date_from => $date_from, date_to => $date_to)
+> string email_campaign_history_export_get(email_campaign_id => $email_campaign_id, date_from => $date_from, date_to => $date_to)
 
 Export specific email campaign history
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+**string**
 
 ### Authorization
 

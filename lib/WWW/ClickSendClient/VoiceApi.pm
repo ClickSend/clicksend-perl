@@ -181,10 +181,10 @@ sub voice_cancel_by_message_id_put {
     __PACKAGE__->method_documentation->{ 'voice_history_export_get' } = { 
     	summary => 'Export voice history',
         params => $params,
-        returns => 'File',
+        returns => 'string',
         };
 }
-# @return File
+# @return string
 #
 sub voice_history_export_get {
     my ($self, %args) = @_;
@@ -225,7 +225,7 @@ sub voice_history_export_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('File', $response);
+    my $_response_object = $self->{api_client}->deserialize('string', $response);
     return $_response_object;
 }
 

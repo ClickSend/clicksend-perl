@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **post_letters_export_get**
-> File post_letters_export_get(filename => $filename)
+> string post_letters_export_get(filename => $filename)
 
 export post letter history
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+**string**
 
 ### Authorization
 
