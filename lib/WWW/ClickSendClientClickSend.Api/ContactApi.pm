@@ -651,7 +651,7 @@ sub lists_transfer_contact_put {
     }
 
     # parse inputs
-    my $_resource_path = '/lists/{from_list_id}/contacts/{contact_id}/{to_list_id}';
+    my $_resource_path = '/lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id}';
 
     my $_method = 'PUT';
     my $query_params = {};

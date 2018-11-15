@@ -173,7 +173,7 @@ __PACKAGE__->method_documentation({
     		},
     'email_address' => {
     	datatype => 'string',
-    	base_name => 'email-address',
+    	base_name => 'email_address',
     	description => 'The user&#39;s email address.',
     	format => '',
     	read_only => '',
@@ -193,7 +193,7 @@ __PACKAGE__->attribute_map( {
     'type' => 'type',
     'description' => 'description',
     'client_comments' => 'client_comments',
-    'email_address' => 'email-address'
+    'email_address' => 'email_address'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});
