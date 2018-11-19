@@ -157,16 +157,25 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'subaccount_id' => {
+    	datatype => 'string',
+    	base_name => 'subaccount_id',
+    	description => 'Your subaccount id',
+    	format => '',
+    	read_only => '',
+    		},
 });
 
 __PACKAGE__->swagger_types( {
     'email_address' => 'string',
-    'from' => 'string'
+    'from' => 'string',
+    'subaccount_id' => 'string'
 } );
 
 __PACKAGE__->attribute_map( {
     'email_address' => 'email_address',
-    'from' => 'from'
+    'from' => 'from',
+    'subaccount_id' => 'subaccount_id'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});

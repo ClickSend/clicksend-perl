@@ -105,7 +105,8 @@ isa_ok($api, 'WWW::ClickSendClient::EmailMarketingApi');
 #
 {
     my $email_campaign_id = undef; # replace NULL with a proper value
-    my $result = $api->email_campaign_put(email_campaign_id => $email_campaign_id);
+    my $email_campaign = undef; # replace NULL with a proper value
+    my $result = $api->email_campaign_put(email_campaign_id => $email_campaign_id, email_campaign => $email_campaign);
 }
 
 #

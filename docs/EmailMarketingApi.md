@@ -19,10 +19,10 @@ Method | HTTP request | Description
 [**email_campaign_price_post**](EmailMarketingApi.md#email_campaign_price_post) | **POST** /email-campaigns/price | Calculate email campaign price
 [**email_campaign_put**](EmailMarketingApi.md#email_campaign_put) | **PUT** /email-campaigns/{email_campaign_id} | Edit email campaign
 [**email_campaigns_get**](EmailMarketingApi.md#email_campaigns_get) | **GET** /email-campaigns | Get all email campaigns
-[**send_verification_token_get**](EmailMarketingApi.md#send_verification_token_get) | **GET** /email/address-verify/{email_address_id}/send | Send verification token
+[**send_verification_token_get**](EmailMarketingApi.md#send_verification_token_get) | **PUT** /email/address-verify/{email_address_id}/send | Send verification token
 [**specific_allowed_email_address_delete**](EmailMarketingApi.md#specific_allowed_email_address_delete) | **DELETE** /email/addresses/{email_address_id} | Delete specific email address
 [**specific_allowed_email_address_get**](EmailMarketingApi.md#specific_allowed_email_address_get) | **GET** /email/addresses/{email_address_id} | Get specific email address
-[**verify_allowed_email_address_get**](EmailMarketingApi.md#verify_allowed_email_address_get) | **GET** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
+[**verify_allowed_email_address_get**](EmailMarketingApi.md#verify_allowed_email_address_get) | **PUT** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
 
 
 # **allowed_email_address_get**
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **email_campaign_put**
-> string email_campaign_put(email_campaign_id => $email_campaign_id)
+> string email_campaign_put(email_campaign_id => $email_campaign_id, email_campaign => $email_campaign)
 
 Edit email campaign
 
@@ -458,9 +458,10 @@ my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
 );
 
 my $email_campaign_id = 56; # int | Allowed email campaign id
+my $email_campaign = WWW::ClickSendClient::Object::EmailCampaign->new(); # EmailCampaign | Email model
 
 eval { 
-    my $result = $api_instance->email_campaign_put(email_campaign_id => $email_campaign_id);
+    my $result = $api_instance->email_campaign_put(email_campaign_id => $email_campaign_id, email_campaign => $email_campaign);
     print Dumper($result);
 };
 if ($@) {
@@ -473,6 +474,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email_campaign_id** | **int**| Allowed email campaign id | 
+ **email_campaign** | [**EmailCampaign**](EmailCampaign.md)| Email model | 
 
 ### Return type
 

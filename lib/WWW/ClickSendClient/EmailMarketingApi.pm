@@ -654,11 +654,17 @@ sub email_campaign_price_post {
 # Edit email campaign
 # 
 # @param int $email_campaign_id Allowed email campaign id (required)
+# @param EmailCampaign $email_campaign Email model (required)
 {
     my $params = {
     'email_campaign_id' => {
         data_type => 'int',
         description => 'Allowed email campaign id',
+        required => '1',
+    },
+    'email_campaign' => {
+        data_type => 'EmailCampaign',
+        description => 'Email model',
         required => '1',
     },
     };
@@ -676,6 +682,11 @@ sub email_campaign_put {
     # verify the required parameter 'email_campaign_id' is set
     unless (exists $args{'email_campaign_id'}) {
       croak("Missing the required parameter 'email_campaign_id' when calling email_campaign_put");
+    }
+
+    # verify the required parameter 'email_campaign' is set
+    unless (exists $args{'email_campaign'}) {
+      croak("Missing the required parameter 'email_campaign' when calling email_campaign_put");
     }
 
     # parse inputs
@@ -701,6 +712,11 @@ sub email_campaign_put {
     }
 
     my $_body_data;
+    # body params
+    if ( exists $args{'email_campaign'}) {
+        $_body_data = $args{'email_campaign'};
+    }
+
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 
@@ -819,7 +835,7 @@ sub send_verification_token_get {
     # parse inputs
     my $_resource_path = '/email/address-verify/{email_address_id}/send';
 
-    my $_method = 'GET';
+    my $_method = 'PUT';
     my $query_params = {};
     my $header_params = {};
     my $form_params = {};
@@ -1031,7 +1047,7 @@ sub verify_allowed_email_address_get {
     # parse inputs
     my $_resource_path = '/email/address-verify/{email_address_id}/verify/{activation_token}';
 
-    my $_method = 'GET';
+    my $_method = 'PUT';
     my $query_params = {};
     my $header_params = {};
     my $form_params = {};

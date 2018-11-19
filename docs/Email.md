@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **cc** | [**ARRAY[EmailRecipient]**](EmailRecipient.md) | Array of Cc Recipient items. | [optional] 
 **bcc** | [**ARRAY[EmailRecipient]**](EmailRecipient.md) | Array of Bcc Recipient items. | [optional] 
 **from** | [**ARRAY[EmailFrom]**](EmailFrom.md) | From Email object. | 
+**subject** | **string** | Subject of the email. | [optional] 
 **body** | **string** | Body of the email. | 
 **attachments** | [**ARRAY[Attachment]**](Attachment.md) | Array of Attachment items. | [optional] 
 **schedule** | [**Number**](Number.md) | Schedule. | [optional] 

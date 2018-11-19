@@ -175,6 +175,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'subject' => {
+    	datatype => 'string',
+    	base_name => 'subject',
+    	description => 'Subject of the email.',
+    	format => '',
+    	read_only => '',
+    		},
     'body' => {
     	datatype => 'string',
     	base_name => 'body',
@@ -203,6 +210,7 @@ __PACKAGE__->swagger_types( {
     'cc' => 'ARRAY[EmailRecipient]',
     'bcc' => 'ARRAY[EmailRecipient]',
     'from' => 'ARRAY[EmailFrom]',
+    'subject' => 'string',
     'body' => 'string',
     'attachments' => 'ARRAY[Attachment]',
     'schedule' => 'Number'
@@ -213,6 +221,7 @@ __PACKAGE__->attribute_map( {
     'cc' => 'cc',
     'bcc' => 'bcc',
     'from' => 'from',
+    'subject' => 'subject',
     'body' => 'body',
     'attachments' => 'attachments',
     'schedule' => 'schedule'
