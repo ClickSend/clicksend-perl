@@ -490,11 +490,17 @@ sub lists_post {
 # Remove duplicate contacts
 # 
 # @param int $list_id Your list id (required)
+# @param Fields $fields Fields model (required)
 {
     my $params = {
     'list_id' => {
         data_type => 'int',
         description => 'Your list id',
+        required => '1',
+    },
+    'fields' => {
+        data_type => 'Fields',
+        description => 'Fields model',
         required => '1',
     },
     };
@@ -512,6 +518,11 @@ sub lists_remove_duplicates_by_list_id_put {
     # verify the required parameter 'list_id' is set
     unless (exists $args{'list_id'}) {
       croak("Missing the required parameter 'list_id' when calling lists_remove_duplicates_by_list_id_put");
+    }
+
+    # verify the required parameter 'fields' is set
+    unless (exists $args{'fields'}) {
+      croak("Missing the required parameter 'fields' when calling lists_remove_duplicates_by_list_id_put");
     }
 
     # parse inputs
@@ -537,6 +548,11 @@ sub lists_remove_duplicates_by_list_id_put {
     }
 
     my $_body_data;
+    # body params
+    if ( exists $args{'fields'}) {
+        $_body_data = $args{'fields'};
+    }
+
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 

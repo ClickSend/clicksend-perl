@@ -53,13 +53,13 @@ sub new {
 #
 # Upload File
 # 
-# @param string $content Base64-encoded file contents (required)
+# @param string $content Your base64 encoded file. (required)
 # @param string $convert  (required)
 {
     my $params = {
     'content' => {
         data_type => 'string',
-        description => 'Base64-encoded file contents',
+        description => 'Your base64 encoded file.',
         required => '1',
     },
     'convert' => {
@@ -102,19 +102,19 @@ sub uploads_post {
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/x-www-form-urlencoded');
 
     # query params
     if ( exists $args{'convert'}) {
         $query_params->{'convert'} = $self->{api_client}->to_query_value($args{'convert'});
     }
 
-    my $_body_data;
-    # body params
-    if ( exists $args{'content'}) {
-        $_body_data = $args{'content'};
+    # form params
+    if ( exists $args{'content'} ) {
+                $form_params->{'content'} = $self->{api_client}->to_form_value($args{'content'});
     }
-
+    
+    my $_body_data;
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 

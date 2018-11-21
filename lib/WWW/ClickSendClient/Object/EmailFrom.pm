@@ -143,10 +143,10 @@ __PACKAGE__->class_documentation({description => 'Email being sent from',
 }                                 );
 
 __PACKAGE__->method_documentation({
-    'email' => {
+    'email_address_id' => {
     	datatype => 'string',
-    	base_name => 'email',
-    	description => 'Email of the recipient.',
+    	base_name => 'email_address_id',
+    	description => 'Email address id of the recipient.',
     	format => '',
     	read_only => '',
     		},
@@ -160,12 +160,12 @@ __PACKAGE__->method_documentation({
 });
 
 __PACKAGE__->swagger_types( {
-    'email' => 'string',
+    'email_address_id' => 'string',
     'name' => 'string'
 } );
 
 __PACKAGE__->attribute_map( {
-    'email' => 'email',
+    'email_address_id' => 'email_address_id',
     'name' => 'name'
 } );
 

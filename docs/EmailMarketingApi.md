@@ -95,7 +95,7 @@ my $api_instance = WWW::ClickSendClient::EmailMarketingApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $email_address = WWW::ClickSendClient::Object::string->new(); # string | Email to be allowed.
+my $email_address = 'email_address_example'; # string | Email to be allowed.
 
 eval { 
     my $result = $api_instance->allowed_email_address_post(email_address => $email_address);
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

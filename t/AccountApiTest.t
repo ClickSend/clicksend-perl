@@ -81,7 +81,8 @@ isa_ok($api, 'WWW::ClickSendClient::AccountApi');
 #
 {
     my $email = undef; # replace NULL with a proper value
-    my $result = $api->forgot_username_put(email => $email);
+    my $phone_number = undef; # replace NULL with a proper value
+    my $result = $api->forgot_username_put(email => $email, phone_number => $phone_number);
 }
 
 

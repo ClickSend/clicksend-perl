@@ -85,7 +85,8 @@ isa_ok($api, 'WWW::ClickSendClient::ContactListApi');
 #
 {
     my $list_id = undef; # replace NULL with a proper value
-    my $result = $api->lists_remove_duplicates_by_list_id_put(list_id => $list_id);
+    my $fields = undef; # replace NULL with a proper value
+    my $result = $api->lists_remove_duplicates_by_list_id_put(list_id => $list_id, fields => $fields);
 }
 
 

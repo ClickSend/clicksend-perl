@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sms_email_sms_stripped_string_post**
-> string sms_email_sms_stripped_string_post(stripped_string => $stripped_string)
+> string sms_email_sms_stripped_string_post(strip_string => $strip_string)
 
 Create email to sms stripped string rule
 
@@ -238,10 +238,10 @@ my $api_instance = WWW::ClickSendClient::EmailToSmsApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $stripped_string = WWW::ClickSendClient::Object::string->new(); # string | String to be stripped.
+my $strip_string = 'strip_string_example'; # string | String to be stripped.
 
 eval { 
-    my $result = $api_instance->sms_email_sms_stripped_string_post(stripped_string => $stripped_string);
+    my $result = $api_instance->sms_email_sms_stripped_string_post(strip_string => $strip_string);
     print Dumper($result);
 };
 if ($@) {
@@ -253,7 +253,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **stripped_string** | **string**| String to be stripped. | 
+ **strip_string** | **string**| String to be stripped. | 
 
 ### Return type
 
@@ -265,13 +265,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sms_email_sms_stripped_string_put**
-> string sms_email_sms_stripped_string_put(rule_id => $rule_id, stripped_string => $stripped_string)
+> string sms_email_sms_stripped_string_put(strip_string => $strip_string, rule_id => $rule_id)
 
 Update email to sms stripped string rule
 
@@ -288,11 +288,11 @@ my $api_instance = WWW::ClickSendClient::EmailToSmsApi->new(
     password => 'YOUR_PASSWORD',
 );
 
+my $strip_string = 'strip_string_example'; # string | String to be stripped.
 my $rule_id = 56; # int | Your rule id
-my $stripped_string = WWW::ClickSendClient::Object::string->new(); # string | String to be stripped.
 
 eval { 
-    my $result = $api_instance->sms_email_sms_stripped_string_put(rule_id => $rule_id, stripped_string => $stripped_string);
+    my $result = $api_instance->sms_email_sms_stripped_string_put(strip_string => $strip_string, rule_id => $rule_id);
     print Dumper($result);
 };
 if ($@) {
@@ -304,8 +304,8 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **strip_string** | **string**| String to be stripped. | 
  **rule_id** | **int**| Your rule id | 
- **stripped_string** | **string**| String to be stripped. | 
 
 ### Return type
 
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -30,7 +30,7 @@ use Log::Any qw($log);
 use Date::Parse;
 use DateTime;
 
-use WWW::ClickSendClient::Object::Number;
+
 
 use base ("Class::Accessor", "Class::Data::Inheritable");
 

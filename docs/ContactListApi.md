@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **lists_remove_duplicates_by_list_id_put**
-> string lists_remove_duplicates_by_list_id_put(list_id => $list_id)
+> string lists_remove_duplicates_by_list_id_put(list_id => $list_id, fields => $fields)
 
 Remove duplicate contacts
 
@@ -343,9 +343,10 @@ my $api_instance = WWW::ClickSendClient::ContactListApi->new(
 );
 
 my $list_id = 56; # int | Your list id
+my $fields = WWW::ClickSendClient::Object::Fields->new(); # Fields | Fields model
 
 eval { 
-    my $result = $api_instance->lists_remove_duplicates_by_list_id_put(list_id => $list_id);
+    my $result = $api_instance->lists_remove_duplicates_by_list_id_put(list_id => $list_id, fields => $fields);
     print Dumper($result);
 };
 if ($@) {
@@ -358,6 +359,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list_id** | **int**| Your list id | 
+ **fields** | [**Fields**](Fields.md)| Fields model | 
 
 ### Return type
 

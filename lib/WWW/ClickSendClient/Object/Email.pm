@@ -33,7 +33,7 @@ use DateTime;
 use WWW::ClickSendClient::Object::Attachment;
 use WWW::ClickSendClient::Object::EmailFrom;
 use WWW::ClickSendClient::Object::EmailRecipient;
-use WWW::ClickSendClient::Object::Number;
+
 
 use base ("Class::Accessor", "Class::Data::Inheritable");
 

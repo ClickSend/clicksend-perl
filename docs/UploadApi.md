@@ -30,7 +30,7 @@ my $api_instance = WWW::ClickSendClient::UploadApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $content = WWW::ClickSendClient::Object::string->new(); # string | Base64-encoded file contents
+my $content = 'content_example'; # string | Your base64 encoded file.
 my $convert = 'convert_example'; # string | 
 
 eval { 
@@ -46,7 +46,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | **string**| Base64-encoded file contents | 
+ **content** | **string**| Your base64 encoded file. | 
  **convert** | **string**|  | 
 
 ### Return type
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

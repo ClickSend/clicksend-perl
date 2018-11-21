@@ -232,7 +232,7 @@ my $api_instance = WWW::ClickSendClient::AccountApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $username = WWW::ClickSendClient::Object::string->new(); # string | Username belonging to account
+my $username = 'username_example'; # string | Username belonging to account.
 
 eval { 
     my $result = $api_instance->forgot_password_put(username => $username);
@@ -247,7 +247,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **string**| Username belonging to account | 
+ **username** | **string**| Username belonging to account. | 
 
 ### Return type
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forgot_username_put**
-> string forgot_username_put(email => $email)
+> string forgot_username_put(email => $email, phone_number => $phone_number)
 
 Forgot username
 
@@ -328,10 +328,11 @@ use WWW::ClickSendClient::AccountApi;
 my $api_instance = WWW::ClickSendClient::AccountApi->new(
 );
 
-my $email = WWW::ClickSendClient::Object::string->new(); # string | Email belonging to account
+my $email = 'email_example'; # string | Email belonging to account.
+my $phone_number = 'phone_number_example'; # string | Phone number belonging to account.
 
 eval { 
-    my $result = $api_instance->forgot_username_put(email => $email);
+    my $result = $api_instance->forgot_username_put(email => $email, phone_number => $phone_number);
     print Dumper($result);
 };
 if ($@) {
@@ -343,7 +344,8 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **string**| Email belonging to account | 
+ **email** | **string**| Email belonging to account. | [optional] 
+ **phone_number** | **string**| Phone number belonging to account. | [optional] 
 
 ### Return type
 
@@ -355,7 +357,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

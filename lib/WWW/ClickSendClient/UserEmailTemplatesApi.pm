@@ -291,7 +291,7 @@ sub email_template_put {
     # parse inputs
     my $_resource_path = '/email/templates/{template_id}';
 
-    my $_method = 'POST';
+    my $_method = 'PUT';
     my $query_params = {};
     my $header_params = {};
     my $form_params = {};

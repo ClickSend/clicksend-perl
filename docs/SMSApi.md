@@ -300,7 +300,7 @@ my $api_instance = WWW::ClickSendClient::SMSApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $url = WWW::ClickSendClient::Object::string->new(); # string | Your url
+my $url = 'url_example'; # string | Your url.
 
 eval { 
     my $result = $api_instance->sms_inbound_post(url => $url);
@@ -315,7 +315,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | **string**| Your url | 
+ **url** | **string**| Your url. | 
 
 ### Return type
 
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -552,7 +552,7 @@ my $api_instance = WWW::ClickSendClient::SMSApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $url = WWW::ClickSendClient::Object::string->new(); # string | Your url
+my $url = 'url_example'; # string | Your url.
 
 eval { 
     my $result = $api_instance->sms_receipts_post(url => $url);
@@ -567,7 +567,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | **string**| Your url | 
+ **url** | **string**| Your url. | 
 
 ### Return type
 
@@ -579,7 +579,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

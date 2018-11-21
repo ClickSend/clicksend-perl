@@ -323,10 +323,10 @@ sub sms_email_sms_stripped_string_get {
 #
 # Create email to sms stripped string rule
 # 
-# @param string $stripped_string String to be stripped. (required)
+# @param string $strip_string String to be stripped. (required)
 {
     my $params = {
-    'stripped_string' => {
+    'strip_string' => {
         data_type => 'string',
         description => 'String to be stripped.',
         required => '1',
@@ -343,9 +343,9 @@ sub sms_email_sms_stripped_string_get {
 sub sms_email_sms_stripped_string_post {
     my ($self, %args) = @_;
 
-    # verify the required parameter 'stripped_string' is set
-    unless (exists $args{'stripped_string'}) {
-      croak("Missing the required parameter 'stripped_string' when calling sms_email_sms_stripped_string_post");
+    # verify the required parameter 'strip_string' is set
+    unless (exists $args{'strip_string'}) {
+      croak("Missing the required parameter 'strip_string' when calling sms_email_sms_stripped_string_post");
     }
 
     # parse inputs
@@ -361,14 +361,14 @@ sub sms_email_sms_stripped_string_post {
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/x-www-form-urlencoded');
 
-    my $_body_data;
-    # body params
-    if ( exists $args{'stripped_string'}) {
-        $_body_data = $args{'stripped_string'};
+    # form params
+    if ( exists $args{'strip_string'} ) {
+                $form_params->{'strip-string'} = $self->{api_client}->to_form_value($args{'strip_string'});
     }
-
+    
+    my $_body_data;
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 
@@ -388,18 +388,18 @@ sub sms_email_sms_stripped_string_post {
 #
 # Update email to sms stripped string rule
 # 
+# @param string $strip_string String to be stripped. (required)
 # @param int $rule_id Your rule id (required)
-# @param string $stripped_string String to be stripped. (required)
 {
     my $params = {
+    'strip_string' => {
+        data_type => 'string',
+        description => 'String to be stripped.',
+        required => '1',
+    },
     'rule_id' => {
         data_type => 'int',
         description => 'Your rule id',
-        required => '1',
-    },
-    'stripped_string' => {
-        data_type => 'string',
-        description => 'String to be stripped.',
         required => '1',
     },
     };
@@ -414,14 +414,14 @@ sub sms_email_sms_stripped_string_post {
 sub sms_email_sms_stripped_string_put {
     my ($self, %args) = @_;
 
+    # verify the required parameter 'strip_string' is set
+    unless (exists $args{'strip_string'}) {
+      croak("Missing the required parameter 'strip_string' when calling sms_email_sms_stripped_string_put");
+    }
+
     # verify the required parameter 'rule_id' is set
     unless (exists $args{'rule_id'}) {
       croak("Missing the required parameter 'rule_id' when calling sms_email_sms_stripped_string_put");
-    }
-
-    # verify the required parameter 'stripped_string' is set
-    unless (exists $args{'stripped_string'}) {
-      croak("Missing the required parameter 'stripped_string' when calling sms_email_sms_stripped_string_put");
     }
 
     # parse inputs
@@ -437,7 +437,7 @@ sub sms_email_sms_stripped_string_put {
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/x-www-form-urlencoded');
 
     # path params
     if ( exists $args{'rule_id'}) {
@@ -446,12 +446,12 @@ sub sms_email_sms_stripped_string_put {
         $_resource_path =~ s/$_base_variable/$_base_value/g;
     }
 
-    my $_body_data;
-    # body params
-    if ( exists $args{'stripped_string'}) {
-        $_body_data = $args{'stripped_string'};
+    # form params
+    if ( exists $args{'strip_string'} ) {
+                $form_params->{'strip-string'} = $self->{api_client}->to_form_value($args{'strip_string'});
     }
-
+    
+    my $_body_data;
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 

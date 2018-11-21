@@ -162,14 +162,14 @@ sub allowed_email_address_post {
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/x-www-form-urlencoded');
 
-    my $_body_data;
-    # body params
-    if ( exists $args{'email_address'}) {
-        $_body_data = $args{'email_address'};
+    # form params
+    if ( exists $args{'email_address'} ) {
+                $form_params->{'email_address'} = $self->{api_client}->to_form_value($args{'email_address'});
     }
-
+    
+    my $_body_data;
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 
