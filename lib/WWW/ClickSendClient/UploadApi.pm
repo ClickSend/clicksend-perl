@@ -53,19 +53,19 @@ sub new {
 #
 # Upload File
 # 
-# @param string $content Your base64 encoded file. (required)
 # @param string $convert  (required)
+# @param UploadFile $upload_file  (optional)
 {
     my $params = {
-    'content' => {
-        data_type => 'string',
-        description => 'Your base64 encoded file.',
-        required => '1',
-    },
     'convert' => {
         data_type => 'string',
         description => '',
         required => '1',
+    },
+    'upload_file' => {
+        data_type => 'UploadFile',
+        description => '',
+        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'uploads_post' } = { 
@@ -78,11 +78,6 @@ sub new {
 #
 sub uploads_post {
     my ($self, %args) = @_;
-
-    # verify the required parameter 'content' is set
-    unless (exists $args{'content'}) {
-      croak("Missing the required parameter 'content' when calling uploads_post");
-    }
 
     # verify the required parameter 'convert' is set
     unless (exists $args{'convert'}) {
@@ -102,19 +97,19 @@ sub uploads_post {
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/x-www-form-urlencoded');
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
     # query params
     if ( exists $args{'convert'}) {
         $query_params->{'convert'} = $self->{api_client}->to_query_value($args{'convert'});
     }
 
-    # form params
-    if ( exists $args{'content'} ) {
-                $form_params->{'content'} = $self->{api_client}->to_form_value($args{'content'});
-    }
-    
     my $_body_data;
+    # body params
+    if ( exists $args{'upload_file'}) {
+        $_body_data = $args{'upload_file'};
+    }
+
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 

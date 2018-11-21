@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **uploads_post**
-> string uploads_post(content => $content, convert => $convert)
+> string uploads_post(convert => $convert, upload_file => $upload_file)
 
 Upload File
 
@@ -30,11 +30,11 @@ my $api_instance = WWW::ClickSendClient::UploadApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $content = 'content_example'; # string | Your base64 encoded file.
 my $convert = 'convert_example'; # string | 
+my $upload_file = WWW::ClickSendClient::Object::UploadFile->new(); # UploadFile | 
 
 eval { 
-    my $result = $api_instance->uploads_post(content => $content, convert => $convert);
+    my $result = $api_instance->uploads_post(convert => $convert, upload_file => $upload_file);
     print Dumper($result);
 };
 if ($@) {
@@ -46,8 +46,8 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | **string**| Your base64 encoded file. | 
  **convert** | **string**|  | 
+ **upload_file** | [**UploadFile**](UploadFile.md)|  | [optional] 
 
 ### Return type
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

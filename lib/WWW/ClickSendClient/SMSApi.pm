@@ -398,12 +398,12 @@ sub sms_inbound_get {
 #
 # Create inbound sms
 # 
-# @param string $url Your url. (required)
+# @param Url $url Url model (required)
 {
     my $params = {
     'url' => {
-        data_type => 'string',
-        description => 'Your url.',
+        data_type => 'Url',
+        description => 'Url model',
         required => '1',
     },
     };
@@ -436,14 +436,14 @@ sub sms_inbound_post {
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/x-www-form-urlencoded');
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # form params
-    if ( exists $args{'url'} ) {
-                $form_params->{'url'} = $self->{api_client}->to_form_value($args{'url'});
-    }
-    
     my $_body_data;
+    # body params
+    if ( exists $args{'url'}) {
+        $_body_data = $args{'url'};
+    }
+
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 
@@ -726,12 +726,12 @@ sub sms_receipts_get {
 #
 # Add a delivery receipt
 # 
-# @param string $url Your url. (required)
+# @param Url $url Url model (required)
 {
     my $params = {
     'url' => {
-        data_type => 'string',
-        description => 'Your url.',
+        data_type => 'Url',
+        description => 'Url model',
         required => '1',
     },
     };
@@ -764,14 +764,14 @@ sub sms_receipts_post {
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/x-www-form-urlencoded');
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # form params
-    if ( exists $args{'url'} ) {
-                $form_params->{'url'} = $self->{api_client}->to_form_value($args{'url'});
-    }
-    
     my $_body_data;
+    # body params
+    if ( exists $args{'url'}) {
+        $_body_data = $args{'url'};
+    }
+
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 

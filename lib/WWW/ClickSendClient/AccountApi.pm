@@ -299,13 +299,13 @@ sub account_verify_verify_by_activation_token_put {
 #
 # Forgot password
 # 
-# @param string $username Username belonging to account. (required)
+# @param ForgotPassword $forgot_password  (optional)
 {
     my $params = {
-    'username' => {
-        data_type => 'string',
-        description => 'Username belonging to account.',
-        required => '1',
+    'forgot_password' => {
+        data_type => 'ForgotPassword',
+        description => '',
+        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'forgot_password_put' } = { 
@@ -318,11 +318,6 @@ sub account_verify_verify_by_activation_token_put {
 #
 sub forgot_password_put {
     my ($self, %args) = @_;
-
-    # verify the required parameter 'username' is set
-    unless (exists $args{'username'}) {
-      croak("Missing the required parameter 'username' when calling forgot_password_put");
-    }
 
     # parse inputs
     my $_resource_path = '/forgot-password';
@@ -337,14 +332,14 @@ sub forgot_password_put {
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/x-www-form-urlencoded');
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # form params
-    if ( exists $args{'username'} ) {
-                $form_params->{'username'} = $self->{api_client}->to_form_value($args{'username'});
-    }
-    
     my $_body_data;
+    # body params
+    if ( exists $args{'forgot_password'}) {
+        $_body_data = $args{'forgot_password'};
+    }
+
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 
@@ -429,18 +424,12 @@ sub forgot_password_verify_put {
 #
 # Forgot username
 # 
-# @param string $email Email belonging to account. (optional)
-# @param string $phone_number Phone number belonging to account. (optional)
+# @param ForgotUsername $forgot_username  (optional)
 {
     my $params = {
-    'email' => {
-        data_type => 'string',
-        description => 'Email belonging to account.',
-        required => '0',
-    },
-    'phone_number' => {
-        data_type => 'string',
-        description => 'Phone number belonging to account.',
+    'forgot_username' => {
+        data_type => 'ForgotUsername',
+        description => '',
         required => '0',
     },
     };
@@ -468,19 +457,14 @@ sub forgot_username_put {
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/x-www-form-urlencoded');
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # form params
-    if ( exists $args{'email'} ) {
-                $form_params->{'email'} = $self->{api_client}->to_form_value($args{'email'});
-    }
-    
-    # form params
-    if ( exists $args{'phone_number'} ) {
-                $form_params->{'phone_number'} = $self->{api_client}->to_form_value($args{'phone_number'});
-    }
-    
     my $_body_data;
+    # body params
+    if ( exists $args{'forgot_username'}) {
+        $_body_data = $args{'forgot_username'};
+    }
+
     # authentication setting, if any
     my $auth_settings = [qw()];
 

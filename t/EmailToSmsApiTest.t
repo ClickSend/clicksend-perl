@@ -66,17 +66,17 @@ isa_ok($api, 'WWW::ClickSendClient::EmailToSmsApi');
 # sms_email_sms_stripped_string_post test
 #
 {
-    my $strip_string = undef; # replace NULL with a proper value
-    my $result = $api->sms_email_sms_stripped_string_post(strip_string => $strip_string);
+    my $stripped_string = undef; # replace NULL with a proper value
+    my $result = $api->sms_email_sms_stripped_string_post(stripped_string => $stripped_string);
 }
 
 #
 # sms_email_sms_stripped_string_put test
 #
 {
-    my $strip_string = undef; # replace NULL with a proper value
+    my $url = undef; # replace NULL with a proper value
     my $rule_id = undef; # replace NULL with a proper value
-    my $result = $api->sms_email_sms_stripped_string_put(strip_string => $strip_string, rule_id => $rule_id);
+    my $result = $api->sms_email_sms_stripped_string_put(url => $url, rule_id => $rule_id);
 }
 
 #

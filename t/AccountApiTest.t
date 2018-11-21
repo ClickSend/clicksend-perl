@@ -64,8 +64,8 @@ isa_ok($api, 'WWW::ClickSendClient::AccountApi');
 # forgot_password_put test
 #
 {
-    my $username = undef; # replace NULL with a proper value
-    my $result = $api->forgot_password_put(username => $username);
+    my $forgot_password = undef; # replace NULL with a proper value
+    my $result = $api->forgot_password_put(forgot_password => $forgot_password);
 }
 
 #
@@ -80,9 +80,8 @@ isa_ok($api, 'WWW::ClickSendClient::AccountApi');
 # forgot_username_put test
 #
 {
-    my $email = undef; # replace NULL with a proper value
-    my $phone_number = undef; # replace NULL with a proper value
-    my $result = $api->forgot_username_put(email => $email, phone_number => $phone_number);
+    my $forgot_username = undef; # replace NULL with a proper value
+    my $result = $api->forgot_username_put(forgot_username => $forgot_username);
 }
 
 

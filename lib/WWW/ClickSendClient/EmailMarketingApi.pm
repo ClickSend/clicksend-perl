@@ -124,13 +124,13 @@ sub allowed_email_address_get {
 #
 # Create allowed Email Address
 # 
-# @param string $email_address Email to be allowed. (required)
+# @param EmailAddress $email_address  (optional)
 {
     my $params = {
     'email_address' => {
-        data_type => 'string',
-        description => 'Email to be allowed.',
-        required => '1',
+        data_type => 'EmailAddress',
+        description => '',
+        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'allowed_email_address_post' } = { 
@@ -143,11 +143,6 @@ sub allowed_email_address_get {
 #
 sub allowed_email_address_post {
     my ($self, %args) = @_;
-
-    # verify the required parameter 'email_address' is set
-    unless (exists $args{'email_address'}) {
-      croak("Missing the required parameter 'email_address' when calling allowed_email_address_post");
-    }
 
     # parse inputs
     my $_resource_path = '/email/addresses';
@@ -162,14 +157,14 @@ sub allowed_email_address_post {
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/x-www-form-urlencoded');
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
-    # form params
-    if ( exists $args{'email_address'} ) {
-                $form_params->{'email_address'} = $self->{api_client}->to_form_value($args{'email_address'});
-    }
-    
     my $_body_data;
+    # body params
+    if ( exists $args{'email_address'}) {
+        $_body_data = $args{'email_address'};
+    }
+
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 

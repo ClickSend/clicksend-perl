@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forgot_password_put**
-> string forgot_password_put(username => $username)
+> string forgot_password_put(forgot_password => $forgot_password)
 
 Forgot password
 
@@ -232,10 +232,10 @@ my $api_instance = WWW::ClickSendClient::AccountApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $username = 'username_example'; # string | Username belonging to account.
+my $forgot_password = WWW::ClickSendClient::Object::ForgotPassword->new(); # ForgotPassword | 
 
 eval { 
-    my $result = $api_instance->forgot_password_put(username => $username);
+    my $result = $api_instance->forgot_password_put(forgot_password => $forgot_password);
     print Dumper($result);
 };
 if ($@) {
@@ -247,7 +247,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **string**| Username belonging to account. | 
+ **forgot_password** | [**ForgotPassword**](ForgotPassword.md)|  | [optional] 
 
 ### Return type
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **forgot_username_put**
-> string forgot_username_put(email => $email, phone_number => $phone_number)
+> string forgot_username_put(forgot_username => $forgot_username)
 
 Forgot username
 
@@ -328,11 +328,10 @@ use WWW::ClickSendClient::AccountApi;
 my $api_instance = WWW::ClickSendClient::AccountApi->new(
 );
 
-my $email = 'email_example'; # string | Email belonging to account.
-my $phone_number = 'phone_number_example'; # string | Phone number belonging to account.
+my $forgot_username = WWW::ClickSendClient::Object::ForgotUsername->new(); # ForgotUsername | 
 
 eval { 
-    my $result = $api_instance->forgot_username_put(email => $email, phone_number => $phone_number);
+    my $result = $api_instance->forgot_username_put(forgot_username => $forgot_username);
     print Dumper($result);
 };
 if ($@) {
@@ -344,8 +343,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **string**| Email belonging to account. | [optional] 
- **phone_number** | **string**| Phone number belonging to account. | [optional] 
+ **forgot_username** | [**ForgotUsername**](ForgotUsername.md)|  | [optional] 
 
 ### Return type
 
@@ -357,7 +355,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
