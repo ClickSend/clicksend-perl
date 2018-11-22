@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sms_email_sms_stripped_string_put**
-> string sms_email_sms_stripped_string_put(url => $url, rule_id => $rule_id)
+> string sms_email_sms_stripped_string_put(stripped_string => $stripped_string, rule_id => $rule_id)
 
 Update email to sms stripped string rule
 
@@ -288,11 +288,11 @@ my $api_instance = WWW::ClickSendClient::EmailToSmsApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $url = WWW::ClickSendClient::Object::Url->new(); # Url | Url model
+my $stripped_string = WWW::ClickSendClient::Object::StrippedString->new(); # StrippedString | StrippedString model
 my $rule_id = 56; # int | Your rule id
 
 eval { 
-    my $result = $api_instance->sms_email_sms_stripped_string_put(url => $url, rule_id => $rule_id);
+    my $result = $api_instance->sms_email_sms_stripped_string_put(stripped_string => $stripped_string, rule_id => $rule_id);
     print Dumper($result);
 };
 if ($@) {
@@ -304,7 +304,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | [**Url**](Url.md)| Url model | 
+ **stripped_string** | [**StrippedString**](StrippedString.md)| StrippedString model | 
  **rule_id** | **int**| Your rule id | 
 
 ### Return type

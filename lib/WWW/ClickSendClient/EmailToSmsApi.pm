@@ -388,13 +388,13 @@ sub sms_email_sms_stripped_string_post {
 #
 # Update email to sms stripped string rule
 # 
-# @param Url $url Url model (required)
+# @param StrippedString $stripped_string StrippedString model (required)
 # @param int $rule_id Your rule id (required)
 {
     my $params = {
-    'url' => {
-        data_type => 'Url',
-        description => 'Url model',
+    'stripped_string' => {
+        data_type => 'StrippedString',
+        description => 'StrippedString model',
         required => '1',
     },
     'rule_id' => {
@@ -414,9 +414,9 @@ sub sms_email_sms_stripped_string_post {
 sub sms_email_sms_stripped_string_put {
     my ($self, %args) = @_;
 
-    # verify the required parameter 'url' is set
-    unless (exists $args{'url'}) {
-      croak("Missing the required parameter 'url' when calling sms_email_sms_stripped_string_put");
+    # verify the required parameter 'stripped_string' is set
+    unless (exists $args{'stripped_string'}) {
+      croak("Missing the required parameter 'stripped_string' when calling sms_email_sms_stripped_string_put");
     }
 
     # verify the required parameter 'rule_id' is set
@@ -448,8 +448,8 @@ sub sms_email_sms_stripped_string_put {
 
     my $_body_data;
     # body params
-    if ( exists $args{'url'}) {
-        $_body_data = $args{'url'};
+    if ( exists $args{'stripped_string'}) {
+        $_body_data = $args{'stripped_string'};
     }
 
     # authentication setting, if any

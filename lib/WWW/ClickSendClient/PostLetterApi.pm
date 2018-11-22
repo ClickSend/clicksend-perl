@@ -79,7 +79,7 @@ sub post_letters_export_get {
     }
 
     # parse inputs
-    my $_resource_path = '/post/letters/export';
+    my $_resource_path = '/post/letters/history/export';
 
     my $_method = 'GET';
     my $query_params = {};
