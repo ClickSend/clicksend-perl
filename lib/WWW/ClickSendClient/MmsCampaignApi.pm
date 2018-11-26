@@ -79,7 +79,7 @@ sub mms_campaign_by_mms_campaign_id_get {
     }
 
     # parse inputs
-    my $_resource_path = '/mms-campaign/{mms_campaign_id}';
+    my $_resource_path = '/mms-campaigns/{mms_campaign_id}';
 
     my $_method = 'GET';
     my $query_params = {};
