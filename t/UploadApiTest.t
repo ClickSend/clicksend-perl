@@ -33,9 +33,9 @@ isa_ok($api, 'WWW::ClickSendClient::UploadApi');
 # uploads_post test
 #
 {
-    my $convert = undef; # replace NULL with a proper value
     my $upload_file = undef; # replace NULL with a proper value
-    my $result = $api->uploads_post(convert => $convert, upload_file => $upload_file);
+    my $convert = undef; # replace NULL with a proper value
+    my $result = $api->uploads_post(upload_file => $upload_file, convert => $convert);
 }
 
 

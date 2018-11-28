@@ -53,19 +53,19 @@ sub new {
 #
 # Upload File
 # 
+# @param UploadFile $upload_file Your file to be uploaded (required)
 # @param string $convert  (required)
-# @param UploadFile $upload_file  (optional)
 {
     my $params = {
+    'upload_file' => {
+        data_type => 'UploadFile',
+        description => 'Your file to be uploaded',
+        required => '1',
+    },
     'convert' => {
         data_type => 'string',
         description => '',
         required => '1',
-    },
-    'upload_file' => {
-        data_type => 'UploadFile',
-        description => '',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'uploads_post' } = { 
@@ -78,6 +78,11 @@ sub new {
 #
 sub uploads_post {
     my ($self, %args) = @_;
+
+    # verify the required parameter 'upload_file' is set
+    unless (exists $args{'upload_file'}) {
+      croak("Missing the required parameter 'upload_file' when calling uploads_post");
+    }
 
     # verify the required parameter 'convert' is set
     unless (exists $args{'convert'}) {
