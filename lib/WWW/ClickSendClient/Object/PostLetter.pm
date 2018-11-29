@@ -179,6 +179,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'priority_post' => {
+    	datatype => 'int',
+    	base_name => 'priority_post',
+    	description => 'Whether letter is priority',
+    	format => '',
+    	read_only => '',
+    		},
     'source' => {
     	datatype => 'string',
     	base_name => 'source',
@@ -194,6 +201,7 @@ __PACKAGE__->swagger_types( {
     'template_used' => 'int',
     'duplex' => 'int',
     'colour' => 'int',
+    'priority_post' => 'int',
     'source' => 'string'
 } );
 
@@ -203,6 +211,7 @@ __PACKAGE__->attribute_map( {
     'template_used' => 'template_used',
     'duplex' => 'duplex',
     'colour' => 'colour',
+    'priority_post' => 'priority_post',
     'source' => 'source'
 } );
 
