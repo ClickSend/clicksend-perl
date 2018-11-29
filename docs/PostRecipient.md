@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address_name** | **string** | Name of address | 
 **address_line_1** | **string** | First line of address | 
-**address_line_2** | **string** | Second line of address | 
+**address_line_2** | **string** | Second line of address | [optional] 
 **address_city** | **string** | City | 
 **address_state** | **string** | State | 
 **address_postal_code** | **string** | Postal code | 
