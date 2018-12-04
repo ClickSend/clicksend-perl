@@ -415,8 +415,6 @@ sub lists_contacts_by_list_id_get {
 # 
 # @param Contact $contact Contact model (required)
 # @param int $list_id List id (required)
-# @param int $page Page number (optional, default to 1)
-# @param int $limit Number of records per page (optional, default to 10)
 {
     my $params = {
     'contact' => {
@@ -428,16 +426,6 @@ sub lists_contacts_by_list_id_get {
         data_type => 'int',
         description => 'List id',
         required => '1',
-    },
-    'page' => {
-        data_type => 'int',
-        description => 'Page number',
-        required => '0',
-    },
-    'limit' => {
-        data_type => 'int',
-        description => 'Number of records per page',
-        required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'lists_contacts_by_list_id_post' } = { 
@@ -475,16 +463,6 @@ sub lists_contacts_by_list_id_post {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # query params
-    if ( exists $args{'page'}) {
-        $query_params->{'page'} = $self->{api_client}->to_query_value($args{'page'});
-    }
-
-    # query params
-    if ( exists $args{'limit'}) {
-        $query_params->{'limit'} = $self->{api_client}->to_query_value($args{'limit'});
-    }
 
     # path params
     if ( exists $args{'list_id'}) {

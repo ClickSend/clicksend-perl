@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **lists_contacts_by_list_id_post**
-> string lists_contacts_by_list_id_post(contact => $contact, list_id => $list_id, page => $page, limit => $limit)
+> string lists_contacts_by_list_id_post(contact => $contact, list_id => $list_id)
 
 Create new contact
 
@@ -250,11 +250,9 @@ my $api_instance = WWW::ClickSendClient::ContactApi->new(
 
 my $contact = WWW::ClickSendClient::Object::Contact->new(); # Contact | Contact model
 my $list_id = 56; # int | List id
-my $page = 56; # int | Page number
-my $limit = 56; # int | Number of records per page
 
 eval { 
-    my $result = $api_instance->lists_contacts_by_list_id_post(contact => $contact, list_id => $list_id, page => $page, limit => $limit);
+    my $result = $api_instance->lists_contacts_by_list_id_post(contact => $contact, list_id => $list_id);
     print Dumper($result);
 };
 if ($@) {
@@ -268,8 +266,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact** | [**Contact**](Contact.md)| Contact model | 
  **list_id** | **int**| List id | 
- **page** | **int**| Page number | [optional] [default to 1]
- **limit** | **int**| Number of records per page | [optional] [default to 10]
 
 ### Return type
 

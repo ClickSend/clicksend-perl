@@ -66,9 +66,10 @@ isa_ok($api, 'WWW::ClickSendClient::EmailDeliveryReceiptRulesApi');
 # email_delivery_receipt_automations_get test
 #
 {
+    my $q = undef; # replace NULL with a proper value
     my $page = undef; # replace NULL with a proper value
     my $limit = undef; # replace NULL with a proper value
-    my $result = $api->email_delivery_receipt_automations_get(page => $page, limit => $limit);
+    my $result = $api->email_delivery_receipt_automations_get(q => $q, page => $page, limit => $limit);
 }
 
 

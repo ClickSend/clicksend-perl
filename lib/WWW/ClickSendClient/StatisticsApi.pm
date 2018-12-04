@@ -49,55 +49,6 @@ sub new {
 
 
 #
-# statistics_mms_get
-#
-# Get mms statistics
-# 
-{
-    my $params = {
-    };
-    __PACKAGE__->method_documentation->{ 'statistics_mms_get' } = { 
-    	summary => 'Get mms statistics',
-        params => $params,
-        returns => 'string',
-        };
-}
-# @return string
-#
-sub statistics_mms_get {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/statistics/mms';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw(BasicAuth )];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('string', $response);
-    return $_response_object;
-}
-
-#
 # statistics_sms_get
 #
 # Get sms statistics

@@ -327,10 +327,16 @@ sub sms_history_get {
 #
 # Get all inbound sms
 # 
+# @param string $q Your keyword or query. (required)
 # @param int $page Page number (optional, default to 1)
 # @param int $limit Number of records per page (optional, default to 10)
 {
     my $params = {
+    'q' => {
+        data_type => 'string',
+        description => 'Your keyword or query.',
+        required => '1',
+    },
     'page' => {
         data_type => 'int',
         description => 'Page number',
@@ -353,6 +359,11 @@ sub sms_history_get {
 sub sms_inbound_get {
     my ($self, %args) = @_;
 
+    # verify the required parameter 'q' is set
+    unless (exists $args{'q'}) {
+      croak("Missing the required parameter 'q' when calling sms_inbound_get");
+    }
+
     # parse inputs
     my $_resource_path = '/sms/inbound';
 
@@ -367,6 +378,11 @@ sub sms_inbound_get {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # query params
+    if ( exists $args{'q'}) {
+        $query_params->{'q'} = $self->{api_client}->to_query_value($args{'q'});
+    }
 
     # query params
     if ( exists $args{'page'}) {
@@ -655,10 +671,16 @@ sub sms_receipts_by_message_id_get {
 #
 # Get all delivery receipts
 # 
+# @param string $q Your keyword or query. (required)
 # @param int $page Page number (optional, default to 1)
 # @param int $limit Number of records per page (optional, default to 10)
 {
     my $params = {
+    'q' => {
+        data_type => 'string',
+        description => 'Your keyword or query.',
+        required => '1',
+    },
     'page' => {
         data_type => 'int',
         description => 'Page number',
@@ -681,6 +703,11 @@ sub sms_receipts_by_message_id_get {
 sub sms_receipts_get {
     my ($self, %args) = @_;
 
+    # verify the required parameter 'q' is set
+    unless (exists $args{'q'}) {
+      croak("Missing the required parameter 'q' when calling sms_receipts_get");
+    }
+
     # parse inputs
     my $_resource_path = '/sms/receipts';
 
@@ -695,6 +722,11 @@ sub sms_receipts_get {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # query params
+    if ( exists $args{'q'}) {
+        $query_params->{'q'} = $self->{api_client}->to_query_value($args{'q'});
+    }
 
     # query params
     if ( exists $args{'page'}) {

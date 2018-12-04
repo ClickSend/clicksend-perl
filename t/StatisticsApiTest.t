@@ -30,13 +30,6 @@ my $api = WWW::ClickSendClient::StatisticsApi->new();
 isa_ok($api, 'WWW::ClickSendClient::StatisticsApi');
 
 #
-# statistics_mms_get test
-#
-{
-    my $result = $api->statistics_mms_get();
-}
-
-#
 # statistics_sms_get test
 #
 {

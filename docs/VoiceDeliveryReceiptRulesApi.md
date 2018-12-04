@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **voice_delivery_receipt_automations_get**
-> string voice_delivery_receipt_automations_get(page => $page, limit => $limit)
+> string voice_delivery_receipt_automations_get(q => $q, page => $page, limit => $limit)
 
 Get all voice delivery receipt automations
 
@@ -236,11 +236,12 @@ my $api_instance = WWW::ClickSendClient::VoiceDeliveryReceiptRulesApi->new(
     password => 'YOUR_PASSWORD',
 );
 
+my $q = 'q_example'; # string | Your keyword or query.
 my $page = 56; # int | Page number
 my $limit = 56; # int | Number of records per page
 
 eval { 
-    my $result = $api_instance->voice_delivery_receipt_automations_get(page => $page, limit => $limit);
+    my $result = $api_instance->voice_delivery_receipt_automations_get(q => $q, page => $page, limit => $limit);
     print Dumper($result);
 };
 if ($@) {
@@ -252,6 +253,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **string**| Your keyword or query. | 
  **page** | **int**| Page number | [optional] [default to 1]
  **limit** | **int**| Number of records per page | [optional] [default to 10]
 

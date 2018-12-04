@@ -300,8 +300,26 @@ sub fax_receipts_by_message_id_get {
 #
 # Get List of Fax Receipts
 # 
+# @param string $q Your keyword or query. (required)
+# @param int $page Page number (optional, default to 1)
+# @param int $limit Number of records per page (optional, default to 10)
 {
     my $params = {
+    'q' => {
+        data_type => 'string',
+        description => 'Your keyword or query.',
+        required => '1',
+    },
+    'page' => {
+        data_type => 'int',
+        description => 'Page number',
+        required => '0',
+    },
+    'limit' => {
+        data_type => 'int',
+        description => 'Number of records per page',
+        required => '0',
+    },
     };
     __PACKAGE__->method_documentation->{ 'fax_receipts_get' } = { 
     	summary => 'Get List of Fax Receipts',
@@ -313,6 +331,11 @@ sub fax_receipts_by_message_id_get {
 #
 sub fax_receipts_get {
     my ($self, %args) = @_;
+
+    # verify the required parameter 'q' is set
+    unless (exists $args{'q'}) {
+      croak("Missing the required parameter 'q' when calling fax_receipts_get");
+    }
 
     # parse inputs
     my $_resource_path = '/fax/receipts';
@@ -328,6 +351,21 @@ sub fax_receipts_get {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # query params
+    if ( exists $args{'q'}) {
+        $query_params->{'q'} = $self->{api_client}->to_query_value($args{'q'});
+    }
+
+    # query params
+    if ( exists $args{'page'}) {
+        $query_params->{'page'} = $self->{api_client}->to_query_value($args{'page'});
+    }
+
+    # query params
+    if ( exists $args{'limit'}) {
+        $query_params->{'limit'} = $self->{api_client}->to_query_value($args{'limit'});
+    }
 
     my $_body_data;
     # authentication setting, if any

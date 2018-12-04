@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **fax_receipts_get**
-> string fax_receipts_get()
+> string fax_receipts_get(q => $q, page => $page, limit => $limit)
 
 Get List of Fax Receipts
 
@@ -194,9 +194,12 @@ my $api_instance = WWW::ClickSendClient::FaxApi->new(
     password => 'YOUR_PASSWORD',
 );
 
+my $q = 'q_example'; # string | Your keyword or query.
+my $page = 56; # int | Page number
+my $limit = 56; # int | Number of records per page
 
 eval { 
-    my $result = $api_instance->fax_receipts_get();
+    my $result = $api_instance->fax_receipts_get(q => $q, page => $page, limit => $limit);
     print Dumper($result);
 };
 if ($@) {
@@ -205,7 +208,12 @@ if ($@) {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **q** | **string**| Your keyword or query. | 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **limit** | **int**| Number of records per page | [optional] [default to 10]
 
 ### Return type
 

@@ -73,9 +73,7 @@ isa_ok($api, 'WWW::ClickSendClient::ContactApi');
 {
     my $contact = undef; # replace NULL with a proper value
     my $list_id = undef; # replace NULL with a proper value
-    my $page = undef; # replace NULL with a proper value
-    my $limit = undef; # replace NULL with a proper value
-    my $result = $api->lists_contacts_by_list_id_post(contact => $contact, list_id => $list_id, page => $page, limit => $limit);
+    my $result = $api->lists_contacts_by_list_id_post(contact => $contact, list_id => $list_id);
 }
 
 #
