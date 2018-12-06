@@ -31,6 +31,7 @@ use Date::Parse;
 use DateTime;
 
 
+
 use base ("Class::Accessor", "Class::Data::Inheritable");
 
 
@@ -144,7 +145,7 @@ __PACKAGE__->class_documentation({description => 'All dates before specified tim
 
 __PACKAGE__->method_documentation({
     'date_before' => {
-    	datatype => 'string',
+    	datatype => 'Number',
     	base_name => 'date_before',
     	description => 'An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.',
     	format => '',
@@ -153,7 +154,7 @@ __PACKAGE__->method_documentation({
 });
 
 __PACKAGE__->swagger_types( {
-    'date_before' => 'string'
+    'date_before' => 'Number'
 } );
 
 __PACKAGE__->attribute_map( {
