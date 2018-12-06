@@ -403,7 +403,7 @@ my $api_instance = WWW::ClickSendClient::SMSApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $date_before = WWW::ClickSendClient::Object::Number->new(); # Number | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+my $date_before = WWW::ClickSendClient::Object::DateBefore->new(); # DateBefore | DateBefore model
 
 eval { 
     my $result = $api_instance->sms_inbound_read_put(date_before => $date_before);
@@ -418,7 +418,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date_before** | **Number**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional] 
+ **date_before** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 
@@ -655,7 +655,7 @@ my $api_instance = WWW::ClickSendClient::SMSApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $date_before = WWW::ClickSendClient::Object::Number->new(); # Number | Mark all as read before this timestamp
+my $date_before = WWW::ClickSendClient::Object::DateBefore->new(); # DateBefore | DateBefore model
 
 eval { 
     my $result = $api_instance->sms_receipts_read_put(date_before => $date_before);
@@ -670,7 +670,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date_before** | **Number**| Mark all as read before this timestamp | [optional] 
+ **date_before** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 

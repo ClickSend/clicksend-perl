@@ -541,12 +541,12 @@ sub sms_inbound_read_by_message_id_put {
 #
 # Mark inbound SMS as read
 # 
-# @param Number $date_before An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)
+# @param DateBefore $date_before DateBefore model (optional)
 {
     my $params = {
     'date_before' => {
-        data_type => 'Number',
-        description => 'An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.',
+        data_type => 'DateBefore',
+        description => 'DateBefore model',
         required => '0',
     },
     };
@@ -869,12 +869,12 @@ sub sms_receipts_post {
 #
 # Mark delivery receipts as read
 # 
-# @param Number $date_before Mark all as read before this timestamp (optional)
+# @param DateBefore $date_before DateBefore model (optional)
 {
     my $params = {
     'date_before' => {
-        data_type => 'Number',
-        description => 'Mark all as read before this timestamp',
+        data_type => 'DateBefore',
+        description => 'DateBefore model',
         required => '0',
     },
     };
