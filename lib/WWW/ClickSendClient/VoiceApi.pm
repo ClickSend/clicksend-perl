@@ -441,16 +441,10 @@ sub voice_price_post {
 #
 # Get all voice receipts
 # 
-# @param string $q Your keyword or query. (optional)
 # @param int $page Page number (optional, default to 1)
 # @param int $limit Number of records per page (optional, default to 10)
 {
     my $params = {
-    'q' => {
-        data_type => 'string',
-        description => 'Your keyword or query.',
-        required => '0',
-    },
     'page' => {
         data_type => 'int',
         description => 'Page number',
@@ -487,11 +481,6 @@ sub voice_receipts_get {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # query params
-    if ( exists $args{'q'}) {
-        $query_params->{'q'} = $self->{api_client}->to_query_value($args{'q'});
-    }
 
     # query params
     if ( exists $args{'page'}) {

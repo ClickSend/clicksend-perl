@@ -470,15 +470,82 @@ sub sms_inbound_post {
 }
 
 #
+# sms_inbound_read_by_message_id_put
+#
+# Mark inbound SMS as read
+# 
+# @param string $message_id Message ID (required)
+{
+    my $params = {
+    'message_id' => {
+        data_type => 'string',
+        description => 'Message ID',
+        required => '1',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sms_inbound_read_by_message_id_put' } = { 
+    	summary => 'Mark inbound SMS as read',
+        params => $params,
+        returns => 'string',
+        };
+}
+# @return string
+#
+sub sms_inbound_read_by_message_id_put {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'message_id' is set
+    unless (exists $args{'message_id'}) {
+      croak("Missing the required parameter 'message_id' when calling sms_inbound_read_by_message_id_put");
+    }
+
+    # parse inputs
+    my $_resource_path = '/sms/inbound-read/{message_id}';
+
+    my $_method = 'PUT';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # path params
+    if ( exists $args{'message_id'}) {
+        my $_base_variable = "{" . "message_id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'message_id'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('string', $response);
+    return $_response_object;
+}
+
+#
 # sms_inbound_read_put
 #
 # Mark inbound SMS as read
 # 
-# @param string $date_before An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)
+# @param Number $date_before An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)
 {
     my $params = {
     'date_before' => {
-        data_type => 'string',
+        data_type => 'Number',
         description => 'An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.',
         required => '0',
     },
@@ -666,16 +733,10 @@ sub sms_receipts_by_message_id_get {
 #
 # Get all delivery receipts
 # 
-# @param string $q Your keyword or query. (optional)
 # @param int $page Page number (optional, default to 1)
 # @param int $limit Number of records per page (optional, default to 10)
 {
     my $params = {
-    'q' => {
-        data_type => 'string',
-        description => 'Your keyword or query.',
-        required => '0',
-    },
     'page' => {
         data_type => 'int',
         description => 'Page number',
@@ -712,11 +773,6 @@ sub sms_receipts_get {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
-
-    # query params
-    if ( exists $args{'q'}) {
-        $query_params->{'q'} = $self->{api_client}->to_query_value($args{'q'});
-    }
 
     # query params
     if ( exists $args{'page'}) {
@@ -813,11 +869,11 @@ sub sms_receipts_post {
 #
 # Mark delivery receipts as read
 # 
-# @param string $date_before Mark all as read before this timestamp (optional)
+# @param Number $date_before Mark all as read before this timestamp (optional)
 {
     my $params = {
     'date_before' => {
-        data_type => 'string',
+        data_type => 'Number',
         description => 'Mark all as read before this timestamp',
         required => '0',
     },

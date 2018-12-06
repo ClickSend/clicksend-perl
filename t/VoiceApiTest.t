@@ -82,10 +82,9 @@ isa_ok($api, 'WWW::ClickSendClient::VoiceApi');
 # voice_receipts_get test
 #
 {
-    my $q = undef; # replace NULL with a proper value
     my $page = undef; # replace NULL with a proper value
     my $limit = undef; # replace NULL with a proper value
-    my $result = $api->voice_receipts_get(q => $q, page => $page, limit => $limit);
+    my $result = $api->voice_receipts_get(page => $page, limit => $limit);
 }
 
 #

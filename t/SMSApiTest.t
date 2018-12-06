@@ -82,6 +82,14 @@ isa_ok($api, 'WWW::ClickSendClient::SMSApi');
 }
 
 #
+# sms_inbound_read_by_message_id_put test
+#
+{
+    my $message_id = undef; # replace NULL with a proper value
+    my $result = $api->sms_inbound_read_by_message_id_put(message_id => $message_id);
+}
+
+#
 # sms_inbound_read_put test
 #
 {
@@ -109,10 +117,9 @@ isa_ok($api, 'WWW::ClickSendClient::SMSApi');
 # sms_receipts_get test
 #
 {
-    my $q = undef; # replace NULL with a proper value
     my $page = undef; # replace NULL with a proper value
     my $limit = undef; # replace NULL with a proper value
-    my $result = $api->sms_receipts_get(q => $q, page => $page, limit => $limit);
+    my $result = $api->sms_receipts_get(page => $page, limit => $limit);
 }
 
 #

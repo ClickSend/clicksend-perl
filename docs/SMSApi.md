@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**sms_history_get**](SMSApi.md#sms_history_get) | **GET** /sms/history | Get all sms history
 [**sms_inbound_get**](SMSApi.md#sms_inbound_get) | **GET** /sms/inbound | Get all inbound sms
 [**sms_inbound_post**](SMSApi.md#sms_inbound_post) | **POST** /sms/inbound | Create inbound sms
+[**sms_inbound_read_by_message_id_put**](SMSApi.md#sms_inbound_read_by_message_id_put) | **PUT** /sms/inbound-read/{message_id} | Mark inbound SMS as read
 [**sms_inbound_read_put**](SMSApi.md#sms_inbound_read_put) | **PUT** /sms/inbound-read | Mark inbound SMS as read
 [**sms_price_post**](SMSApi.md#sms_price_post) | **POST** /sms/price | Calculate sms price
 [**sms_receipts_by_message_id_get**](SMSApi.md#sms_receipts_by_message_id_get) | **GET** /sms/receipts/{message_id} | Get a Specific Delivery Receipt
@@ -334,6 +335,56 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **sms_inbound_read_by_message_id_put**
+> string sms_inbound_read_by_message_id_put(message_id => $message_id)
+
+Mark inbound SMS as read
+
+Mark specific inbound SMS as read
+
+### Example 
+```perl
+use Data::Dumper;
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $message_id = 'message_id_example'; # string | Message ID
+
+eval { 
+    my $result = $api_instance->sms_inbound_read_by_message_id_put(message_id => $message_id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SMSApi->sms_inbound_read_by_message_id_put: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **message_id** | **string**| Message ID | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **sms_inbound_read_put**
 > string sms_inbound_read_put(date_before => $date_before)
 
@@ -352,7 +403,7 @@ my $api_instance = WWW::ClickSendClient::SMSApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $date_before = WWW::ClickSendClient::Object::string->new(); # string | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+my $date_before = WWW::ClickSendClient::Object::Number->new(); # Number | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
 
 eval { 
     my $result = $api_instance->sms_inbound_read_put(date_before => $date_before);
@@ -367,7 +418,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date_before** | **string**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional] 
+ **date_before** | **Number**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional] 
 
 ### Return type
 
@@ -485,7 +536,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sms_receipts_get**
-> string sms_receipts_get(q => $q, page => $page, limit => $limit)
+> string sms_receipts_get(page => $page, limit => $limit)
 
 Get all delivery receipts
 
@@ -502,12 +553,11 @@ my $api_instance = WWW::ClickSendClient::SMSApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $q = 'q_example'; # string | Your keyword or query.
 my $page = 56; # int | Page number
 my $limit = 56; # int | Number of records per page
 
 eval { 
-    my $result = $api_instance->sms_receipts_get(q => $q, page => $page, limit => $limit);
+    my $result = $api_instance->sms_receipts_get(page => $page, limit => $limit);
     print Dumper($result);
 };
 if ($@) {
@@ -519,7 +569,6 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **string**| Your keyword or query. | [optional] 
  **page** | **int**| Page number | [optional] [default to 1]
  **limit** | **int**| Number of records per page | [optional] [default to 10]
 
@@ -606,7 +655,7 @@ my $api_instance = WWW::ClickSendClient::SMSApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $date_before = WWW::ClickSendClient::Object::string->new(); # string | Mark all as read before this timestamp
+my $date_before = WWW::ClickSendClient::Object::Number->new(); # Number | Mark all as read before this timestamp
 
 eval { 
     my $result = $api_instance->sms_receipts_read_put(date_before => $date_before);
@@ -621,7 +670,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date_before** | **string**| Mark all as read before this timestamp | [optional] 
+ **date_before** | **Number**| Mark all as read before this timestamp | [optional] 
 
 ### Return type
 
