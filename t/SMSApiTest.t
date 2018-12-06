@@ -56,11 +56,12 @@ isa_ok($api, 'WWW::ClickSendClient::SMSApi');
 # sms_history_get test
 #
 {
+    my $q = undef; # replace NULL with a proper value
     my $date_from = undef; # replace NULL with a proper value
     my $date_to = undef; # replace NULL with a proper value
     my $page = undef; # replace NULL with a proper value
     my $limit = undef; # replace NULL with a proper value
-    my $result = $api->sms_history_get(date_from => $date_from, date_to => $date_to, page => $page, limit => $limit);
+    my $result = $api->sms_history_get(q => $q, date_from => $date_from, date_to => $date_to, page => $page, limit => $limit);
 }
 
 #

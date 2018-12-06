@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sms_history_get**
-> string sms_history_get(date_from => $date_from, date_to => $date_to, page => $page, limit => $limit)
+> string sms_history_get(q => $q, date_from => $date_from, date_to => $date_to, page => $page, limit => $limit)
 
 Get all sms history
 
@@ -193,13 +193,14 @@ my $api_instance = WWW::ClickSendClient::SMSApi->new(
     password => 'YOUR_PASSWORD',
 );
 
+my $q = 'q_example'; # string | Custom query Example: from:{number},status_code:201.
 my $date_from = 56; # int | Start date
 my $date_to = 56; # int | End date
 my $page = 56; # int | Page number
 my $limit = 56; # int | Number of records per page
 
 eval { 
-    my $result = $api_instance->sms_history_get(date_from => $date_from, date_to => $date_to, page => $page, limit => $limit);
+    my $result = $api_instance->sms_history_get(q => $q, date_from => $date_from, date_to => $date_to, page => $page, limit => $limit);
     print Dumper($result);
 };
 if ($@) {
@@ -211,6 +212,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **string**| Custom query Example: from:{number},status_code:201. | [optional] 
  **date_from** | **int**| Start date | [optional] 
  **date_to** | **int**| End date | [optional] 
  **page** | **int**| Page number | [optional] [default to 1]

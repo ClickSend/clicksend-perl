@@ -234,12 +234,18 @@ sub sms_history_export_get {
 #
 # Get all sms history
 # 
+# @param string $q Custom query Example: from:{number},status_code:201. (optional)
 # @param int $date_from Start date (optional)
 # @param int $date_to End date (optional)
 # @param int $page Page number (optional, default to 1)
 # @param int $limit Number of records per page (optional, default to 10)
 {
     my $params = {
+    'q' => {
+        data_type => 'string',
+        description => 'Custom query Example: from:{number},status_code:201.',
+        required => '0',
+    },
     'date_from' => {
         data_type => 'int',
         description => 'Start date',
@@ -286,6 +292,11 @@ sub sms_history_get {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # query params
+    if ( exists $args{'q'}) {
+        $query_params->{'q'} = $self->{api_client}->to_query_value($args{'q'});
+    }
 
     # query params
     if ( exists $args{'date_from'}) {
