@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**fax_history_get**](FaxApi.md#fax_history_get) | **GET** /fax/history | Get a list of Fax History.
 [**fax_price_post**](FaxApi.md#fax_price_post) | **POST** /fax/price | Calculate Total Price for Fax Messages sent
 [**fax_receipts_by_message_id_get**](FaxApi.md#fax_receipts_by_message_id_get) | **GET** /fax/receipts/{message_id} | Get a single fax receipt based on message id.
-[**fax_receipts_get**](FaxApi.md#fax_receipts_get) | **GET** /fax/receipts | Get List of Fax Receipts
 [**fax_send_post**](FaxApi.md#fax_send_post) | **POST** /fax/send | Send a fax using supplied supported file-types.
 
 
@@ -160,58 +159,6 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message_id** | **string**| ID of the message receipt to retrieve | 
-
-### Return type
-
-**string**
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **fax_receipts_get**
-> string fax_receipts_get(page => $page, limit => $limit)
-
-Get List of Fax Receipts
-
-Get List of Fax Receipts
-
-### Example 
-```perl
-use Data::Dumper;
-use WWW::ClickSendClient::FaxApi;
-my $api_instance = WWW::ClickSendClient::FaxApi->new(
-
-    # Configure HTTP basic authorization: BasicAuth
-    username => 'YOUR_USERNAME',
-    password => 'YOUR_PASSWORD',
-);
-
-my $page = 56; # int | Page number
-my $limit = 56; # int | Number of records per page
-
-eval { 
-    my $result = $api_instance->fax_receipts_get(page => $page, limit => $limit);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling FaxApi->fax_receipts_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int**| Page number | [optional] [default to 1]
- **limit** | **int**| Number of records per page | [optional] [default to 10]
 
 ### Return type
 

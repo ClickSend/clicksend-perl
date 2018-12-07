@@ -24,42 +24,34 @@ use lib 'lib';
 use strict;
 use warnings;
 
-use_ok('WWW::ClickSendClient::MMSApi');
+use_ok('WWW::ClickSendClient::FAXApi');
 
-my $api = WWW::ClickSendClient::MMSApi->new();
-isa_ok($api, 'WWW::ClickSendClient::MMSApi');
-
-#
-# mms_price_post test
-#
-{
-    my $mms_messages = undef; # replace NULL with a proper value
-    my $result = $api->mms_price_post(mms_messages => $mms_messages);
-}
+my $api = WWW::ClickSendClient::FAXApi->new();
+isa_ok($api, 'WWW::ClickSendClient::FAXApi');
 
 #
-# mms_receipts_get test
+# fax_receipts_get test
 #
 {
     my $page = undef; # replace NULL with a proper value
     my $limit = undef; # replace NULL with a proper value
-    my $result = $api->mms_receipts_get(page => $page, limit => $limit);
+    my $result = $api->fax_receipts_get(page => $page, limit => $limit);
 }
 
 #
-# mms_receipts_read_put test
+# fax_receipts_post test
+#
+{
+    my $url = undef; # replace NULL with a proper value
+    my $result = $api->fax_receipts_post(url => $url);
+}
+
+#
+# fax_receipts_read_put test
 #
 {
     my $date_before = undef; # replace NULL with a proper value
-    my $result = $api->mms_receipts_read_put(date_before => $date_before);
-}
-
-#
-# mms_send_post test
-#
-{
-    my $mms_messages = undef; # replace NULL with a proper value
-    my $result = $api->mms_send_post(mms_messages => $mms_messages);
+    my $result = $api->fax_receipts_read_put(date_before => $date_before);
 }
 
 

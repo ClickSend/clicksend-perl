@@ -88,6 +88,22 @@ isa_ok($api, 'WWW::ClickSendClient::VoiceApi');
 }
 
 #
+# voice_receipts_post test
+#
+{
+    my $url = undef; # replace NULL with a proper value
+    my $result = $api->voice_receipts_post(url => $url);
+}
+
+#
+# voice_receipts_read_put test
+#
+{
+    my $date_before = undef; # replace NULL with a proper value
+    my $result = $api->voice_receipts_read_put(date_before => $date_before);
+}
+
+#
 # voice_send_post test
 #
 {

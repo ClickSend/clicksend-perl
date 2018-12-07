@@ -59,15 +59,6 @@ isa_ok($api, 'WWW::ClickSendClient::FaxApi');
 }
 
 #
-# fax_receipts_get test
-#
-{
-    my $page = undef; # replace NULL with a proper value
-    my $limit = undef; # replace NULL with a proper value
-    my $result = $api->fax_receipts_get(page => $page, limit => $limit);
-}
-
-#
 # fax_send_post test
 #
 {

@@ -15,7 +15,9 @@ Method | HTTP request | Description
 [**voice_history_get**](VoiceApi.md#voice_history_get) | **GET** /voice/history | Get all voice history
 [**voice_lang_get**](VoiceApi.md#voice_lang_get) | **GET** /voice/lang | Get all voice languages
 [**voice_price_post**](VoiceApi.md#voice_price_post) | **POST** /voice/price | Calculate voice price
-[**voice_receipts_get**](VoiceApi.md#voice_receipts_get) | **GET** /voice/receipts | Get all voice receipts
+[**voice_receipts_get**](VoiceApi.md#voice_receipts_get) | **GET** /voice/receipts | Get all delivery receipts
+[**voice_receipts_post**](VoiceApi.md#voice_receipts_post) | **POST** /voice/receipts | Add a delivery receipt
+[**voice_receipts_read_put**](VoiceApi.md#voice_receipts_read_put) | **PUT** /voice/receipts-read | Mark delivery receipts as read
 [**voice_send_post**](VoiceApi.md#voice_send_post) | **POST** /voice/send | Send voice message(s)
 
 
@@ -320,9 +322,9 @@ Name | Type | Description  | Notes
 # **voice_receipts_get**
 > string voice_receipts_get(page => $page, limit => $limit)
 
-Get all voice receipts
+Get all delivery receipts
 
-Get all voice receipts
+Get all delivery receipts
 
 ### Example 
 ```perl
@@ -353,6 +355,106 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Page number | [optional] [default to 1]
  **limit** | **int**| Number of records per page | [optional] [default to 10]
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **voice_receipts_post**
+> string voice_receipts_post(url => $url)
+
+Add a delivery receipt
+
+Add a delivery receipt
+
+### Example 
+```perl
+use Data::Dumper;
+use WWW::ClickSendClient::VoiceApi;
+my $api_instance = WWW::ClickSendClient::VoiceApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $url = WWW::ClickSendClient::Object::Url->new(); # Url | Url model
+
+eval { 
+    my $result = $api_instance->voice_receipts_post(url => $url);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling VoiceApi->voice_receipts_post: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **url** | [**Url**](Url.md)| Url model | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **voice_receipts_read_put**
+> string voice_receipts_read_put(date_before => $date_before)
+
+Mark delivery receipts as read
+
+Mark delivery receipts as read
+
+### Example 
+```perl
+use Data::Dumper;
+use WWW::ClickSendClient::VoiceApi;
+my $api_instance = WWW::ClickSendClient::VoiceApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $date_before = WWW::ClickSendClient::Object::DateBefore->new(); # DateBefore | DateBefore model
+
+eval { 
+    my $result = $api_instance->voice_receipts_read_put(date_before => $date_before);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling VoiceApi->voice_receipts_read_put: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **date_before** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 

@@ -11,6 +11,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**account_get**](AccountApi.md#account_get) | **GET** /account | Get account information
 [**account_post**](AccountApi.md#account_post) | **POST** /account | Create a new account
+[**account_useage_by_subaccount_get**](AccountApi.md#account_useage_by_subaccount_get) | **GET** /account/usage/{year}/{month}/subaccount | Get account useage by subaccount
 [**account_verify_send_put**](AccountApi.md#account_verify_send_put) | **PUT** /account-verify/send | Send account activation token
 [**account_verify_verify_by_activation_token_put**](AccountApi.md#account_verify_verify_by_activation_token_put) | **PUT** /account-verify/verify/{activation_token} | Verify new account
 [**forgot_password_put**](AccountApi.md#forgot_password_put) | **PUT** /forgot-password | Forgot password
@@ -98,6 +99,58 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account** | [**Account**](Account.md)| Account model | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **account_useage_by_subaccount_get**
+> string account_useage_by_subaccount_get(year => $year, month => $month)
+
+Get account useage by subaccount
+
+Get account useage by subaccount
+
+### Example 
+```perl
+use Data::Dumper;
+use WWW::ClickSendClient::AccountApi;
+my $api_instance = WWW::ClickSendClient::AccountApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $year = 56; # int | Year to filter by (yyyy)
+my $month = 56; # int | Month to filter by (mm)
+
+eval { 
+    my $result = $api_instance->account_useage_by_subaccount_get(year => $year, month => $month);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling AccountApi->account_useage_by_subaccount_get: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **year** | **int**| Year to filter by (yyyy) | 
+ **month** | **int**| Month to filter by (mm) | 
 
 ### Return type
 

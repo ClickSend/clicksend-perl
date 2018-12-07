@@ -45,6 +45,15 @@ isa_ok($api, 'WWW::ClickSendClient::AccountApi');
 }
 
 #
+# account_useage_by_subaccount_get test
+#
+{
+    my $year = undef; # replace NULL with a proper value
+    my $month = undef; # replace NULL with a proper value
+    my $result = $api->account_useage_by_subaccount_get(year => $year, month => $month);
+}
+
+#
 # account_verify_send_put test
 #
 {

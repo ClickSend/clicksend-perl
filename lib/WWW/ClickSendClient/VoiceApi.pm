@@ -439,7 +439,7 @@ sub voice_price_post {
 #
 # voice_receipts_get
 #
-# Get all voice receipts
+# Get all delivery receipts
 # 
 # @param int $page Page number (optional, default to 1)
 # @param int $limit Number of records per page (optional, default to 10)
@@ -457,7 +457,7 @@ sub voice_price_post {
     },
     };
     __PACKAGE__->method_documentation->{ 'voice_receipts_get' } = { 
-    	summary => 'Get all voice receipts',
+    	summary => 'Get all delivery receipts',
         params => $params,
         returns => 'string',
         };
@@ -493,6 +493,131 @@ sub voice_receipts_get {
     }
 
     my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('string', $response);
+    return $_response_object;
+}
+
+#
+# voice_receipts_post
+#
+# Add a delivery receipt
+# 
+# @param Url $url Url model (required)
+{
+    my $params = {
+    'url' => {
+        data_type => 'Url',
+        description => 'Url model',
+        required => '1',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'voice_receipts_post' } = { 
+    	summary => 'Add a delivery receipt',
+        params => $params,
+        returns => 'string',
+        };
+}
+# @return string
+#
+sub voice_receipts_post {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'url' is set
+    unless (exists $args{'url'}) {
+      croak("Missing the required parameter 'url' when calling voice_receipts_post");
+    }
+
+    # parse inputs
+    my $_resource_path = '/voice/receipts';
+
+    my $_method = 'POST';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    my $_body_data;
+    # body params
+    if ( exists $args{'url'}) {
+        $_body_data = $args{'url'};
+    }
+
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('string', $response);
+    return $_response_object;
+}
+
+#
+# voice_receipts_read_put
+#
+# Mark delivery receipts as read
+# 
+# @param DateBefore $date_before DateBefore model (optional)
+{
+    my $params = {
+    'date_before' => {
+        data_type => 'DateBefore',
+        description => 'DateBefore model',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'voice_receipts_read_put' } = { 
+    	summary => 'Mark delivery receipts as read',
+        params => $params,
+        returns => 'string',
+        };
+}
+# @return string
+#
+sub voice_receipts_read_put {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/voice/receipts-read';
+
+    my $_method = 'PUT';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    my $_body_data;
+    # body params
+    if ( exists $args{'date_before'}) {
+        $_body_data = $args{'date_before'};
+    }
+
     # authentication setting, if any
     my $auth_settings = [qw(BasicAuth )];
 

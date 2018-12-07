@@ -163,6 +163,91 @@ sub account_post {
 }
 
 #
+# account_useage_by_subaccount_get
+#
+# Get account useage by subaccount
+# 
+# @param int $year Year to filter by (yyyy) (required)
+# @param int $month Month to filter by (mm) (required)
+{
+    my $params = {
+    'year' => {
+        data_type => 'int',
+        description => 'Year to filter by (yyyy)',
+        required => '1',
+    },
+    'month' => {
+        data_type => 'int',
+        description => 'Month to filter by (mm)',
+        required => '1',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'account_useage_by_subaccount_get' } = { 
+    	summary => 'Get account useage by subaccount',
+        params => $params,
+        returns => 'string',
+        };
+}
+# @return string
+#
+sub account_useage_by_subaccount_get {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'year' is set
+    unless (exists $args{'year'}) {
+      croak("Missing the required parameter 'year' when calling account_useage_by_subaccount_get");
+    }
+
+    # verify the required parameter 'month' is set
+    unless (exists $args{'month'}) {
+      croak("Missing the required parameter 'month' when calling account_useage_by_subaccount_get");
+    }
+
+    # parse inputs
+    my $_resource_path = '/account/usage/{year}/{month}/subaccount';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # path params
+    if ( exists $args{'year'}) {
+        my $_base_variable = "{" . "year" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'year'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    # path params
+    if ( exists $args{'month'}) {
+        my $_base_variable = "{" . "month" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'month'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('string', $response);
+    return $_response_object;
+}
+
+#
 # account_verify_send_put
 #
 # Send account activation token
