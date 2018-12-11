@@ -134,7 +134,7 @@ my $api_instance = WWW::ClickSendClient::InboundFAXRulesApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $inbound_fax_rule = WWW::ClickSendClient::Object::InboundFAXRule->new(); # InboundFAXRule | Inbound fax rule model
+my $inbound_fax_rule = WWW::ClickSendClient::Object::InboundFaxRule->new(); # InboundFaxRule | Inbound fax rule model
 
 eval { 
     my $result = $api_instance->fax_inbound_automation_post(inbound_fax_rule => $inbound_fax_rule);
@@ -149,7 +149,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inbound_fax_rule** | [**InboundFAXRule**](InboundFAXRule.md)| Inbound fax rule model | 
+ **inbound_fax_rule** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model | 
 
 ### Return type
 
@@ -185,7 +185,7 @@ my $api_instance = WWW::ClickSendClient::InboundFAXRulesApi->new(
 );
 
 my $inbound_rule_id = 56; # int | Inbound rule id
-my $inbound_fax_rule = WWW::ClickSendClient::Object::InboundFAXRule->new(); # InboundFAXRule | Inbound fax rule model
+my $inbound_fax_rule = WWW::ClickSendClient::Object::InboundFaxRule->new(); # InboundFaxRule | Inbound fax rule model
 
 eval { 
     my $result = $api_instance->fax_inbound_automation_put(inbound_rule_id => $inbound_rule_id, inbound_fax_rule => $inbound_fax_rule);
@@ -201,7 +201,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inbound_rule_id** | **int**| Inbound rule id | 
- **inbound_fax_rule** | [**InboundFAXRule**](InboundFAXRule.md)| Inbound fax rule model | 
+ **inbound_fax_rule** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model | 
 
 ### Return type
 

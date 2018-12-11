@@ -30,6 +30,35 @@ my $api = WWW::ClickSendClient::FAXApi->new();
 isa_ok($api, 'WWW::ClickSendClient::FAXApi');
 
 #
+# fax_history_get test
+#
+{
+    my $date_from = undef; # replace NULL with a proper value
+    my $date_to = undef; # replace NULL with a proper value
+    my $q = undef; # replace NULL with a proper value
+    my $order = undef; # replace NULL with a proper value
+    my $page = undef; # replace NULL with a proper value
+    my $limit = undef; # replace NULL with a proper value
+    my $result = $api->fax_history_get(date_from => $date_from, date_to => $date_to, q => $q, order => $order, page => $page, limit => $limit);
+}
+
+#
+# fax_price_post test
+#
+{
+    my $fax_message = undef; # replace NULL with a proper value
+    my $result = $api->fax_price_post(fax_message => $fax_message);
+}
+
+#
+# fax_receipts_by_message_id_get test
+#
+{
+    my $message_id = undef; # replace NULL with a proper value
+    my $result = $api->fax_receipts_by_message_id_get(message_id => $message_id);
+}
+
+#
 # fax_receipts_get test
 #
 {
@@ -52,6 +81,14 @@ isa_ok($api, 'WWW::ClickSendClient::FAXApi');
 {
     my $date_before = undef; # replace NULL with a proper value
     my $result = $api->fax_receipts_read_put(date_before => $date_before);
+}
+
+#
+# fax_send_post test
+#
+{
+    my $fax_message = undef; # replace NULL with a proper value
+    my $result = $api->fax_send_post(fax_message => $fax_message);
 }
 
 

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::ClickSendClient::Object::InboundFAXRule');
+use_ok('WWW::ClickSendClient::Object::InboundFaxRule');
 
-my $instance = WWW::ClickSendClient::Object::InboundFAXRule->new();
+my $instance = WWW::ClickSendClient::Object::InboundFaxRule->new();
 
-isa_ok($instance, 'WWW::ClickSendClient::Object::InboundFAXRule');
+isa_ok($instance, 'WWW::ClickSendClient::Object::InboundFaxRule');
 

@@ -187,11 +187,11 @@ sub fax_inbound_automation_get {
 #
 # Create new inbound fax automation
 # 
-# @param InboundFAXRule $inbound_fax_rule Inbound fax rule model (required)
+# @param InboundFaxRule $inbound_fax_rule Inbound fax rule model (required)
 {
     my $params = {
     'inbound_fax_rule' => {
-        data_type => 'InboundFAXRule',
+        data_type => 'InboundFaxRule',
         description => 'Inbound fax rule model',
         required => '1',
     },
@@ -253,7 +253,7 @@ sub fax_inbound_automation_post {
 # Update inbound fax automation
 # 
 # @param int $inbound_rule_id Inbound rule id (required)
-# @param InboundFAXRule $inbound_fax_rule Inbound fax rule model (required)
+# @param InboundFaxRule $inbound_fax_rule Inbound fax rule model (required)
 {
     my $params = {
     'inbound_rule_id' => {
@@ -262,7 +262,7 @@ sub fax_inbound_automation_post {
         required => '1',
     },
     'inbound_fax_rule' => {
-        data_type => 'InboundFAXRule',
+        data_type => 'InboundFaxRule',
         description => 'Inbound fax rule model',
         required => '1',
     },

@@ -1,8 +1,8 @@
-# WWW::ClickSendClient::Object::InboundFAXRule
+# WWW::ClickSendClient::Object::InboundFaxRule
 
 ## Load the model package
 ```perl
-use WWW::ClickSendClient::Object::InboundFAXRule;
+use WWW::ClickSendClient::Object::InboundFaxRule;
 ```
 
 ## Properties
