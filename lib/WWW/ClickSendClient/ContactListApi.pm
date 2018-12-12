@@ -188,7 +188,7 @@ sub lists_by_list_id_get {
 # Update specific contact list
 # 
 # @param int $list_id Your list id (required)
-# @param List $list List model (required)
+# @param ContactList $contact_list Contact list model (required)
 {
     my $params = {
     'list_id' => {
@@ -196,9 +196,9 @@ sub lists_by_list_id_get {
         description => 'Your list id',
         required => '1',
     },
-    'list' => {
-        data_type => 'List',
-        description => 'List model',
+    'contact_list' => {
+        data_type => 'ContactList',
+        description => 'Contact list model',
         required => '1',
     },
     };
@@ -218,9 +218,9 @@ sub lists_by_list_id_put {
       croak("Missing the required parameter 'list_id' when calling lists_by_list_id_put");
     }
 
-    # verify the required parameter 'list' is set
-    unless (exists $args{'list'}) {
-      croak("Missing the required parameter 'list' when calling lists_by_list_id_put");
+    # verify the required parameter 'contact_list' is set
+    unless (exists $args{'contact_list'}) {
+      croak("Missing the required parameter 'contact_list' when calling lists_by_list_id_put");
     }
 
     # parse inputs
@@ -247,8 +247,8 @@ sub lists_by_list_id_put {
 
     my $_body_data;
     # body params
-    if ( exists $args{'list'}) {
-        $_body_data = $args{'list'};
+    if ( exists $args{'contact_list'}) {
+        $_body_data = $args{'contact_list'};
     }
 
     # authentication setting, if any
@@ -424,12 +424,12 @@ sub lists_import_by_list_id_post {
 #
 # Create new contact list
 # 
-# @param List $list List model (required)
+# @param ContactList $contact_list Contact list model (required)
 {
     my $params = {
-    'list' => {
-        data_type => 'List',
-        description => 'List model',
+    'contact_list' => {
+        data_type => 'ContactList',
+        description => 'Contact list model',
         required => '1',
     },
     };
@@ -444,9 +444,9 @@ sub lists_import_by_list_id_post {
 sub lists_post {
     my ($self, %args) = @_;
 
-    # verify the required parameter 'list' is set
-    unless (exists $args{'list'}) {
-      croak("Missing the required parameter 'list' when calling lists_post");
+    # verify the required parameter 'contact_list' is set
+    unless (exists $args{'contact_list'}) {
+      croak("Missing the required parameter 'contact_list' when calling lists_post");
     }
 
     # parse inputs
@@ -466,8 +466,8 @@ sub lists_post {
 
     my $_body_data;
     # body params
-    if ( exists $args{'list'}) {
-        $_body_data = $args{'list'};
+    if ( exists $args{'contact_list'}) {
+        $_body_data = $args{'contact_list'};
     }
 
     # authentication setting, if any

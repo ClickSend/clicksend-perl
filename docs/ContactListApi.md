@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **lists_by_list_id_put**
-> string lists_by_list_id_put(list_id => $list_id, list => $list)
+> string lists_by_list_id_put(list_id => $list_id, contact_list => $contact_list)
 
 Update specific contact list
 
@@ -137,10 +137,10 @@ my $api_instance = WWW::ClickSendClient::ContactListApi->new(
 );
 
 my $list_id = 56; # int | Your list id
-my $list = WWW::ClickSendClient::Object::List->new(); # List | List model
+my $contact_list = WWW::ClickSendClient::Object::ContactList->new(); # ContactList | Contact list model
 
 eval { 
-    my $result = $api_instance->lists_by_list_id_put(list_id => $list_id, list => $list);
+    my $result = $api_instance->lists_by_list_id_put(list_id => $list_id, contact_list => $contact_list);
     print Dumper($result);
 };
 if ($@) {
@@ -153,7 +153,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list_id** | **int**| Your list id | 
- **list** | [**List**](List.md)| List model | 
+ **contact_list** | [**ContactList**](ContactList.md)| Contact list model | 
 
 ### Return type
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **lists_post**
-> string lists_post(list => $list)
+> string lists_post(contact_list => $contact_list)
 
 Create new contact list
 
@@ -292,10 +292,10 @@ my $api_instance = WWW::ClickSendClient::ContactListApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $list = WWW::ClickSendClient::Object::List->new(); # List | List model
+my $contact_list = WWW::ClickSendClient::Object::ContactList->new(); # ContactList | Contact list model
 
 eval { 
-    my $result = $api_instance->lists_post(list => $list);
+    my $result = $api_instance->lists_post(contact_list => $contact_list);
     print Dumper($result);
 };
 if ($@) {
@@ -307,7 +307,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **list** | [**List**](List.md)| List model | 
+ **contact_list** | [**ContactList**](ContactList.md)| Contact list model | 
 
 ### Return type
 

@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::ClickSendClient::Object::List');
+use_ok('WWW::ClickSendClient::Object::ContactList');
 
-my $instance = WWW::ClickSendClient::Object::List->new();
+my $instance = WWW::ClickSendClient::Object::ContactList->new();
 
-isa_ok($instance, 'WWW::ClickSendClient::Object::List');
+isa_ok($instance, 'WWW::ClickSendClient::Object::ContactList');
 

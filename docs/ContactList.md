@@ -1,8 +1,8 @@
-# WWW::ClickSendClient::Object::List
+# WWW::ClickSendClient::Object::ContactList
 
 ## Load the model package
 ```perl
-use WWW::ClickSendClient::Object::List;
+use WWW::ClickSendClient::Object::ContactList;
 ```
 
 ## Properties

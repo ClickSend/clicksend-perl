@@ -50,8 +50,8 @@ isa_ok($api, 'WWW::ClickSendClient::ContactListApi');
 #
 {
     my $list_id = undef; # replace NULL with a proper value
-    my $list = undef; # replace NULL with a proper value
-    my $result = $api->lists_by_list_id_put(list_id => $list_id, list => $list);
+    my $contact_list = undef; # replace NULL with a proper value
+    my $result = $api->lists_by_list_id_put(list_id => $list_id, contact_list => $contact_list);
 }
 
 #
@@ -76,8 +76,8 @@ isa_ok($api, 'WWW::ClickSendClient::ContactListApi');
 # lists_post test
 #
 {
-    my $list = undef; # replace NULL with a proper value
-    my $result = $api->lists_post(list => $list);
+    my $contact_list = undef; # replace NULL with a proper value
+    my $result = $api->lists_post(contact_list => $contact_list);
 }
 
 #
