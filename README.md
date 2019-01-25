@@ -1,6 +1,11 @@
 # The official perl library for ClickSend v3 API
 
- This is an official SDK for [ClickSend](https://clicksend.com)  Below you will find a current list of the available methods for clicksend.  *NOTE: You will need to create a free account to use the API. You can register [here](https://dashboard.clicksend.com/#/signup/step1/)..* 
+This is the official [ClickSend](https://clicksend.com) SDK. Documentation can be found [here](https://developers.clicksend.com/docs/rest/v3/?perl#introduction).
+
+## Requirements
+
+- [Sign Up](https://www.clicksend.com/signup) for a free ClickSend account.
+- Copy your API key from the [API Credentials](https://dashboard.clicksend.com/#/account/subaccount) area.
 
 ## A note on Moose
 
@@ -332,9 +337,9 @@ if ($@) {
 
 ```
 
-# DOCUMENTATION FOR API ENDPOINTS AND MODELS
+## Documentation
 
-Documentation can be found here: [ClickSend API Docs](https://developers.clicksend.com/docs/)
+Documentation for our SDK and REST API can be found [here](https://developers.clicksend.com/docs/rest/v3/?perl#introduction).
 
 # DOCUMENTATION FOR AUTHORIZATION
 
