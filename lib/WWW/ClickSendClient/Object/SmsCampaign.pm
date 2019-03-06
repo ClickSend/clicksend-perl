@@ -178,6 +178,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'url_to_shorten' => {
+    	datatype => 'string',
+    	base_name => 'url_to_shorten',
+    	description => 'url to be shortened add http://smsg.io/xxxxx&#x60; to the body as a placeholder.',
+    	format => '',
+    	read_only => '',
+    		},
 });
 
 __PACKAGE__->swagger_types( {
@@ -185,7 +192,8 @@ __PACKAGE__->swagger_types( {
     'name' => 'string',
     'body' => 'string',
     'from' => 'string',
-    'schedule' => 'int'
+    'schedule' => 'int',
+    'url_to_shorten' => 'string'
 } );
 
 __PACKAGE__->attribute_map( {
@@ -193,7 +201,8 @@ __PACKAGE__->attribute_map( {
     'name' => 'name',
     'body' => 'body',
     'from' => 'from',
-    'schedule' => 'schedule'
+    'schedule' => 'schedule',
+    'url_to_shorten' => 'url_to_shorten'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});
