@@ -8,7 +8,7 @@ use WWW::ClickSendClient::Object::VoiceMessage;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**to** | **string** | Your phone number in E.164 format. | 
+**to** | **string** | Your phone number in E.164 format. | [optional] 
 **body** | **string** | Biscuit uv3nlCOjRk croissant chocolate lollipop chocolate muffin. | 
 **voice** | **string** | Either &#39;female&#39; or &#39;male&#39;. | 
 **custom_string** | **string** | Your reference. Will be passed back with all replies and delivery reports. | 
