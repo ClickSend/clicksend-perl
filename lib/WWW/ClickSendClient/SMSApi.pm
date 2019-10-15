@@ -673,6 +673,73 @@ sub sms_price_post {
 }
 
 #
+# sms_receipt_read_by_message_id_put
+#
+# Mark specific delivery receipt as read
+# 
+# @param string $message_id The message ID you want to mark as read (required)
+{
+    my $params = {
+    'message_id' => {
+        data_type => 'string',
+        description => 'The message ID you want to mark as read',
+        required => '1',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sms_receipt_read_by_message_id_put' } = { 
+    	summary => 'Mark specific delivery receipt as read',
+        params => $params,
+        returns => 'string',
+        };
+}
+# @return string
+#
+sub sms_receipt_read_by_message_id_put {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'message_id' is set
+    unless (exists $args{'message_id'}) {
+      croak("Missing the required parameter 'message_id' when calling sms_receipt_read_by_message_id_put");
+    }
+
+    # parse inputs
+    my $_resource_path = '/sms/receipts-read/{message_id}';
+
+    my $_method = 'PUT';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # path params
+    if ( exists $args{'message_id'}) {
+        my $_base_variable = "{" . "message_id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'message_id'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('string', $response);
+    return $_response_object;
+}
+
+#
 # sms_receipts_by_message_id_get
 #
 # Get a Specific Delivery Receipt

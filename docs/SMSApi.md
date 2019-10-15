@@ -18,6 +18,7 @@ Method | HTTP request | Description
 [**sms_inbound_read_by_message_id_put**](SMSApi.md#sms_inbound_read_by_message_id_put) | **PUT** /sms/inbound-read/{message_id} | Mark inbound SMS as read
 [**sms_inbound_read_put**](SMSApi.md#sms_inbound_read_put) | **PUT** /sms/inbound-read | Mark inbound SMS as read
 [**sms_price_post**](SMSApi.md#sms_price_post) | **POST** /sms/price | Calculate sms price
+[**sms_receipt_read_by_message_id_put**](SMSApi.md#sms_receipt_read_by_message_id_put) | **PUT** /sms/receipts-read/{message_id} | Mark specific delivery receipt as read
 [**sms_receipts_by_message_id_get**](SMSApi.md#sms_receipts_by_message_id_get) | **GET** /sms/receipts/{message_id} | Get a Specific Delivery Receipt
 [**sms_receipts_get**](SMSApi.md#sms_receipts_get) | **GET** /sms/receipts | Get all delivery receipts
 [**sms_receipts_post**](SMSApi.md#sms_receipts_post) | **POST** /sms/receipts | Add a delivery receipt
@@ -471,6 +472,56 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sms_messages** | [**SmsMessageCollection**](SmsMessageCollection.md)| SmsMessageCollection model | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sms_receipt_read_by_message_id_put**
+> string sms_receipt_read_by_message_id_put(message_id => $message_id)
+
+Mark specific delivery receipt as read
+
+Mark specific delivery receipt as read
+
+### Example 
+```perl
+use Data::Dumper;
+use WWW::ClickSendClient::SMSApi;
+my $api_instance = WWW::ClickSendClient::SMSApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $message_id = 'message_id_example'; # string | The message ID you want to mark as read
+
+eval { 
+    my $result = $api_instance->sms_receipt_read_by_message_id_put(message_id => $message_id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling SMSApi->sms_receipt_read_by_message_id_put: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **message_id** | **string**| The message ID you want to mark as read | 
 
 ### Return type
 

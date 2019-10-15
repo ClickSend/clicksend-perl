@@ -107,6 +107,14 @@ isa_ok($api, 'WWW::ClickSendClient::SMSApi');
 }
 
 #
+# sms_receipt_read_by_message_id_put test
+#
+{
+    my $message_id = undef; # replace NULL with a proper value
+    my $result = $api->sms_receipt_read_by_message_id_put(message_id => $message_id);
+}
+
+#
 # sms_receipts_by_message_id_get test
 #
 {
