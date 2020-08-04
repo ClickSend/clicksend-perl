@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**lists_contacts_by_list_id_and_contact_id_put**](ContactApi.md#lists_contacts_by_list_id_and_contact_id_put) | **PUT** /lists/{list_id}/contacts/{contact_id} | Update specific contact
 [**lists_contacts_by_list_id_get**](ContactApi.md#lists_contacts_by_list_id_get) | **GET** /lists/{list_id}/contacts | Get all contacts in a list
 [**lists_contacts_by_list_id_post**](ContactApi.md#lists_contacts_by_list_id_post) | **POST** /lists/{list_id}/contacts | Create new contact
+[**lists_copy_contact_put**](ContactApi.md#lists_copy_contact_put) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id} | Copy contact to another list
 [**lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put**](ContactApi.md#lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put) | **PUT** /lists/{list_id}/remove-opted-out-contacts/{opt_out_list_id} | Remove all opted out contacts
 [**lists_transfer_contact_put**](ContactApi.md#lists_transfer_contact_put) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id} | Transfer contact to another list
 
@@ -266,6 +267,60 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact** | [**Contact**](Contact.md)| Contact model | 
  **list_id** | **int**| List id | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **lists_copy_contact_put**
+> string lists_copy_contact_put(from_list_id => $from_list_id, contact_id => $contact_id, to_list_id => $to_list_id)
+
+Copy contact to another list
+
+Copy contact to another list
+
+### Example 
+```perl
+use Data::Dumper;
+use WWW::ClickSendClient::ContactApi;
+my $api_instance = WWW::ClickSendClient::ContactApi->new(
+
+    # Configure HTTP basic authorization: BasicAuth
+    username => 'YOUR_USERNAME',
+    password => 'YOUR_PASSWORD',
+);
+
+my $from_list_id = 56; # int | List ID for list that contains contact.
+my $contact_id = 56; # int | Contact ID
+my $to_list_id = 56; # int | List ID for list you want to copy the contact to.
+
+eval { 
+    my $result = $api_instance->lists_copy_contact_put(from_list_id => $from_list_id, contact_id => $contact_id, to_list_id => $to_list_id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling ContactApi->lists_copy_contact_put: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from_list_id** | **int**| List ID for list that contains contact. | 
+ **contact_id** | **int**| Contact ID | 
+ **to_list_id** | **int**| List ID for list you want to copy the contact to. | 
 
 ### Return type
 

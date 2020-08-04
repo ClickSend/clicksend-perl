@@ -77,6 +77,16 @@ isa_ok($api, 'WWW::ClickSendClient::ContactApi');
 }
 
 #
+# lists_copy_contact_put test
+#
+{
+    my $from_list_id = undef; # replace NULL with a proper value
+    my $contact_id = undef; # replace NULL with a proper value
+    my $to_list_id = undef; # replace NULL with a proper value
+    my $result = $api->lists_copy_contact_put(from_list_id => $from_list_id, contact_id => $contact_id, to_list_id => $to_list_id);
+}
+
+#
 # lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put test
 #
 {

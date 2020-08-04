@@ -492,6 +492,109 @@ sub lists_contacts_by_list_id_post {
 }
 
 #
+# lists_copy_contact_put
+#
+# Copy contact to another list
+# 
+# @param int $from_list_id List ID for list that contains contact. (required)
+# @param int $contact_id Contact ID (required)
+# @param int $to_list_id List ID for list you want to copy the contact to. (required)
+{
+    my $params = {
+    'from_list_id' => {
+        data_type => 'int',
+        description => 'List ID for list that contains contact.',
+        required => '1',
+    },
+    'contact_id' => {
+        data_type => 'int',
+        description => 'Contact ID',
+        required => '1',
+    },
+    'to_list_id' => {
+        data_type => 'int',
+        description => 'List ID for list you want to copy the contact to.',
+        required => '1',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'lists_copy_contact_put' } = { 
+    	summary => 'Copy contact to another list',
+        params => $params,
+        returns => 'string',
+        };
+}
+# @return string
+#
+sub lists_copy_contact_put {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'from_list_id' is set
+    unless (exists $args{'from_list_id'}) {
+      croak("Missing the required parameter 'from_list_id' when calling lists_copy_contact_put");
+    }
+
+    # verify the required parameter 'contact_id' is set
+    unless (exists $args{'contact_id'}) {
+      croak("Missing the required parameter 'contact_id' when calling lists_copy_contact_put");
+    }
+
+    # verify the required parameter 'to_list_id' is set
+    unless (exists $args{'to_list_id'}) {
+      croak("Missing the required parameter 'to_list_id' when calling lists_copy_contact_put");
+    }
+
+    # parse inputs
+    my $_resource_path = '/lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id}';
+
+    my $_method = 'PUT';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # path params
+    if ( exists $args{'from_list_id'}) {
+        my $_base_variable = "{" . "from_list_id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'from_list_id'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    # path params
+    if ( exists $args{'contact_id'}) {
+        my $_base_variable = "{" . "contact_id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'contact_id'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    # path params
+    if ( exists $args{'to_list_id'}) {
+        my $_base_variable = "{" . "to_list_id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'to_list_id'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('string', $response);
+    return $_response_object;
+}
+
+#
 # lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put
 #
 # Remove all opted out contacts
