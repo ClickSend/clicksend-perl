@@ -344,7 +344,7 @@ sub update_params_for_auth {
         elsif ($auth eq 'BasicAuth') {
             
             if ($self->{config}{username} || $self->{config}{password}) {
-                $header_params->{'Authorization'} = 'Basic ' . encode_base64($self->{config}{username} . ":" . $self->{config}{password});
+                $header_params->{'Authorization'} = 'Basic ' . encode_base64($self->{config}{username} . ":" . $self->{config}{password}, "");
             }
         }
         else {
