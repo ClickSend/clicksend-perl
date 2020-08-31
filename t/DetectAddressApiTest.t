@@ -33,8 +33,8 @@ isa_ok($api, 'WWW::ClickSendClient::DetectAddressApi');
 # detect_address_post test
 #
 {
-    my $upload_file = undef; # replace NULL with a proper value
-    my $result = $api->detect_address_post(upload_file => $upload_file);
+    my $content = undef; # replace NULL with a proper value
+    my $result = $api->detect_address_post(content => $content);
 }
 
 

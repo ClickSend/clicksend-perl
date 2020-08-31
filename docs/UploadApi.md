@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **uploads_post**
-> string uploads_post(upload_file => $upload_file, convert => $convert)
+> string uploads_post(content => $content, convert => $convert)
 
 Upload File
 
@@ -30,11 +30,11 @@ my $api_instance = WWW::ClickSendClient::UploadApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $upload_file = WWW::ClickSendClient::Object::UploadFile->new(); # UploadFile | Your file to be uploaded
+my $content = WWW::ClickSendClient::Object::Content->new(); # Content | Your file to be uploaded
 my $convert = 'convert_example'; # string | 
 
 eval { 
-    my $result = $api_instance->uploads_post(upload_file => $upload_file, convert => $convert);
+    my $result = $api_instance->uploads_post(content => $content, convert => $convert);
     print Dumper($result);
 };
 if ($@) {
@@ -46,7 +46,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **upload_file** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
+ **content** | [**Content**](Content.md)| Your file to be uploaded | 
  **convert** | **string**|  | 
 
 ### Return type

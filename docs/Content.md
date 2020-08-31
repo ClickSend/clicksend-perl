@@ -1,8 +1,8 @@
-# WWW::ClickSendClient::Object::UploadFile
+# WWW::ClickSendClient::Object::Content
 
 ## Load the model package
 ```perl
-use WWW::ClickSendClient::Object::UploadFile;
+use WWW::ClickSendClient::Object::Content;
 ```
 
 ## Properties

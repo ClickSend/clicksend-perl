@@ -53,12 +53,12 @@ sub new {
 #
 # Upload File
 # 
-# @param UploadFile $upload_file Your file to be uploaded (required)
+# @param Content $content Your file to be uploaded (required)
 # @param string $convert  (required)
 {
     my $params = {
-    'upload_file' => {
-        data_type => 'UploadFile',
+    'content' => {
+        data_type => 'Content',
         description => 'Your file to be uploaded',
         required => '1',
     },
@@ -79,9 +79,9 @@ sub new {
 sub uploads_post {
     my ($self, %args) = @_;
 
-    # verify the required parameter 'upload_file' is set
-    unless (exists $args{'upload_file'}) {
-      croak("Missing the required parameter 'upload_file' when calling uploads_post");
+    # verify the required parameter 'content' is set
+    unless (exists $args{'content'}) {
+      croak("Missing the required parameter 'content' when calling uploads_post");
     }
 
     # verify the required parameter 'convert' is set
@@ -111,8 +111,8 @@ sub uploads_post {
 
     my $_body_data;
     # body params
-    if ( exists $args{'upload_file'}) {
-        $_body_data = $args{'upload_file'};
+    if ( exists $args{'content'}) {
+        $_body_data = $args{'content'};
     }
 
     # authentication setting, if any

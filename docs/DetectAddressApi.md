@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **detect_address_post**
-> string detect_address_post(upload_file => $upload_file)
+> string detect_address_post(content => $content)
 
 Detects address in uploaded file.
 
@@ -30,10 +30,10 @@ my $api_instance = WWW::ClickSendClient::DetectAddressApi->new(
     password => 'YOUR_PASSWORD',
 );
 
-my $upload_file = WWW::ClickSendClient::Object::UploadFile->new(); # UploadFile | Your file to be uploaded
+my $content = WWW::ClickSendClient::Object::Content->new(); # Content | Your file to be uploaded
 
 eval { 
-    my $result = $api_instance->detect_address_post(upload_file => $upload_file);
+    my $result = $api_instance->detect_address_post(content => $content);
     print Dumper($result);
 };
 if ($@) {
@@ -45,7 +45,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **upload_file** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
+ **content** | [**Content**](Content.md)| Your file to be uploaded | 
 
 ### Return type
 
