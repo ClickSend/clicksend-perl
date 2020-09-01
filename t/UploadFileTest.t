@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('WWW::ClickSendClient::Object::Content');
+use_ok('WWW::ClickSendClient::Object::UploadFile');
 
-my $instance = WWW::ClickSendClient::Object::Content->new();
+my $instance = WWW::ClickSendClient::Object::UploadFile->new();
 
-isa_ok($instance, 'WWW::ClickSendClient::Object::Content');
+isa_ok($instance, 'WWW::ClickSendClient::Object::UploadFile');
 

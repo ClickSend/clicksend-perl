@@ -53,11 +53,11 @@ sub new {
 #
 # Detects address in uploaded file.
 # 
-# @param Content $content Your file to be uploaded (required)
+# @param UploadFile $upload_file Your file to be uploaded (required)
 {
     my $params = {
-    'content' => {
-        data_type => 'Content',
+    'upload_file' => {
+        data_type => 'UploadFile',
         description => 'Your file to be uploaded',
         required => '1',
     },
@@ -73,9 +73,9 @@ sub new {
 sub detect_address_post {
     my ($self, %args) = @_;
 
-    # verify the required parameter 'content' is set
-    unless (exists $args{'content'}) {
-      croak("Missing the required parameter 'content' when calling detect_address_post");
+    # verify the required parameter 'upload_file' is set
+    unless (exists $args{'upload_file'}) {
+      croak("Missing the required parameter 'upload_file' when calling detect_address_post");
     }
 
     # parse inputs
@@ -95,8 +95,8 @@ sub detect_address_post {
 
     my $_body_data;
     # body params
-    if ( exists $args{'content'}) {
-        $_body_data = $args{'content'};
+    if ( exists $args{'upload_file'}) {
+        $_body_data = $args{'upload_file'};
     }
 
     # authentication setting, if any
