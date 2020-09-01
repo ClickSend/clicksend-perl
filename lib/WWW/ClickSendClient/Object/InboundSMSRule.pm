@@ -193,6 +193,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'webhook_type' => {
+    	datatype => 'string',
+    	base_name => 'webhook_type',
+    	description => 'post, get, or json. post by default',
+    	format => '',
+    	read_only => '',
+    		},
 });
 
 __PACKAGE__->swagger_types( {
@@ -202,7 +209,8 @@ __PACKAGE__->swagger_types( {
     'message_search_term' => 'string',
     'action' => 'string',
     'action_address' => 'string',
-    'enabled' => 'Number'
+    'enabled' => 'Number',
+    'webhook_type' => 'string'
 } );
 
 __PACKAGE__->attribute_map( {
@@ -212,7 +220,8 @@ __PACKAGE__->attribute_map( {
     'message_search_term' => 'message_search_term',
     'action' => 'action',
     'action_address' => 'action_address',
-    'enabled' => 'enabled'
+    'enabled' => 'enabled',
+    'webhook_type' => 'webhook_type'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});
