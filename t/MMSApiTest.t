@@ -30,6 +30,26 @@ my $api = WWW::ClickSendClient::MMSApi->new();
 isa_ok($api, 'WWW::ClickSendClient::MMSApi');
 
 #
+# mms_history_export_get test
+#
+{
+    my $filename = undef; # replace NULL with a proper value
+    my $result = $api->mms_history_export_get(filename => $filename);
+}
+
+#
+# mms_history_get test
+#
+{
+    my $q = undef; # replace NULL with a proper value
+    my $date_from = undef; # replace NULL with a proper value
+    my $date_to = undef; # replace NULL with a proper value
+    my $page = undef; # replace NULL with a proper value
+    my $limit = undef; # replace NULL with a proper value
+    my $result = $api->mms_history_get(q => $q, date_from => $date_from, date_to => $date_to, page => $page, limit => $limit);
+}
+
+#
 # mms_price_post test
 #
 {

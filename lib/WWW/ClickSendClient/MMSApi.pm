@@ -49,6 +49,175 @@ sub new {
 
 
 #
+# mms_history_export_get
+#
+# Export all mms history
+# 
+# @param string $filename Filename to download history as (required)
+{
+    my $params = {
+    'filename' => {
+        data_type => 'string',
+        description => 'Filename to download history as',
+        required => '1',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'mms_history_export_get' } = { 
+    	summary => 'Export all mms history',
+        params => $params,
+        returns => 'string',
+        };
+}
+# @return string
+#
+sub mms_history_export_get {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'filename' is set
+    unless (exists $args{'filename'}) {
+      croak("Missing the required parameter 'filename' when calling mms_history_export_get");
+    }
+
+    # parse inputs
+    my $_resource_path = '/mms/history/export';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # query params
+    if ( exists $args{'filename'}) {
+        $query_params->{'filename'} = $self->{api_client}->to_query_value($args{'filename'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('string', $response);
+    return $_response_object;
+}
+
+#
+# mms_history_get
+#
+# Get all mms history
+# 
+# @param string $q Custom query Example: from:{number},status_code:201. (optional)
+# @param int $date_from Start date (optional)
+# @param int $date_to End date (optional)
+# @param int $page Page number (optional, default to 1)
+# @param int $limit Number of records per page (optional, default to 10)
+{
+    my $params = {
+    'q' => {
+        data_type => 'string',
+        description => 'Custom query Example: from:{number},status_code:201.',
+        required => '0',
+    },
+    'date_from' => {
+        data_type => 'int',
+        description => 'Start date',
+        required => '0',
+    },
+    'date_to' => {
+        data_type => 'int',
+        description => 'End date',
+        required => '0',
+    },
+    'page' => {
+        data_type => 'int',
+        description => 'Page number',
+        required => '0',
+    },
+    'limit' => {
+        data_type => 'int',
+        description => 'Number of records per page',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'mms_history_get' } = { 
+    	summary => 'Get all mms history',
+        params => $params,
+        returns => 'string',
+        };
+}
+# @return string
+#
+sub mms_history_get {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/mms/history';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # query params
+    if ( exists $args{'q'}) {
+        $query_params->{'q'} = $self->{api_client}->to_query_value($args{'q'});
+    }
+
+    # query params
+    if ( exists $args{'date_from'}) {
+        $query_params->{'date_from'} = $self->{api_client}->to_query_value($args{'date_from'});
+    }
+
+    # query params
+    if ( exists $args{'date_to'}) {
+        $query_params->{'date_to'} = $self->{api_client}->to_query_value($args{'date_to'});
+    }
+
+    # query params
+    if ( exists $args{'page'}) {
+        $query_params->{'page'} = $self->{api_client}->to_query_value($args{'page'});
+    }
+
+    # query params
+    if ( exists $args{'limit'}) {
+        $query_params->{'limit'} = $self->{api_client}->to_query_value($args{'limit'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw(BasicAuth )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('string', $response);
+    return $_response_object;
+}
+
+#
 # mms_price_post
 #
 # Get Price for MMS sent
