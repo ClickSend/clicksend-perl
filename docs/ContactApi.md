@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **lists_contacts_by_list_id_get**
-> string lists_contacts_by_list_id_get(list_id => $list_id, page => $page, limit => $limit)
+> string lists_contacts_by_list_id_get(list_id => $list_id, page => $page, limit => $limit, updated_after => $updated_after)
 
 Get all contacts in a list
 
@@ -198,9 +198,10 @@ my $api_instance = WWW::ClickSendClient::ContactApi->new(
 my $list_id = 56; # int | Contact list ID
 my $page = 56; # int | Page number
 my $limit = 56; # int | Number of records per page
+my $updated_after = 56; # int | Get all contacts updated after a given timestamp.
 
 eval { 
-    my $result = $api_instance->lists_contacts_by_list_id_get(list_id => $list_id, page => $page, limit => $limit);
+    my $result = $api_instance->lists_contacts_by_list_id_get(list_id => $list_id, page => $page, limit => $limit, updated_after => $updated_after);
     print Dumper($result);
 };
 if ($@) {
@@ -215,6 +216,7 @@ Name | Type | Description  | Notes
  **list_id** | **int**| Contact list ID | 
  **page** | **int**| Page number | [optional] [default to 1]
  **limit** | **int**| Number of records per page | [optional] [default to 10]
+ **updated_after** | **int**| Get all contacts updated after a given timestamp. | [optional] [default to 10]
 
 ### Return type
 

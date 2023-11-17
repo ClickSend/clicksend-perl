@@ -327,6 +327,7 @@ sub lists_contacts_by_list_id_and_contact_id_put {
 # @param int $list_id Contact list ID (required)
 # @param int $page Page number (optional, default to 1)
 # @param int $limit Number of records per page (optional, default to 10)
+# @param int $updated_after Get all contacts updated after a given timestamp. (optional, default to 10)
 {
     my $params = {
     'list_id' => {
@@ -342,6 +343,11 @@ sub lists_contacts_by_list_id_and_contact_id_put {
     'limit' => {
         data_type => 'int',
         description => 'Number of records per page',
+        required => '0',
+    },
+    'updated_after' => {
+        data_type => 'int',
+        description => 'Get all contacts updated after a given timestamp.',
         required => '0',
     },
     };
@@ -384,6 +390,11 @@ sub lists_contacts_by_list_id_get {
     # query params
     if ( exists $args{'limit'}) {
         $query_params->{'limit'} = $self->{api_client}->to_query_value($args{'limit'});
+    }
+
+    # query params
+    if ( exists $args{'updated_after'}) {
+        $query_params->{'updated_after'} = $self->{api_client}->to_query_value($args{'updated_after'});
     }
 
     # path params
