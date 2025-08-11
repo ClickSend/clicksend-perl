@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **source** | **string** | Your method of sending e.g. &#39;wordpress&#39;, &#39;php&#39;, &#39;c#&#39;. | [optional] [default to &#39;sdk&#39;]
 **list_id** | **int** | Your list ID if sending to a whole list. Can be used instead of &#39;to&#39;. | [optional] 
 **lang** | **string** | au (string, required) - See section on available languages. | [optional] 
-**schedule** | **int** | Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp | [optional] 
+**schedule** | **int** | Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp | [optional] 
 **require_input** | **int** | Whether you want to receive a keypress from the call recipient | [optional] [default to 0]
 **machine_detection** | **int** | Whether to attempt to detect an answering machine or voicemail service and leave a message | [optional] [default to 0]
 

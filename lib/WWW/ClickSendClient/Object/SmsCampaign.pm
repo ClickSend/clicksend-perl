@@ -167,7 +167,7 @@ __PACKAGE__->method_documentation({
     'from' => {
     	datatype => 'string',
     	base_name => 'from',
-    	description => 'Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.',
+    	description => 'Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.',
     	format => '',
     	read_only => '',
     		},
