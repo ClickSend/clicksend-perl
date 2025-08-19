@@ -174,7 +174,7 @@ __PACKAGE__->method_documentation({
     'schedule' => {
     	datatype => 'int',
     	base_name => 'schedule',
-    	description => 'Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp',
+    	description => 'Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp',
     	format => '',
     	read_only => '',
     		},
