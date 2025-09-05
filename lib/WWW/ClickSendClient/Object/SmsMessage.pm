@@ -146,7 +146,7 @@ __PACKAGE__->method_documentation({
     'from' => {
     	datatype => 'string',
     	base_name => 'from',
-    	description => 'Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.',
+    	description => 'Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.',
     	format => '',
     	read_only => '',
     		},
@@ -174,7 +174,7 @@ __PACKAGE__->method_documentation({
     'schedule' => {
     	datatype => 'int',
     	base_name => 'schedule',
-    	description => 'Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp',
+    	description => 'Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp',
     	format => '',
     	read_only => '',
     		},
